@@ -1,12 +1,21 @@
 import { createStore, compose } from 'redux';
-import { syncHistoryWithStore} from 'react-router-redux';
-import { createBrowserHistory } from 'history';
 import rootReducer from './reducers/index';
-import homeCollection from './data/homeCollection';
 
+let cart = JSON.parse(localStorage.getItem('cart'));
+if ( cart === null ){
+  cart = {
+    items: {}
+  };
+}
+cart.open = false;
 const defaultState = {
-  cart : false,
-  homeCollection : null
+  header: [],
+  cart,
+  collection : [],
+  data: [],
+  product: [],
+  homepage: [],
+  page: []
 };
 
 const enhancers = compose(
@@ -14,8 +23,6 @@ const enhancers = compose(
 );
 
 const store = createStore(rootReducer, defaultState, enhancers);
-
-export const history = syncHistoryWithStore(createBrowserHistory(), store);
 
 if(module.hot) {
   module.hot.accept('./reducers/',() => {

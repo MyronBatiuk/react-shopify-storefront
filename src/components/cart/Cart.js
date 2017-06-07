@@ -1,37 +1,42 @@
 import React, {Component} from 'react';
 import LineItem from './LineItem';
+import store from '../../store';
+import * as actions from '../../actions/actionCreators';
+import * as helpers from '../../helpers/helpers';
 
 class Cart extends Component {
 
+  closeCart = () => {
+    store.dispatch(actions.closeCart());
+  };
+
   render() {
-    const cartObject = JSON.parse(this.props.cart);
-    let cart,line_items = "Cart is empty",subtotal = 0 ,tax = 0 ,total = 0;
-    if ( cartObject !== null ) {
-      cart = cartObject.attrs;
-      subtotal = cart.subtotalPrice.value;
-      tax = cart.totalTax.value;
-      total = cart.totalPrice.value;
-      line_items = cart.lineItems.map((line_item) => {
+    const cart = this.props.cart;
+    let cartStatus = cart.open;
+    let line_items = "Cart is empty", subtotal = 0;
+    let line_items_number = Object.keys(cart.items).length;
+    let checkoutUrl = helpers.shopifyStoreUrl + '/cart/';
+    if ( line_items_number !== 0) {
+      line_items = Object.keys(cart.items).map((line_item) => {
+        subtotal += cart.items[line_item].quantity * cart.items[line_item].price;
+        checkoutUrl += line_item + ':' + cart.items[line_item].quantity + ',';
         return (
           <LineItem
-            updateQuantityInCart={this.props.updateQuantityInCart}
-            removeLineItemInCart={this.props.removeLineItemInCart}
-            key={line_item.attrs.id.value.toString()}
-            line_item={line_item.attrs}
+            key={line_item}
+            id={line_item}
+            line_item={cart.items[line_item]}
             />
         );
       });
     }
 
     return (
-      <div className={`Cart ${this.props.isCartOpen ? 'Cart--open' : ''}`}>
+      <div className={`Cart ${cartStatus ? 'Cart--open' : ''}`}>
         <header className="Cart__header">
           <h2>Your cart</h2>
           <button
-            onClick={this.props.handleCartClose}
-            className="Cart__close">
-            ?
-          </button>
+            onClick={this.closeCart}
+            className="Cart__close">&#10006;</button>
         </header>
         <ul className="Cart__line-items">
           {line_items}
@@ -43,27 +48,16 @@ class Cart extends Component {
               <span className="pricing">$ {subtotal}</span>
             </div>
           </div>
-          <div className="Cart-info clearfix">
-            <div className="Cart-info__total Cart-info__small">Taxes</div>
-            <div className="Cart-info__pricing">
-              <span className="pricing">$ {tax}</span>
-            </div>
-          </div>
-          <div className="Cart-info clearfix">
-            <div className="Cart-info__total Cart-info__small">Total</div>
-            <div className="Cart-info__pricing">
-              <span className="pricing">$ {total}</span>
-            </div>
-          </div>
-          <button className="Cart__checkout button" onClick={() => this.openCheckout(cart.webUrl.value)}>Checkout</button>
+          <button className="Cart__checkout button" onClick={() => this.openCheckout(checkoutUrl)}>Checkout</button>
+          <p className="add-info">Shipping & taxes calculated at checkout</p>
         </footer>
       </div>
     )
   }
 
-  openCheckout = (url) =>{
+  openCheckout = (url) => {
     localStorage.removeItem('cart');
-    window.open(url);
+    window.location = url;
   };
 }
 

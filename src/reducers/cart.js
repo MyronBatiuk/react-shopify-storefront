@@ -1,9 +1,31 @@
 function cart(state = [], action) {
+  let newState = Object.assign({}, state);
   switch(action.type) {
+    case 'ADD_VARIANT_TO_CART':
+      if (action.id in newState.items) {
+        newState.items[action.id].quantity += action.product.quantity;
+      } else {
+        newState.items[action.id] = action.product;
+      }
+      localStorage.setItem('cart', JSON.stringify(newState));
+      return newState;
+    case 'UPDATE_QUANTITY':
+      newState = Object.assign({}, state);
+      if ( action.operation === 'increment' ) {
+        newState.items[action.id].quantity += 1;
+      } else {
+        newState.items[action.id].quantity -= 1;
+      }
+      localStorage.setItem('cart', JSON.stringify(newState));
+      return newState;
+    case 'REMOVE_ITEM':
+      delete newState.items[action.id];
+      localStorage.setItem('cart', JSON.stringify(newState));
+      return newState;
     case 'OPEN_CART' :
-      return true;
+      return { ...state, open: true };
     case 'CLOSE_CART':
-      return false;
+      return { ...state, open: false };
     default:
       return state;
   }

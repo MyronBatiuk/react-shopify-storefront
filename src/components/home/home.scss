@@ -1,0 +1,36 @@
+.home-page {
+  .hero-section {
+    .hero-section__image {
+      background-position: center center;
+      height: 475px;
+      position: relative;
+      display: table;
+      width: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      .hero-section__inner {
+        position: relative;
+        display: table-cell;
+        vertical-align: middle;
+        padding: 55px;
+        color: #fff;
+        z-index: 2;
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+        .inner__title {
+          font-size:4em;
+          font-weight:600;
+          margin-bottom: 8px;
+          text-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+        .inner__subtitle {
+          margin: 0 auto;
+          max-width: 75%;
+          text-shadow: 0 0 15px rgba(0,0,0,0.1);
+          font-size: 1.5em;
+        }
+      }
+    }
+  }
+}

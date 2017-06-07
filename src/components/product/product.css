@@ -1,0 +1,18 @@
+.product-template {
+  padding: 50px 0;
+  overflow: hidden; }
+  .product-template .product__compare-price {
+    text-decoration: line-through;
+    margin-left: 20px; }
+  .product-template .product__variants {
+    display: block;
+    margin-top: 15px; }
+  .product-template .product__quantity {
+    display: inline-block;
+    margin-top: 15px; }
+    .product-template .product__quantity input {
+      margin-left: 20px;
+      padding-left: 20px;
+      width: 100px; }
+  .product-template .product__buy {
+    margin: 20px 0 0 20px; }

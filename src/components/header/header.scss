@@ -1,0 +1,252 @@
+.header-section {
+  .site-header {
+    border-bottom: 1px solid #e8e9eb;
+    padding: 0 55px;
+    position: relative;
+    z-index: 2;
+    background: #fff;
+    @media screen and (max-width: 749px) {
+      padding: 0;
+    }
+    .logo {
+      max-width: 173px;
+      margin: 15px 0;
+      @media screen and (max-width: 749px) {
+        padding-left: 15px;
+      }
+    }
+    .site-nav {
+      text-align: center;
+      padding: 0;
+      .nav-item {
+        list-style: none;
+        display: inline-block;
+        a {
+          padding: 3px 10px;
+          display: block;
+          color: #3d4246;
+          font: 400 16px/1.5 "Work Sans", "HelveticaNeue", "Helvetica Neue", sans-serif;
+          &:hover {
+            opacity: 0.6;
+          }
+        }
+      }
+    }
+    .site-header__icons {
+      position: relative;
+      white-space: nowrap;
+      text-align: right;
+      @media screen and (max-width: 749px) {
+        padding-right: 17px;
+      }
+      .site-header__icons-wrapper {
+        position: relative;
+        margin-right: -9px;
+        max-width: 350px;
+        float: right;
+        .site-header__search {
+          padding-right: 45px;
+          .search-header {
+            display: inline-block;
+            position: relative;
+            width: 100%;
+            max-width: 30px;
+            vertical-align: middle;
+            transition: all 0.35s cubic-bezier(0.29, 0.63, 0.44, 1);
+            .search-header__input {
+              background-color: transparent;
+              border-radius: 2px;
+              color: #3d4246;
+              border: 1px solid transparent;
+              padding: 10px 18px 10px 35px;
+              width: 100%;
+              -webkit-appearance: none;
+              -moz-appearance: none;
+              font: 400 16px/1.2 "Work Sans", "HelveticaNeue", "Helvetica Neue", sans-serif;
+              max-width: 100%;
+            }
+            .search-header__submit {
+              font: 400 16px/1.5 "Work Sans", "HelveticaNeue", "Helvetica Neue", sans-serif;
+              background-color: transparent;
+              border: 0;
+              margin: 0;
+              color: #3d4246;
+              text-align: left;
+              cursor: pointer;
+              display: inline-block;
+              vertical-align: middle;
+              position: absolute;
+              left: 0;
+              top: 0;
+              padding: 0 0 0 5px;
+              height: 100%;
+              z-index: 1;
+              outline: none;
+              &:hover {
+                opacity: 0.6;
+              }
+              .icon-search {
+                fill: currentColor;
+                display: inline-block;
+                width: 20px;
+                overflow: hidden;
+                vertical-align: middle;
+                height: 30px;
+                margin-right: 3px;
+              }
+            }
+            &.search--focus {
+              max-width: 250px;
+              .search-header__input {
+                outline: none;
+                border-color: #e8e9eb;
+                cursor: auto;
+              }
+              .search-header__submit {
+                padding-left: 10px;
+                pointer-events: auto;
+              }
+            }
+          }
+        }
+        .site-header__cart {
+          cursor: pointer;
+          @media screen and (min-width: 750px) {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            padding: 8px 0;
+            -ms-transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            color: #3d4246;
+            text-align: right;
+          }
+          @media screen and (max-width: 749px) {
+            display: inline-block;
+            vertical-align: middle;
+            padding: 18px 8px;
+            margin: 0;
+            font-size: 1em;
+            color: #3d4246;
+          }
+          .icon-cart {
+            margin-right: 3px;
+            height: 30px;
+            overflow: hidden;
+            display: inline-block;
+            width: 20px;
+            color: #3d4246;
+            vertical-align: middle;
+            fill: currentColor;
+            &:hover {
+              opacity: 0.6;
+            }
+          }
+        }
+        .site-header__mobile-menu {
+          vertical-align: middle;
+          padding: 18px 8px;
+          font-size: 1em;
+          background-color: transparent;
+          display: none;
+          border: 0;
+          cursor: pointer;
+          outline: none;
+          &:hover {
+            opacity: 0.6;
+          }
+          .icon {
+            height: 30px;
+            vertical-align: middle;
+            overflow: hidden;
+            display: inline-block;
+            width: 20px;
+            color: #3d4246;
+            fill: currentColor;
+          }
+          .icon-close {
+            display: none;
+          }
+          &.open {
+            .icon-close {
+              display: block;
+            }
+            .icon-hamburger {
+              display: none;
+            }
+          }
+          @media screen and (max-width: 749px) {
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+  .mobile-nav-wrapper {
+    -ms-transform: translate3d(0, -100%, 0);
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    position: absolute;
+    background-color: #fff;
+    transition: all 0.45s cubic-bezier(0.29, 0.63, 0.44, 1);
+    overflow: hidden;
+    width: 100%;
+    z-index: 1;
+    &.open {
+      transform: translate3d(0, 0, 0);
+      box-shadow: 0 3px 2px -2px grey;
+    }
+    .mobile-search {
+      padding:10px 15px;
+      position: relative;
+      .mobile-search__input {
+        outline: none;
+        border: 1px solid #e8e9eb;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background-color: transparent;
+        border-radius: 2px;
+        width: 100%;
+        padding: 5px 15px 5px 40px;
+        color: #3d4246;
+        font:400 16px/1.5 "Work Sans","HelveticaNeue","Helvetica Neue",sans-serif;
+      }
+      .mobile-search__submit {
+        display: inline-block;
+        vertical-align: middle;
+        position: absolute;
+        left: 12px;
+        top: 12px;
+        padding: 0 0 0 5px;
+        z-index: 1;
+        padding-left: 10px;
+        pointer-events: auto;
+        background-color: transparent;
+        border: 0;
+        margin: 0;
+        color: #3d4246;
+        text-align: left;
+        .icon-search {
+          height: 30px;
+          margin-right: 3px;
+        }
+      }
+    }
+    .mobile-nav {
+      padding: 0;
+      margin: 0;
+      .mobile-nav__item {
+        list-style: none;
+        border-top: 1px solid #e8e9eb;
+        a {
+          display: block;
+          width: 100%;
+          padding: 15px;
+          color: #3d4246;
+          font: 400 16px/1.5 "Work Sans", "HelveticaNeue", "Helvetica Neue", sans-serif;
+        }
+      }
+    }
+  }
+}

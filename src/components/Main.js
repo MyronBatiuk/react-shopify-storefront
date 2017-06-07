@@ -1,22 +1,50 @@
 import React, { Component } from 'react';
 import Header from './header/Header';
 import Footer from './footer/Footer';
-//import ProductsConnector from './home/ProductsConnector';
-//import ProductPage from './singleProduct/ProductPage';
-//import About from './pages/About';
-//import NotFound from './pages/NotFound';
+import Collection from './collection/Collection';
+import Product from './product/Product';
+import Page from './page/Page';
+import NotFound from './404/NotFound';
+import Cart from './cart/Cart';
+import SearchResults from './search/SearchResults';
+import HomePage from './home/HomePage';
+import { Route, Switch } from 'react-router-dom';
 
 export default class App extends Component {
   render() {
-    //const addVariantToCart = this.props.addVariantToCart;
     return (
       <div id="main">
-        <Header/>
+        <Header header={this.props.header}
+                history={this.props.history}
+                location={this.props.location}/>
         <Switch>
-          <Route exact path="/" component={ProductsGrid}/>
-          <Route path="/products/:handle" component={ProductPage}></Route>
+          <Route exact path="/" render={(props) => (
+            <HomePage homepage={this.props.homepage}
+                      collection={this.props.collection}
+                      location={this.props.location}
+                      header={this.props.header}/> )}/>
+          <Route path="/collections/:handle" render={(props) => (
+            <Collection collection={this.props.collection}
+                        location={this.props.location}
+                        header={this.props.header}/> )}/>
+          <Route path="/products/:handle" render={(props) => (
+            <Product product={this.props.product}
+                     cart={this.props.cart}
+                     location={this.props.location}
+                     header={this.props.header}/> )}/>
+          <Route path="/search" render={(props) => (
+            <SearchResults history={this.props.history}
+                           data={this.props.data}
+                           header={this.props.header}/> )}/>
+          <Route path="/pages/:handle" render={(props) => (
+            <Page page={this.props.page}
+                  location={this.props.location}
+                  header={this.props.header}/> )}/>
+          <Route render={(props) => (
+            <NotFound  header={this.props.header}/> )}/>
         </Switch>
         <Footer/>
+        <Cart cart={this.props.cart}/>
       </div>
     )
   }

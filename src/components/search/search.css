@@ -1,0 +1,9 @@
+.search-results {
+  margin: 50px auto; }
+  .search-results .search-results__title {
+    text-align: center; }
+  .search-results .search-item {
+    border-bottom: 1px solid #f6f6f6;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    display: block; }
