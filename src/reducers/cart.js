@@ -7,6 +7,8 @@ function cart(state = [], action) {
       } else {
         newState.items[action.id] = action.product;
       }
+      if ( !newState.hasOwnProperty('currency') )
+        newState['currency'] = action.currency;
       localStorage.setItem('cart', JSON.stringify(newState));
       return newState;
     case 'UPDATE_QUANTITY':

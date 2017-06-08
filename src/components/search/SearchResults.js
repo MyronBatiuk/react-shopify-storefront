@@ -80,8 +80,10 @@ export default class SearchResults extends Component {
   }
 
   componentDidUpdate(){
-    if ( this.props.header.hasOwnProperty('shop_name') )
+    if ( Object.keys(this.props.header).length !== 0 && Object.keys(this.props.data).length !== 0 ){
       helpers.changeSeo('', this.props.header.shop_name, 'Search page', 'Search');
+      helpers.hideLoadingIndicator();
+    }
   }
 
   render() {

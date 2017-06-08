@@ -17,9 +17,10 @@ export default class Page extends Component {
     }
   }
   componentDidUpdate(){
-    helpers.hideLoadingIndicator();
-    if ( this.props.header.hasOwnProperty('shop_name') )
+    if ( Object.keys(this.props.page).length !== 0 && Object.keys(this.props.header).length !== 0 ){
+      helpers.hideLoadingIndicator();
       helpers.changeSeo(this.props.page, this.props.header.shop_name);
+    }
   }
   render() {
     const page = this.props.page;

@@ -4,10 +4,15 @@ import store from '../../store';
 import * as actions from '../../actions/actionCreators';
 import * as helpers from '../../helpers/helpers';
 
-class Cart extends Component {
+export default class Cart extends Component {
 
   closeCart = () => {
     store.dispatch(actions.closeCart());
+  };
+
+  openCheckout = (url) => {
+    localStorage.removeItem('cart');
+    window.location = url;
   };
 
   render() {
@@ -25,6 +30,7 @@ class Cart extends Component {
             key={line_item}
             id={line_item}
             line_item={cart.items[line_item]}
+            currency={cart.currency}
             />
         );
       });
@@ -45,7 +51,7 @@ class Cart extends Component {
           <div className="Cart-info clearfix">
             <div className="Cart-info__total Cart-info__small">Subtotal</div>
             <div className="Cart-info__pricing">
-              <span className="pricing">$ {subtotal}</span>
+              <span className="pricing">{cart.currency} {subtotal}</span>
             </div>
           </div>
           <button className="Cart__checkout button" onClick={() => this.openCheckout(checkoutUrl)}>Checkout</button>
@@ -54,11 +60,4 @@ class Cart extends Component {
       </div>
     )
   }
-
-  openCheckout = (url) => {
-    localStorage.removeItem('cart');
-    window.location = url;
-  };
 }
-
-export default Cart;

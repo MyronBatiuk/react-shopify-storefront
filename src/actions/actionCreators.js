@@ -61,11 +61,12 @@ export function changeSelectedQuantity(quantity) {
   }
 }
 
-export function addVariantToCart(product,id) {
+export function addVariantToCart(product,id,currency) {
   return {
     type:'ADD_VARIANT_TO_CART',
     product: product,
-    id: id.toString()
+    id: id.toString(),
+    currency: currency
   }
 }
 

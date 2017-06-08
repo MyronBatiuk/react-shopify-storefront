@@ -1,0 +1,5 @@
+.not-found {
+  min-height: 300px; }
+  .not-found .not-found__title {
+    margin-top: 50px;
+    text-align: center; }

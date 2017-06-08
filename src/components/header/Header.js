@@ -8,7 +8,7 @@ import * as actions from '../../actions/actionCreators';
 import * as helpers from '../../helpers/helpers';
 import './header.css';
 
-class Header extends Component {
+export default class Header extends Component {
 
   componentWillMount() {
     helpers.getData('/pages/home', 'header');
@@ -20,7 +20,6 @@ class Header extends Component {
   }
   constructor() {
     super();
-
     this.state = {
       mobileNavIsOpen: false
     }
@@ -86,5 +85,3 @@ class Header extends Component {
     )
   }
 }
-
-export default Header;

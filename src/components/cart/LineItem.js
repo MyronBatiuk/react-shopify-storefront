@@ -42,7 +42,7 @@ class LineItem extends Component {
               <button className="Line-item__quantity-update" onClick={this.incrementQuantity}>+</button>
             </div>
             <span className="Line-item__price">
-              $ { (this.props.line_item.quantity * this.props.line_item.price).toFixed(2) }
+              {this.props.currency} { (this.props.line_item.quantity * this.props.line_item.price).toFixed(2) }
             </span>
             <button className="Line-item__remove" onClick={this.removeLineItemFromCart}>×</button>
           </div>

@@ -9,6 +9,11 @@ export default class HomePage extends Component {
   componentWillMount(){
     helpers.getData('/pages/home', 'home');
   }
+  componentDidUpdate(){
+    if (Object.keys(this.props.header).length !== 0 && Object.keys(this.props.collection).length !== 0) {
+      helpers.hideLoadingIndicator();
+    }
+  }
   render(){
     const homepage = this.props.homepage;
     let hero;

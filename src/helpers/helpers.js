@@ -48,11 +48,9 @@ export function showLoadingIndicator(){
 export function hideLoadingIndicator(){
   const indicator = document.getElementById('ipl-progress-indicator');
   window.scrollTo(0, 0);
-  if(indicator){
-    setTimeout(() => {
-      indicator.classList.add('available');
-    }, 250)
-  }
+  setTimeout(() => {
+    indicator.classList.add('available');
+  }, 250);
 }
 
 export function changeSeo(object,shop_name,shop_description,title) {

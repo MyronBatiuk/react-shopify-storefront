@@ -1,16 +1,20 @@
 import React,{ Component } from 'react';
 import * as helpers from '../../helpers/helpers';
+import './notfound.css';
 
-export default class NotFount extends Component {
+export default class NotFound extends Component {
 
   componentDidUpdate(){
-    if ( this.props.header.hasOwnProperty('shop_name') )
+    if ( Object.keys(this.props.header).length !== 0 )
+      helpers.hideLoadingIndicator();
       helpers.changeSeo('', this.props.header.shop_name, 'This page was not found on this site.', '404 Not Found');
   }
 
   render(){
     return(
-      <h1>404 Not Found</h1>
+      <div className="not-found page-width">
+        <h1 className="not-found__title">404 Not Found</h1>
+      </div>
     )
   }
 }

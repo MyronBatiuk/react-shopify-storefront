@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import * as helpers from '../../helpers/helpers';
 
-class Navigation extends Component {
+export default class Navigation extends Component {
 
   componentDidMount(){
     let listOfItems = this.props.items;
@@ -33,6 +33,3 @@ class Navigation extends Component {
     )
   }
 }
-
-
-export default Navigation;

@@ -5,7 +5,7 @@ import Hero from './Hero';
 import * as helpers from '../../helpers/helpers';
 import './collection.css';
 
-class Collection extends Component {
+export default class Collection extends Component {
   componentWillMount() {
     helpers.showLoadingIndicator();
     let collection = this.props.location.pathname;
@@ -34,8 +34,8 @@ class Collection extends Component {
     }
   }
   componentDidUpdate(){
-    helpers.hideLoadingIndicator();
-    if ( this.props.location.pathname !== "/" && this.props.header.hasOwnProperty('shop_name') ) {
+    if ( this.props.location.pathname !== "/" && Object.keys(this.props.header).length !== 0 && Object.keys(this.props.collection).length !== 0 ) {
+      helpers.hideLoadingIndicator();
       helpers.changeSeo(this.props.collection, this.props.header.shop_name);
     }
   }
@@ -74,5 +74,3 @@ class Collection extends Component {
     );
   }
 }
-
-export default Collection;

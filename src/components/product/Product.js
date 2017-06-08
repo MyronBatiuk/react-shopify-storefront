@@ -21,13 +21,15 @@ export default class Product extends Component {
     }
   }
   componentDidUpdate(){
-    helpers.hideLoadingIndicator();
-    if ( this.props.header.hasOwnProperty('shop_name') )
-      helpers.changeSeo(this.props.product, this.props.header.shop_name);
+    if ( Object.keys(this.props.product).length !== 0 && Object.keys(this.props.header).length !== 0 ){
+      helpers.hideLoadingIndicator();
+      helpers.changeSeo(this.props.product, this.props.header.shop_name)
+    }
   }
   addVariantToCart = () => {
     let product = this.props.product;
     let variantId = this.props.product.selected_variant;
+    let currency = this.props.product.currency;
     let cartObject = {
       title: product.title,
       image: product.featured_image,
@@ -36,7 +38,7 @@ export default class Product extends Component {
       option: product.options[0],
       variant: product.variants[variantId].title
     };
-    store.dispatch(actions.addVariantToCart(cartObject, variantId));
+    store.dispatch(actions.addVariantToCart(cartObject, variantId, currency));
     if (!this.props.cart.open)
       store.dispatch(actions.openCart());
   };
