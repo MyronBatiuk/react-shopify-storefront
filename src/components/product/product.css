@@ -1,6 +1,26 @@
 .product-template {
   padding: 50px 0;
   overflow: hidden; }
+  .product-template .featured-image {
+    margin: auto; }
+  .product-template .product-images {
+    list-style: none;
+    padding: 0;
+    text-align: center; }
+    .product-template .product-images .product-images__item {
+      display: inline-block;
+      border: 1px solid #f6f6f6;
+      width: 70px;
+      height: 70px;
+      margin-right: 10px;
+      padding: 3px; }
+      .product-template .product-images .product-images__item:last-child {
+        margin-right: 0; }
+      .product-template .product-images .product-images__item:hover {
+        cursor: pointer;
+        opacity: 0.6; }
+      .product-template .product-images .product-images__item img {
+        margin: auto; }
   .product-template .product__compare-price {
     text-decoration: line-through;
     margin-left: 20px; }

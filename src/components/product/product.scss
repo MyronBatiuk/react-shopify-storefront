@@ -1,6 +1,32 @@
 .product-template {
   padding:50px 0;
   overflow: hidden;
+  .featured-image {
+    margin:auto;
+  }
+  .product-images {
+    list-style: none;
+    padding:0;
+    text-align:center;
+    .product-images__item {
+      display:inline-block;
+      border:1px solid #f6f6f6;
+      width:70px;
+      height:70px;
+      margin-right:10px;
+      padding: 3px;
+      &:last-child {
+        margin-right:0
+      }
+      &:hover {
+        cursor: pointer;
+        opacity: 0.6;
+      }
+      img {
+        margin: auto;
+      }
+    }
+  }
   .product__compare-price {
     text-decoration: line-through;
     margin-left :20px;

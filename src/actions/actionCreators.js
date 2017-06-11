@@ -61,6 +61,13 @@ export function changeSelectedQuantity(quantity) {
   }
 }
 
+export function changeFeaturedImage(image) {
+  return {
+    type: 'CHANGE_FEATURED_IMAGE',
+    image: image
+  }
+}
+
 export function addVariantToCart(product,id,currency) {
   return {
     type:'ADD_VARIANT_TO_CART',

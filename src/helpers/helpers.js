@@ -47,7 +47,8 @@ export function showLoadingIndicator(){
 
 export function hideLoadingIndicator(){
   const indicator = document.getElementById('ipl-progress-indicator');
-  window.scrollTo(0, 0);
+  if ( !indicator.classList.contains('available') )
+    window.scrollTo(0, 0);
   setTimeout(() => {
     indicator.classList.add('available');
   }, 250);
