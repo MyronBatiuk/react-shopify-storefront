@@ -39,10 +39,10 @@ export default class Header extends Component {
     let header = this.props.header;
     let logo, navigation, mobileNavigation;
     if (Object.keys(header).length !== 0) {
-      if (header.logo_src !== '') {
+      if ( header.hasOwnProperty('logo_src') ) {
         logo = <img className="logo" src={header.logo_src} alt=""/>
       } else {
-        logo = <h3>{header.shop_name}</h3>;
+        logo = <h3 className="shop-title">{header.shop_name}</h3>;
       }
       if (Object.keys(header.navigation).length !== 0) {
         navigation = <Navigation items={header.navigation}/>;

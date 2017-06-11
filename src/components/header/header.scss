@@ -15,19 +15,41 @@
         padding-left: 15px;
       }
     }
+    .shop-title {
+      margin:0;
+    }
     .site-nav {
       text-align: center;
       padding: 0;
+      margin:0;
       .nav-item {
         list-style: none;
         display: inline-block;
+        .nav-item__dropdown {
+          display: none;
+          position:absolute;
+          padding: 10px 15px;
+          border: 1px solid #e8e9eb;
+          background: #fff;
+          .dropdown__item {
+            list-style: none;
+            a {
+              padding: 0;
+            }
+          }
+        }
+        &:hover {
+          .nav-item__dropdown {
+
+          }
+        }
         a {
-          padding: 3px 10px;
+          padding: 19px 10px;
           display: block;
           color: #3d4246;
           font: 400 16px/1.5 "Work Sans", "HelveticaNeue", "Helvetica Neue", sans-serif;
           &:hover {
-            opacity: 0.6;
+            opacity:1;
           }
         }
       }

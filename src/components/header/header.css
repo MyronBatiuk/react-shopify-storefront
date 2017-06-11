@@ -13,19 +13,32 @@
     @media screen and (max-width: 749px) {
       .header-section .site-header .logo {
         padding-left: 15px; } }
+  .header-section .site-header .shop-title {
+    margin: 0; }
   .header-section .site-header .site-nav {
     text-align: center;
-    padding: 0; }
+    padding: 0;
+    margin: 0; }
     .header-section .site-header .site-nav .nav-item {
       list-style: none;
       display: inline-block; }
+      .header-section .site-header .site-nav .nav-item .nav-item__dropdown {
+        display: none;
+        position: absolute;
+        padding: 10px 15px;
+        border: 1px solid #e8e9eb;
+        background: #fff; }
+        .header-section .site-header .site-nav .nav-item .nav-item__dropdown .dropdown__item {
+          list-style: none; }
+          .header-section .site-header .site-nav .nav-item .nav-item__dropdown .dropdown__item a {
+            padding: 0; }
       .header-section .site-header .site-nav .nav-item a {
-        padding: 3px 10px;
+        padding: 19px 10px;
         display: block;
         color: #3d4246;
         font: 400 16px/1.5 "Work Sans", "HelveticaNeue", "Helvetica Neue", sans-serif; }
         .header-section .site-header .site-nav .nav-item a:hover {
-          opacity: 0.6; }
+          opacity: 1; }
   .header-section .site-header .site-header__icons {
     position: relative;
     white-space: nowrap;
