@@ -37,8 +37,6 @@
         display: block;
         color: #3d4246;
         font: 400 16px/1.5 "Work Sans", "HelveticaNeue", "Helvetica Neue", sans-serif; }
-        .header-section .site-header .site-nav .nav-item a:hover {
-          opacity: 1; }
   .header-section .site-header .site-header__icons {
     position: relative;
     white-space: nowrap;
