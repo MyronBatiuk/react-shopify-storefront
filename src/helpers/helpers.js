@@ -1,15 +1,7 @@
 import * as actions from '../actions/actionCreators';
 import store from '../store';
-import Client, {Config} from 'shopify-buy';
 
-const shopifyStoreDomain = "custom-storefront.myshopify.com";
-
-const config = new Config({
-  storefrontAccessToken: '220658e0dee403d784ffef24d20241cd',
-  domain: shopifyStoreDomain
-});
-
-export const client = new Client(config);
+const shopifyStoreDomain = "50-states-apparel-staging.myshopify.com";
 
 export const shopifyStoreUrl = "https://" + shopifyStoreDomain;
 
@@ -47,11 +39,12 @@ export function showLoadingIndicator(){
 
 export function hideLoadingIndicator(){
   const indicator = document.getElementById('ipl-progress-indicator');
-  if ( !indicator.classList.contains('available') )
+  if ( !indicator.classList.contains('available') ) {
     window.scrollTo(0, 0);
-  setTimeout(() => {
-    indicator.classList.add('available');
-  }, 250);
+    setTimeout(() => {
+      indicator.classList.add('available');
+    }, 250);
+  }
 }
 
 export function changeSeo(object,shop_name,shop_description,title) {

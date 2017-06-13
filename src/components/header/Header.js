@@ -1,22 +1,17 @@
 import React, { Component } from 'react';
 import Navigation from './Navigation';
-import SearchForm from './SearchForm';
 import MobileNavigation from './MobileNavigation';
 import { Link } from 'react-router-dom';
 import store from '../../store';
 import * as actions from '../../actions/actionCreators';
 import * as helpers from '../../helpers/helpers';
+import CartIcon from './assets/cart-icon.png';
 import './header.css';
 
 export default class Header extends Component {
 
   componentWillMount() {
     helpers.getData('/pages/home', 'header');
-  }
-  componentDidUpdate() {
-    if ( this.props.location.pathname === "/" && this.props.header.hasOwnProperty('shop_name')) {
-      helpers.changeSeo(null, this.props.header.shop_name, this.props.header.shop_description);
-    }
   }
   constructor() {
     super();
@@ -51,7 +46,7 @@ export default class Header extends Component {
     }
 
     return (
-      <div className="header-section">
+      <div className="header-section page-width">
         <header className="site-header">
           <div className="grid grid--no-gutters grid--table">
             <div className="grid__item small--one-half medium-up--one-quarter">
@@ -59,15 +54,11 @@ export default class Header extends Component {
                 {logo}
               </Link>
             </div>
-            <div className="grid__item medium-up--one-half small--hide">
+            <div className="grid__item small--one-half medium-up--three-quarters site-header__icons">
               {navigation}
-            </div>
-            <div className="grid__item small--one-half medium-up--one-quarter site-header__icons">
               <div className="site-header__icons-wrapper">
-                <SearchForm history={this.props.history} />
                 <span onClick={this.openCart} className="site-header__cart">
-                  <svg aria-hidden="true" focusable="false" role="presentation" className="icon icon-cart" viewBox="0 0 37 40"><path d="M36.5 34.8L33.3 8h-5.9C26.7 3.9 23 .8 18.5.8S10.3 3.9 9.6 8H3.7L.5 34.8c-.2 1.5.4 2.4.9 3 .5.5 1.4 1.2 3.1 1.2h28c1.3 0 2.4-.4 3.1-1.3.7-.7 1-1.8.9-2.9zm-18-30c2.2 0 4.1 1.4 4.7 3.2h-9.5c.7-1.9 2.6-3.2 4.8-3.2zM4.5 35l2.8-23h2.2v3c0 1.1.9 2 2 2s2-.9 2-2v-3h10v3c0 1.1.9 2 2 2s2-.9 2-2v-3h2.2l2.8 23h-28z"></path>
-                  </svg>
+                  <img className="icon icon-cart" src={CartIcon} alt=""/>
                 </span>
                 <button type="button" className={`site-header__mobile-menu ${this.state.mobileNavIsOpen ? 'open' : ''}`}
                         onClick={this.collapseNav}>

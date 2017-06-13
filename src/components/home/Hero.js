@@ -15,7 +15,7 @@ export default class Hero extends Component {
       backgroundImage: 'url(' + heroImage + ')'
     };
     if ( hero.title !== '' ){
-      heroTitle = <h2 className="inner__title">{hero.title}</h2>;
+      heroTitle = <h1 className="inner__title">{hero.title}</h1>;
     }
     if ( hero.text !== '' ){
       heroSubtitle =  <p className="inner__subtitle">{hero.text}</p>;

@@ -1,7 +1,86 @@
-footer {
-  padding:70px 0;
-  border-top:1px solid #f6f6f6;
-  .copyright {
-    text-align: center;
+.site-footer {
+  background: #efefef;
+  .site-footer__support-bar {
+    padding: 3.625em 30px;
+    @media screen and (max-width: 749px) {
+      padding: 3em 20px;
+    }
+    .support-bar__subscribe {
+      @media screen and (max-width: 749px){
+        text-align: center;
+        margin-bottom: 40px;
+      }
+      .subscribe__title {
+        font-size: 1.25em;
+        color:#535253;
+        font-weight: 600;
+      }
+      .email-submit-form {
+        button[type="submit"] {
+          float: right;
+          color: #fff;
+          background: #40ba94;
+          border-color: #3bab88;
+          transition: all 300ms ease;
+          outline: none;
+          padding:0 1em;
+          font-size: 1em;
+          border-radius: 2px;
+          cursor: pointer;
+          border: 0;
+          height: 42px;
+          &:hover {
+            background: #3aa785;
+          }
+        }
+        .field {
+          overflow: hidden;
+          padding-right: 0.625em;
+          margin: 1em auto;
+          input[type="email"] {
+            height: 40px;
+            display: block;
+            padding: 0 1em;
+            border: solid 1px #e0e0e0;
+            background: #fff;
+            font-size: 0.875em;
+            border-radius: 2px;
+            width: calc(100% - 2em);
+            font-weight: 600;
+            &:focus {
+              border-color: #49c09b;
+            }
+          }
+        }
+      }
+    }
+    .support-bar__submit {
+      text-align: right;
+      @media screen and (max-width:991px){
+        text-align: center;
+      }
+      a {
+        display:block;
+        img {
+          width:75px;
+          display: inline-block;
+          vertical-align: middle;
+          @media screen and (max-width:991px){
+            display: block;
+            margin: 0 auto 10px;
+          }
+        }
+        .submit__title {
+          display: inline-block;
+          margin: 0 0 0 30px;
+          font-size: 1.25em;
+          color:#535253;
+          font-weight: 600;
+          @media screen and (max-width:991px){
+            margin: 0;
+          }
+        }
+      }
+    }
   }
 }

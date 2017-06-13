@@ -50,7 +50,7 @@ export default class Navigation extends Component {
       }
     });
     return (
-      <ul className="site-nav">
+      <ul className="site-nav small--hide">
         {items}
       </ul>
     )

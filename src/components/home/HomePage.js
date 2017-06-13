@@ -10,7 +10,8 @@ export default class HomePage extends Component {
     helpers.getData('/pages/home', 'home');
   }
   componentDidUpdate(){
-    if (Object.keys(this.props.header).length !== 0 && Object.keys(this.props.collection).length !== 0) {
+    if (Object.keys(this.props.header).length !== 0 && Object.keys(this.props.collection).length !== 0 && Object.keys(this.props.homepage).length !== 0) {
+      helpers.changeSeo(null, this.props.header.shop_name, this.props.header.shop_description);
       helpers.hideLoadingIndicator();
     }
   }
