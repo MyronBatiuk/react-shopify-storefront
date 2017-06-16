@@ -33,14 +33,14 @@
       padding-right: 0.625em;
       margin: 1em auto; }
       .site-footer .site-footer__support-bar .support-bar__subscribe .email-submit-form .field input[type="email"] {
-        height: 40px;
+        height: 42px;
         display: block;
         padding: 0 1em;
         border: solid 1px #e0e0e0;
         background: #fff;
         font-size: 0.875em;
         border-radius: 2px;
-        width: calc(100% - 2em);
+        width: 100%;
         font-weight: 600; }
         .site-footer .site-footer__support-bar .support-bar__subscribe .email-submit-form .field input[type="email"]:focus {
           border-color: #49c09b; }

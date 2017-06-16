@@ -29,29 +29,14 @@
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%); }
 
-.collection .collection-content {
+.collection .products-grid {
   margin-top: 50px; }
-  .collection .collection-content .Product {
-    display: block;
-    text-align: center;
-    margin-bottom: 30px; }
-    .collection .collection-content .Product .Product__title {
-      font-size: 1.5rem;
-      margin-top: 1rem;
-      margin-bottom: 0.4rem;
-      color: #000;
-      font-weight: 600; }
-    .collection .collection-content .Product .Product__price {
-      display: inline-block;
-      font-size: 1.1rem;
-      margin-bottom: 0.4rem;
-      color: #000; }
-  .collection .collection-content .pagination {
+  .collection .products-grid .pagination {
     padding: 0; }
-    .collection .collection-content .pagination li {
+    .collection .products-grid .pagination li {
       list-style: none;
       display: inline-block;
       border: 1px solid #f6f6f6; }
-      .collection .collection-content .pagination li a {
+      .collection .products-grid .pagination li a {
         display: block;
         padding: 3px 10px; }

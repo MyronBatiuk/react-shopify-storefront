@@ -1,11 +1,11 @@
-.home-page .hero-section .hero-section__image {
+.home .hero-section .hero-section__image {
   height: 300px;
   position: relative;
   display: table;
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat; }
-  .home-page .hero-section .hero-section__image .hero-section__inner {
+  .home .hero-section .hero-section__image .hero-section__inner {
     position: relative;
     display: table-cell;
     vertical-align: middle;
@@ -16,21 +16,21 @@
     margin: 0 auto;
     text-align: center; }
     @media screen and (max-width: 767px) {
-      .home-page .hero-section .hero-section__image .hero-section__inner {
+      .home .hero-section .hero-section__image .hero-section__inner {
         padding: 20px 15px; } }
-    .home-page .hero-section .hero-section__image .hero-section__inner .inner__title {
+    .home .hero-section .hero-section__image .hero-section__inner .inner__title {
       font-size: 2.625em;
       font-weight: 600;
       margin-bottom: 8px;
       text-shadow: 0 0 15px rgba(0, 0, 0, 0.1); }
       @media screen and (max-width: 767px) {
-        .home-page .hero-section .hero-section__image .hero-section__inner .inner__title {
+        .home .hero-section .hero-section__image .hero-section__inner .inner__title {
           font-size: 2em; } }
-    .home-page .hero-section .hero-section__image .hero-section__inner .inner__subtitle {
+    .home .hero-section .hero-section__image .hero-section__inner .inner__subtitle {
       margin: 0 auto;
       max-width: 75%;
       text-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
       font-size: 1.5em; }
       @media screen and (max-width: 767px) {
-        .home-page .hero-section .hero-section__image .hero-section__inner .inner__subtitle {
+        .home .hero-section .hero-section__image .hero-section__inner .inner__subtitle {
           font-size: 1.25em; } }

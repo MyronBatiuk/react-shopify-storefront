@@ -68,7 +68,7 @@ export function changeSeo(object,shop_name,shop_description,title) {
   if ( seoTitle !== '' && shopName !== '' ) {
     document.title = seoTitle + ' | ' + shopName;
   } else if ( shopName !== '' ) {
-    document.title = pageTitle + ' | ' + shopName;
+    document.title = pageTitle + ' | ' +  shopName;
   }
   let meta = document.getElementsByTagName("meta");
   if ( seoDescription !== '' ) {

@@ -7,7 +7,7 @@ import Page from './page/Page';
 import NotFound from './404/NotFound';
 import Cart from './cart/Cart';
 import SearchResults from './search/SearchResults';
-import HomePage from './home/HomePage';
+import Home from './home/Home';
 import { Route, Switch } from 'react-router-dom';
 
 export default class App extends Component {
@@ -19,8 +19,8 @@ export default class App extends Component {
                 location={this.props.location}/>
         <Switch>
           <Route exact path="/" render={(props) => (
-            <HomePage homepage={this.props.homepage}
-                      collection={this.props.collection}
+            <Home homepage={this.props.homepage}
+                      data={this.props.data}
                       location={this.props.location}
                       header={this.props.header}/> )}/>
           <Route path="/collections/:handle" render={(props) => (

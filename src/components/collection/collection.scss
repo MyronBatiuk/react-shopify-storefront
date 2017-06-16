@@ -35,26 +35,8 @@
       }
     }
   }
-  .collection-content {
+  .products-grid {
     margin-top:50px;
-    .Product {
-      display: block;
-      text-align: center;
-      margin-bottom: 30px;
-      .Product__title {
-        font-size: 1.5rem;
-        margin-top: 1rem;
-        margin-bottom: 0.4rem;
-        color:#000;
-        font-weight: 600;
-      }
-      .Product__price {
-        display: inline-block;
-        font-size: 1.1rem;
-        margin-bottom: 0.4rem;
-        color:#000;
-      }
-    }
     .pagination {
       padding:0;
       li {

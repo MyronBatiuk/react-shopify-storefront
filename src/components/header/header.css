@@ -114,7 +114,10 @@
   transition: all 0.45s cubic-bezier(0.29, 0.63, 0.44, 1);
   overflow: hidden;
   width: 100%;
-  z-index: 5; }
+  z-index: 5;
+  display: none; }
+  .header-section .mobile-nav-wrapper.show {
+    display: block; }
   .header-section .mobile-nav-wrapper.open {
     transform: translate3d(0, 0, 0);
     box-shadow: 0 3px 2px -2px grey; }

@@ -13,6 +13,7 @@ export default class Header extends Component {
   componentWillMount() {
     helpers.getData('/pages/home', 'header');
   }
+
   constructor() {
     super();
     this.state = {
@@ -21,9 +22,23 @@ export default class Header extends Component {
   }
 
   collapseNav = () => {
+    //open mobile-nav
+    const mobileNav = document.getElementById('mobile-nav');
+    if (mobileNav.classList.contains('open')) {
+      mobileNav.classList.remove('open');
+      setTimeout(() =>{
+        mobileNav.classList.remove('show');
+      },450);
+    } else {
+      mobileNav.classList.add('show');
+      setTimeout(() =>{
+        mobileNav.classList.add('open');
+      },1);
+    }
+    //change button icon
     this.setState({
       mobileNavIsOpen: !this.state.mobileNavIsOpen
-    })
+    });
   };
 
   openCart = () => {
@@ -41,7 +56,7 @@ export default class Header extends Component {
       }
       if (Object.keys(header.navigation).length !== 0) {
         navigation = <Navigation items={header.navigation}/>;
-        mobileNavigation = <MobileNavigation items={header.navigation} status={this.state.mobileNavIsOpen}/>;
+        mobileNavigation = <MobileNavigation items={header.navigation}/>;
       }
     }
 

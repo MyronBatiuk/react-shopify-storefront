@@ -13,7 +13,6 @@ export default class Footer extends Component {
               <div className="support-bar__subscribe">
                 <h4 className="subscribe__title">Get updates on new products from 50 States Apparel</h4>
                 <form method="POST" action="//50statesapparel.us11.list-manage.com/subscribe/post?u=66b8925bd0c9cf475febf2755&amp;id=a58814d25b" acceptCharset="UTF-8" id="subscribe" className="email-submit-form" target="_blank">
-                  <input name="_token" type="hidden" value="dZvuwz2aRXtiBp37PygYsCPrYsXCYGoh1zRXMFhS"/>
                   <button type="submit">Get Updates</button>
                   <div className="field">
                     <input type="email" name="EMAIL" placeholder="Email Address"/>

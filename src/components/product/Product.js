@@ -24,7 +24,7 @@ export default class Product extends Component {
   componentDidUpdate(){
     if ( Object.keys(this.props.product).length !== 0 && Object.keys(this.props.header).length !== 0 ){
       helpers.hideLoadingIndicator();
-      helpers.changeSeo(this.props.product, this.props.header.shop_name)
+      helpers.changeSeo(this.props.product, this.props.header.shop_name);
     }
   }
   addVariantToCart = () => {
