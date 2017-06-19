@@ -212,6 +212,10 @@ h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
   word-wrap: break-word; }
 
+img {
+  max-width: 100%;
+  display: block; }
+
 .icon {
   display: inline-block;
   width: 20px;
@@ -446,7 +450,11 @@ ul {
   .medium-up--one-half {
     width: 50% !important; }
   .medium-up--hide {
-    display: none !important; } }
+    display: none !important; }
+  .medium-up--seven-twelfths {
+    width: 58.33333% !important; }
+  .medium-up--five-twelfths {
+    width: 41.66667% !important; } }
 
 @media only screen and (max-width: 749px) {
   .small--hide {

@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 import VariantSelector from './VariantSelector';
 import ProductImages from './ProductImages';
+import ShareButtons from './ShareButtons';
+import SizeChart from './SizeChart';
 import * as helpers from '../../helpers/helpers';
 import store from '../../store';
 import * as actions from '../../actions/actionCreators';
@@ -13,20 +16,23 @@ export default class Product extends Component {
     let productUrl = this.props.location.pathname;
     helpers.getData(productUrl, 'product');
   }
-  componentWillReceiveProps(nextProps){
+
+  componentWillReceiveProps(nextProps) {
     let newProduct = nextProps.location.pathname;
     let currentProduct = this.props.location.pathname;
-    if ( newProduct !== currentProduct ) {
+    if (newProduct !== currentProduct) {
       helpers.showLoadingIndicator();
       helpers.getData(newProduct, 'product');
     }
   }
-  componentDidUpdate(){
-    if ( Object.keys(this.props.product).length !== 0 && Object.keys(this.props.header).length !== 0 ){
+
+  componentDidUpdate() {
+    if (Object.keys(this.props.product).length !== 0 && Object.keys(this.props.header).length !== 0) {
       helpers.hideLoadingIndicator();
       helpers.changeSeo(this.props.product, this.props.header.shop_name);
     }
   }
+
   addVariantToCart = () => {
     let product = this.props.product;
     let variantId = this.props.product.selected_variant;
@@ -51,7 +57,11 @@ export default class Product extends Component {
   render() {
     let variantSelectors, comparePrice, productImages;
     let product = this.props.product;
+    let collections, group, shareButtons;
+    const sizeChart = <SizeChart/>;
     if (Object.keys(product).length !== 0) {
+      shareButtons = <ShareButtons product={product}/>;
+
       if (Object.keys(product.variants).length > 1)
         variantSelectors = <VariantSelector
           variants={product.variants}
@@ -60,22 +70,52 @@ export default class Product extends Component {
         productImages = <ProductImages
           images={product.product_images}
           />;
-      if ( product.selected_compare_price !== '' )
-        comparePrice = <span className="product__compare-price">{product.currency + product.selected_compare_price}</span>
+      if (product.hasOwnProperty('group'))
+        group = <h4 className="product__group">{product.group}</h4>;
+      if (product.selected_compare_price !== '')
+        comparePrice =
+          <span className="product__compare-price">{product.currency + product.selected_compare_price}</span>;
+      const productCollections = product.collections;
+      if (Object.keys(productCollections).length !== 0) {
+        collections = Object.keys(productCollections).map(key =>
+            <Link key={key} to={`/collections/${productCollections[key].handle}`}>
+              {productCollections[key].title}
+            </Link>
+        )
+      }
     }
     return (
       <div className="product-template page-width">
         <div className="grid">
-          <div className="grid__item medium-up--one-half">
+          <div className="grid__item medium-up--seven-twelfths">
             <img className="featured-image" src={product.featured_image} alt={product.title}/>
             {productImages}
           </div>
-          <div className="grid__item medium-up--one-half">
+          <div className="grid__item medium-up--five-twelfths">
+            <ul className="breadcrumbs">
+              <li>
+                <Link to="/">All States</Link>
+              </li>
+              <span className="breadcrumbs__divider">/</span>
+              <li className="breadcrumbs__collections">
+                {collections}
+              </li>
+              <span className="breadcrumbs__divider">/</span>
+              <li>
+                {product.title}
+              </li>
+            </ul>
             <h1 className="product__title">{product.title}</h1>
+            {group}
             <span className="product__price">{product.currency + product.selected_price}</span>
             {comparePrice}
             <p className="product__description" dangerouslySetInnerHTML={{__html: product.content}}></p>
-            {variantSelectors}
+
+            <div className="variants-and-share-buttons">
+              {variantSelectors}
+              {shareButtons}
+            </div>
+            {sizeChart}
             <label className="product__quantity">
               Quantity
               <input min="1" type="number" defaultValue="1" onChange={this.quantityChange}></input>
