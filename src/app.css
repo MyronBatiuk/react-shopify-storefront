@@ -311,8 +311,7 @@ ul {
   overflow: hidden; }
   .grid .grid__item {
     float: left;
-    padding-left: 30px;
-    width: 100%; }
+    padding-left: 30px; }
     @media screen and (max-width: 450px) {
       .grid .grid__item {
         width: 100% !important; } }
@@ -444,26 +443,26 @@ ul {
 
 @media only screen and (min-width: 1201px) {
   .large-up--seven-twelfths {
-    width: 58.33333% !important; }
+    width: 58.33333%; }
   .large-up--five-twelfths {
-    width: 41.66667% !important; } }
+    width: 41.66667%; } }
 
 @media only screen and (min-width: 750px) {
   .medium-up--one-quarter {
-    width: 25% !important; }
+    width: 25%; }
   .medium-up--one-half {
-    width: 50% !important; }
+    width: 50%; }
   .medium-up--hide {
     display: none !important; }
   .medium-up--seven-twelfths {
-    width: 58.33333% !important; }
+    width: 58.33333%; }
   .medium-up--five-twelfths {
-    width: 41.66667% !important; } }
+    width: 41.66667%; } }
 
 @media only screen and (max-width: 749px) {
   .small--hide {
     display: none !important; }
   .small--one-half {
-    width: 50% !important; }
+    width: 50%; }
   .small--full-width {
     display: block !important; } }

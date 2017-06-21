@@ -89,16 +89,16 @@ export default class Product extends Component {
         )
       }
       if (Object.keys(data).length !== 0)
-        relatedItems = <RelatedItems data={data} title={product.title} slug={product.slug}/>
+        relatedItems = <RelatedItems data={data} title={product.title} slug={product.slug}/>;
     }
     return (
       <div className="product-template page-width">
         <div className="grid product-content">
-          <div className="grid__item medium-up--seven-twelfths">
+          <div className="grid__item medium-up--seven-twelfths small--full-width content__images">
             <img className="featured-image" src={product.featured_image} alt={product.title}/>
             {productImages}
           </div>
-          <div className="grid__item medium-up--five-twelfths">
+          <div className="grid__item medium-up--five-twelfths small--full-width content__info">
             <ul className="breadcrumbs">
               <li>
                 <Link to="/">All States</Link>
