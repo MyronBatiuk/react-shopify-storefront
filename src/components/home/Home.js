@@ -29,7 +29,6 @@ export default class Home extends Component {
         productsGrid = <ProductsGrid data={data} filters={productsFilters}/>
       }
     }
-
     return (
       <div className="home">
         {hero}

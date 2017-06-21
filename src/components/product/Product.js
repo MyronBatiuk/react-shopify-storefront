@@ -4,6 +4,8 @@ import VariantSelector from './VariantSelector';
 import ProductImages from './ProductImages';
 import ShareButtons from './ShareButtons';
 import SizeChart from './SizeChart';
+import Designer from './Designer';
+import RelatedItems from './RelatedItems';
 import * as helpers from '../../helpers/helpers';
 import store from '../../store';
 import * as actions from '../../actions/actionCreators';
@@ -27,7 +29,7 @@ export default class Product extends Component {
   }
 
   componentDidUpdate() {
-    if (Object.keys(this.props.product).length !== 0 && Object.keys(this.props.header).length !== 0) {
+    if (Object.keys(this.props.product).length !== 0 && Object.keys(this.props.header).length !== 0 && Object.keys(this.props.data).length !== 0) {
       helpers.hideLoadingIndicator();
       helpers.changeSeo(this.props.product, this.props.header.shop_name);
     }
@@ -56,22 +58,25 @@ export default class Product extends Component {
 
   render() {
     let variantSelectors, comparePrice, productImages;
-    let product = this.props.product;
-    let collections, group, shareButtons;
+    const product = this.props.product;
+    const data = this.props.data;
+    let collections, group, shareButtons, designer, relatedItems;
     const sizeChart = <SizeChart/>;
     if (Object.keys(product).length !== 0) {
       shareButtons = <ShareButtons product={product}/>;
-
       if (Object.keys(product.variants).length > 1)
         variantSelectors = <VariantSelector
           variants={product.variants}
           />;
+      if (product.hasOwnProperty('designer'))
+        designer = <Designer designer={product.designer}/>;
       if (Object.keys(product.product_images).length > 1)
         productImages = <ProductImages
           images={product.product_images}
           />;
-      if (product.hasOwnProperty('group'))
+      if (product.hasOwnProperty('group')){
         group = <h4 className="product__group">{product.group}</h4>;
+      }
       if (product.selected_compare_price !== '')
         comparePrice =
           <span className="product__compare-price">{product.currency + product.selected_compare_price}</span>;
@@ -83,10 +88,12 @@ export default class Product extends Component {
             </Link>
         )
       }
+      if (Object.keys(data).length !== 0)
+        relatedItems = <RelatedItems data={data} title={product.title} slug={product.slug}/>
     }
     return (
       <div className="product-template page-width">
-        <div className="grid">
+        <div className="grid product-content">
           <div className="grid__item medium-up--seven-twelfths">
             <img className="featured-image" src={product.featured_image} alt={product.title}/>
             {productImages}
@@ -116,13 +123,14 @@ export default class Product extends Component {
               {shareButtons}
             </div>
             {sizeChart}
-            <label className="product__quantity">
-              Quantity
-              <input min="1" type="number" defaultValue="1" onChange={this.quantityChange}></input>
-            </label>
-            <button className="product__buy button" onClick={this.addVariantToCart}>Add to Cart</button>
+            <button className="product__add-to-cart" onClick={this.addVariantToCart}>
+              <i className="fa fa-plus"></i>
+              Add to Cart
+            </button>
+            {designer}
           </div>
         </div>
+        {relatedItems}
       </div>
     );
   }

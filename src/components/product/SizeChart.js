@@ -1,4 +1,5 @@
 import React , {Component} from 'react';
+import ModalContainer from './ModalContainer';
 
 export default class SizeChart extends Component {
 
@@ -10,9 +11,15 @@ export default class SizeChart extends Component {
     };
   }
 
-  toggleModal = () => {
+  showModal = () => {
     this.setState({
-      open: !this.state.open
+      open: true
+    })
+  };
+
+  hideModal = () => {
+    this.setState({
+      open: false
     })
   };
 
@@ -20,16 +27,10 @@ export default class SizeChart extends Component {
 
     return (
       <div className="product__size-chart">
-        <span className="size-chart__title" onClick={this.toggleModal}>Size chart</span>
+        <span className="size-chart__title" onClick={this.showModal}>Size chart</span>
 
         <div className={`size-chart__modal ${this.state.open ? 'open' : ''}`}>
-          <div className="modal__container">
-            <i className="container__close-button" onClick={this.toggleModal}></i>
-
-            <div className="container__content">
-              <img src="http://www.50statesapparel.com/images/FS_Size_Chart_Lg.jpg" alt="Shirt Size Chart"/>
-            </div>
-          </div>
+          <ModalContainer hideModal={this.hideModal}/>
         </div>
       </div>
     )

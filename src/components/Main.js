@@ -31,6 +31,7 @@ export default class App extends Component {
             <Product product={this.props.product}
                      cart={this.props.cart}
                      location={this.props.location}
+                     data={this.props.data}
                      header={this.props.header}/> )}/>
           <Route path="/search" render={(props) => (
             <SearchResults history={this.props.history}

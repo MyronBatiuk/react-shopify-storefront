@@ -143,7 +143,8 @@ export default class ProductsGrid extends Component {
         product={data[filteredProducts[key]]}
         />
     );
-
+    if (Object.keys(filteredProducts).length === 0)
+      products = <h2 className="no-results-title">No products found</h2>;
     return (
       <div className="products-grid page-width">
         <div className="products-filters">
