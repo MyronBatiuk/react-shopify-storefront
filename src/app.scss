@@ -276,6 +276,9 @@ ul {
     margin: 25px 0 55px;
     .types-and-vendors-filter {
       display: inline-block;
+      @media screen and (max-width:991px){
+        display:block;
+      }
       li {
         display:inline-block;
         margin: 0 16px 15px;
@@ -283,15 +286,42 @@ ul {
         text-transform: uppercase;
         font-weight: 500;
         cursor: pointer;
+        @media screen and (max-width:767px){
+          margin: 0 8px 15px;
+        }
         &:hover {
           opacity:0.6;
         }
         &:last-child {
           margin-right:0;
+          @media screen and (max-width:991px){
+            margin-right:16px;
+          }
         }
         &.active {
           border-bottom: 2px solid #535253;
         }
+      }
+    }
+    .collection-title {
+      display:inline-block;
+      background: #40BA94;
+      margin-left:70px;
+      color:#fff;
+      font-size:16px;
+      width:260px;
+      padding: 5px 15px;
+      text-align:left;
+      border-radius: 5px;
+      @media screen and (max-width:991px){
+        margin-left:0;
+      }
+      .icon-close {
+        float: right;
+        width: 15px;
+        fill: #fff;
+        margin-top:2px;
+        cursor:pointer;
       }
     }
     .collections-filter {

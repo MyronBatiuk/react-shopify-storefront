@@ -1,52 +1,38 @@
-.collection {
+.collection-template {
   .collection-hero {
-    position: relative;
-    .collection-hero__image {
-      background-position: 50% 50%;
-      background-repeat: no-repeat;
-      background-size: cover;
-      height: 300px;
-      opacity: 1;
-    }
-    .collection-hero__title-wrapper {
-      &:before {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background-color: #3d4246;
-        opacity: 0.25;
-      }
-      .collection-hero__title {
-        font-size: 2em;
-        font-weight: 600;
-        position: absolute;
-        color: #fff;
-        width: 100%;
-        text-align: center;
-        left: 0;
-        right: 0;
-        top: 50%;
-        -ms-transform: translateY(-50%);
-        -webkit-transform: translateY(-50%);
-        transform: translateY(-50%);
-      }
-    }
-  }
-  .products-grid {
-    margin-top:50px;
-    .pagination {
-      padding:0;
-      li {
-        list-style: none;
+    background:url('./assets/collection-image.png') no-repeat;
+    background-size: cover;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    &__content {
+      text-align: center;
+      .collection-hero__title-wrapper {
         display: inline-block;
-        border:1px solid #f6f6f6;
-        a {
-          display: block;
-          padding: 3px 10px;
+        text-align: right;
+        vertical-align: middle;
+        .collection-hero__title {
+          font-size: 41px;
+          text-transform: uppercase;
+          font-weight: 600;
+          color: #fff;
+          width: 100%;
+          margin-bottom: 10px;
+          @media screen and (max-width:767px){
+            font-size: 33px;
+          }
         }
+        .collection-hero__description {
+          color: #fff;
+          font-size: 24px;
+          margin: 0;
+        }
+      }
+      .collection-hero__image {
+        margin-left:30px;
+        display: inline-block;
+        vertical-align: middle;
+        height:120px;
       }
     }
   }

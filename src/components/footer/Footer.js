@@ -8,7 +8,7 @@ export default class Footer extends Component {
     return (
       <footer className="site-footer">
         <div className="site-footer__support-bar page-width">
-          <div className="grid grid--table">
+          <div className="grid grid--table grid--no-gutters">
             <div className="grid__item large-up--seven-twelfths small--full-width">
               <div className="support-bar__subscribe">
                 <h4 className="subscribe__title">Get updates on new products from 50 States Apparel</h4>

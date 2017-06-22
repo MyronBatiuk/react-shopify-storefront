@@ -1,31 +1,45 @@
 import React , { Component } from 'react';
-import Product from '../collection/Product';
+import Product from './Product';
+import {Link} from 'react-router-dom';
 
 export default class ProductsGrid extends Component {
 
-  constructor() {
-    super();
-
+  constructor(props) {
+    super(props);
     this.state = {
       filteredProducts: [],
       filterType: '',
       filterValue: '',
-      filterCollection: ''
+      filterCollection: props.collection
     };
   }
 
   componentWillMount() {
     const data = this.props.data;
     const typeFilter = this.props.filters['types'];
+    const filterCollection = this.state.filterCollection;
+    let filteredByCollection;
     this.setState({
       filterType: 'type',
       filterValue: typeFilter['0']
     });
     let results = [];
     for (let i = 0; i < Object.keys(data).length; i++) {
-      if (data[i].hasOwnProperty('vendor')) {
-        if (data[i].type === typeFilter['0'])
+      let dataObject = data[i];
+      let collections = dataObject['collections'];
+      if (dataObject.hasOwnProperty('vendor')) {
+        if ( filterCollection !== '' ) {
+          for( let j=0; j < Object.keys(collections).length; j++ ) {
+            if ( collections[j].title === filterCollection )
+              filteredByCollection = true;
+          }
+        } else {
+          filteredByCollection = true;
+        }
+
+        if ( dataObject.type === typeFilter['0'] && filteredByCollection )
           results.push(i);
+        filteredByCollection = false;
       }
     }
     this.setState({
@@ -53,7 +67,7 @@ export default class ProductsGrid extends Component {
       filterValue = nextState.filterValue;
       filterType = nextState.filterType;
     }
-    if ( filterCollection !== nextState.filterCollection) {
+    if ( filterCollection !== nextState.filterCollection ) {
       this.setState({
         filteredProducts: []
       });
@@ -61,6 +75,10 @@ export default class ProductsGrid extends Component {
       newFilter = true;
       filterCollection = nextState.filterCollection;
     }
+    if (nextProps.collection !== this.props.collection)
+      this.setState({
+        filterCollection: nextProps.collection
+      });
     if ( oldLength !== newLength ) {
       for (let i = oldLength; i < newLength; i++) {
         let dataObject = newData[i];
@@ -109,6 +127,8 @@ export default class ProductsGrid extends Component {
     const typeFilters = filters['types'];
     const vendorFilters = filters['vendors'];
     const collectionFilters = filters['collections'];
+    const collection = this.props.collection;
+    let collectionFilter;
     let types = Object.keys(typeFilters).map(key => {
       if ( filterValue === typeFilters[key] ) {
         return (
@@ -132,11 +152,22 @@ export default class ProductsGrid extends Component {
         )
       }
     });
-
-
-    let collections = Object.keys(collectionFilters).map(key =>
-        <option value={collectionFilters[key]}>{collectionFilters[key]}</option>
-    );
+    if (collection === '') {
+      let collections = Object.keys(collectionFilters).map(key =>
+          <option value={collectionFilters[key]}>{collectionFilters[key]}</option>
+      );
+      collectionFilter = <select className="collections-filter" onChange={this.changeCollection}>
+        <option value="">Search by state</option>
+        {collections}
+      </select>;
+    } else {
+      collectionFilter = <div className="collection-title">
+        {collection}
+        <Link to="/">
+          <svg aria-hidden="true" focusable="false" role="presentation" className="icon-close" viewBox="0 0 37 40"><path d="M21.3 23l11-11c.8-.8.8-2 0-2.8-.8-.8-2-.8-2.8 0l-11 11-11-11c-.8-.8-2-.8-2.8 0-.8.8-.8 2 0 2.8l11 11-11 11c-.8.8-.8 2 0 2.8.4.4.9.6 1.4.6s1-.2 1.4-.6l11-11 11 11c.4.4.9.6 1.4.6s1-.2 1.4-.6c.8-.8.8-2 0-2.8l-11-11z"></path></svg>
+        </Link>
+      </div>;
+    }
     let products = Object.keys(filteredProducts).map(key =>
       <Product
         key={key}
@@ -152,10 +183,7 @@ export default class ProductsGrid extends Component {
             {types}
             {vendors}
           </ul>
-          <select className="collections-filter" onChange={this.changeCollection}>
-            <option value="">Search by state</option>
-            {collections}
-          </select>
+          {collectionFilter}
         </div>
         <div className="grid grid--view-items">
           {products}

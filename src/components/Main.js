@@ -26,6 +26,7 @@ export default class App extends Component {
           <Route path="/collections/:handle" render={(props) => (
             <Collection collection={this.props.collection}
                         location={this.props.location}
+                        data={this.props.data}
                         header={this.props.header}/> )}/>
           <Route path="/products/:handle" render={(props) => (
             <Product product={this.props.product}

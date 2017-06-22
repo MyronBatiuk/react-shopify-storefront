@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import * as helpers from '../../helpers/helpers';
 import Hero from './Hero';
-import ProductsGrid from './ProductsGrid';
+import ProductsGrid from '../collection/ProductsGrid';
 import './home.css';
 
 export default class Home extends Component {
@@ -19,6 +19,7 @@ export default class Home extends Component {
   render(){
     const homepage = this.props.homepage;
     const data = this.props.data;
+    const header = this.props.header;
     let hero,productsFilters,productsGrid;
     if (Object.keys(homepage).length !== 0) {
       if ( homepage.hasOwnProperty('hero') ){
@@ -27,6 +28,12 @@ export default class Home extends Component {
       productsFilters = homepage.filters;
       if (Object.keys(data).length !== 0) {
         productsGrid = <ProductsGrid data={data} filters={productsFilters}/>
+      }
+    }
+    if (Object.keys(header).length !== 0) {
+      productsFilters = header.filters;
+      if (Object.keys(data).length !== 0) {
+        productsGrid = <ProductsGrid data={data} filters={productsFilters} collection=""/>
       }
     }
     return (
