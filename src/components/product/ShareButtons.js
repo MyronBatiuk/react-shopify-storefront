@@ -6,8 +6,8 @@ export default class ShareButtons extends Component {
     const product = this.props.product;
     const url = location.protocol + '//' + location.host + product.url;
     return (
-      <div className="product__share-buttons">
-        <a target="_blank" href={`//twitter.com/share?url=${url}"`} className="share-button">
+      <div className="share-buttons">
+        <a target="_blank" href={`//twitter.com/share?url=${url}`} className="share-button">
         </a>
         <a target="_blank" href={`//www.facebook.com/sharer.php?u=${url}`} className="share-button facebook">
         </a>

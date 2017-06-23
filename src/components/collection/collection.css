@@ -10,6 +10,10 @@
       display: inline-block;
       text-align: right;
       vertical-align: middle; }
+      @media screen and (max-width: 767px) {
+        .collection-template .collection-hero__content .collection-hero__title-wrapper {
+          display: block;
+          text-align: center; } }
       .collection-template .collection-hero__content .collection-hero__title-wrapper .collection-hero__title {
         font-size: 41px;
         text-transform: uppercase;
@@ -29,3 +33,6 @@
       display: inline-block;
       vertical-align: middle;
       height: 120px; }
+      @media screen and (max-width: 767px) {
+        .collection-template .collection-hero__content .collection-hero__image {
+          margin: auto; } }

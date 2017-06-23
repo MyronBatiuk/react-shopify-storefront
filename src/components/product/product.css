@@ -78,30 +78,6 @@
       @media screen and (max-width: 767px) {
         .product-template .product-content .content__info .variants-and-share-buttons .product__variants {
           width: 100%; } }
-    .product-template .product-content .content__info .variants-and-share-buttons .product__share-buttons {
-      float: right; }
-      @media screen and (max-width: 767px) {
-        .product-template .product-content .content__info .variants-and-share-buttons .product__share-buttons {
-          float: none;
-          margin-top: 25px; } }
-      .product-template .product-content .content__info .variants-and-share-buttons .product__share-buttons .share-button {
-        width: 1.25em;
-        height: 1.25em;
-        background: url("../product/assets/sharing_icons.svg");
-        background-position: 0 0;
-        background-size: 80px;
-        margin-right: 20px;
-        display: inline-block; }
-        .product-template .product-content .content__info .variants-and-share-buttons .product__share-buttons .share-button:last-child {
-          margin-right: 0; }
-        .product-template .product-content .content__info .variants-and-share-buttons .product__share-buttons .share-button span {
-          display: none; }
-        .product-template .product-content .content__info .variants-and-share-buttons .product__share-buttons .share-button.facebook {
-          background-position: -20px 0; }
-        .product-template .product-content .content__info .variants-and-share-buttons .product__share-buttons .share-button.pinterest {
-          background-position: 20px 0; }
-        .product-template .product-content .content__info .variants-and-share-buttons .product__share-buttons .share-button.fancy {
-          background: url("../product/assets/fancy-icon.svg"); }
     .product-template .product-content .content__info .product__size-chart {
       margin-top: 12px; }
       .product-template .product-content .content__info .product__size-chart .size-chart__title {
@@ -262,49 +238,3 @@
           color: #40ba94; }
       .product-template .product-content .content__info .breadcrumbs .breadcrumbs__divider {
         margin: 0 10px 0 5px; }
-  .product-template .product__related-items {
-    margin-top: 50px; }
-    @media screen and (max-width: 991px) {
-      .product-template .product__related-items {
-        margin-top: 0; } }
-    .product-template .product__related-items .related-items__title {
-      font-weight: 400;
-      font-size: 25px;
-      text-align: center;
-      margin-bottom: 25px; }
-    .product-template .product__related-items .related-items__content {
-      margin-bottom: 60px; }
-      @media screen and (max-width: 991px) {
-        .product-template .product__related-items .related-items__content {
-          margin-bottom: 0; } }
-      .product-template .product__related-items .related-items__content .related-item {
-        text-align: center; }
-        @media screen and (max-width: 767px) {
-          .product-template .product__related-items .related-items__content .related-item {
-            margin-bottom: 30px;
-            width: 50%; } }
-        .product-template .product__related-items .related-items__content .related-item__image {
-          max-height: 170px;
-          margin: 0 auto 25px; }
-          @media screen and (max-width: 767px) {
-            .product-template .product__related-items .related-items__content .related-item__image {
-              max-height: 270px; } }
-        .product-template .product__related-items .related-items__content .related-item__title {
-          font-weight: 400;
-          font-size: 20px;
-          margin-bottom: 5px; }
-        .product-template .product__related-items .related-items__content .related-item__group {
-          font-weight: 400;
-          font-size: 16px;
-          margin-bottom: 10px; }
-        .product-template .product__related-items .related-items__content .related-item__price-wrapper .related-item__collection {
-          color: #40BA94;
-          font-size: 15px;
-          margin-right: 60px;
-          vertical-align: middle; }
-          @media screen and (max-width: 991px) {
-            .product-template .product__related-items .related-items__content .related-item__price-wrapper .related-item__collection {
-              margin-right: 15px; } }
-        .product-template .product__related-items .related-items__content .related-item__price-wrapper .related-item__price {
-          font-size: 26px;
-          vertical-align: middle; }

@@ -269,6 +269,99 @@ ul {
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
+//Related items
+
+.related-items {
+  margin-top: 50px;
+  @media screen and (max-width: 991px) {
+    margin-top: 0;
+  }
+  .related-items__title {
+    font-weight: 400;
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  .related-items__content {
+    margin-bottom: 60px;
+    @media screen and (max-width: 991px) {
+      margin-bottom: 0;
+    }
+    .related-item {
+      text-align: center;
+      @media screen and (max-width:767px){
+        margin-bottom:30px;
+        width:50%;
+      }
+      &__image {
+        max-height: 170px;
+        margin: 0 auto 25px;
+        @media screen and (max-width:767px){
+          max-height: 270px;
+        }
+      }
+      &__title {
+        font-weight: 400;
+        font-size: 20px;
+        margin-bottom: 5px;
+      }
+      &__group {
+        font-weight: 400;
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+      &__price-wrapper {
+        .related-item__collection {
+          color: #40BA94;
+          font-size: 15px;
+          margin-right: 60px;
+          vertical-align: middle;
+          @media screen and (max-width: 991px) {
+            margin-right: 15px;
+          }
+        }
+        .related-item__price {
+          font-size: 26px;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+}
+
+//Share buttons
+.share-buttons {
+  float: right;
+  @media screen and (max-width: 767px) {
+    float: none;
+    margin-top: 25px;
+  }
+  .share-button {
+    width: 1.25em;
+    height: 1.25em;
+    background: url('./components/product/assets/sharing_icons.svg');
+    background-position: 0 0;
+    background-size: 80px;
+    margin-right: 20px;
+    display: inline-block;
+    &:last-child {
+      margin-right: 0;
+    }
+    span {
+      display: none;
+    }
+    &.facebook {
+      background-position: -20px 0;
+    }
+    &.pinterest {
+      background-position: 20px 0;
+    }
+    &.fancy {
+      background: url('./components/product/assets/fancy-icon.svg');
+    }
+  }
+}
+
 //Products Grid
 .products-grid {
   .products-filters {

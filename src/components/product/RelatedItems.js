@@ -20,7 +20,7 @@ export default class RelatedItems extends Component {
     });
     if (totalNumber !== 0) {
       return (
-        <div className="product__related-items">
+        <div className="related-items">
           <h3 className="related-items__title">Related Items</h3>
 
           <div className="related-items__content">

@@ -41,6 +41,7 @@ export default class App extends Component {
           <Route path="/pages/:handle" render={(props) => (
             <Page page={this.props.page}
                   location={this.props.location}
+                  data={this.props.data}
                   header={this.props.header}/> )}/>
           <Route render={(props) => (
             <NotFound  header={this.props.header}/> )}/>

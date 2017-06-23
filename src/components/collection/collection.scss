@@ -11,6 +11,10 @@
         display: inline-block;
         text-align: right;
         vertical-align: middle;
+        @media screen and (max-width:767px){
+          display: block;
+          text-align: center;
+        }
         .collection-hero__title {
           font-size: 41px;
           text-transform: uppercase;
@@ -29,10 +33,13 @@
         }
       }
       .collection-hero__image {
-        margin-left:30px;
+        margin-left: 30px;
         display: inline-block;
         vertical-align: middle;
-        height:120px;
+        height: 120px;
+        @media screen and (max-width: 767px) {
+          margin:auto;
+        }
       }
     }
   }
