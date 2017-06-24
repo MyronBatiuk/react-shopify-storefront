@@ -291,7 +291,6 @@ ul {
     width: 1.25em;
     height: 1.25em;
     background: url("./components/product/assets/sharing_icons.svg");
-    background-position: 0 0;
     background-size: 80px;
     margin-right: 20px;
     display: inline-block; }
@@ -299,6 +298,14 @@ ul {
       margin-right: 0; }
     .share-buttons .share-button span {
       display: none; }
+    .share-buttons .share-button.twitter {
+      background-position: 0 0; }
+    .share-buttons .share-button.instagram {
+      background: url("./assets/instagram.svg");
+      background-size: 20px; }
+    .share-buttons .share-button.dribbble {
+      background: url("./assets/dribbble.svg");
+      background-size: 20px; }
     .share-buttons .share-button.facebook {
       background-position: -20px 0; }
     .share-buttons .share-button.pinterest {

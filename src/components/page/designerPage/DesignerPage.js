@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import NoImage from './assets/no-image.gif';
-import ShareButtons from './ShareButtons';
+import SocialNetworks from './SocialNetworks';
 import AvailableProducts from './AvailableProducts';
 import './designerPage.css';
 
@@ -11,7 +11,7 @@ export default class DesignerPage extends Component {
     const data = this.props.data;
     const designer = page.designer;
     const websites = designer.websites;
-    const shareButtons = <ShareButtons page={page}/>;
+    const socialNetworks = <SocialNetworks networks={designer.social_networks}/>;
     let image,websitesUrl;
     if(designer.image !== ''){
       image = <img className="designer-page__image" src={designer.image} alt=""/>;
@@ -40,7 +40,7 @@ export default class DesignerPage extends Component {
               <div className="designer-page__websites">
                 {websitesUrl}
               </div>
-              {shareButtons}
+              {socialNetworks}
             </div>
           </div>
         </div>

@@ -3,9 +3,10 @@ function data(state = [], action) {
   switch(action.type) {
     case 'GET_ALL_PRODUCTS' :
       const products = action.data['products'];
-      Object.keys(products).map((item) =>
-        newState.push(products[item])
+      Object.keys(products).map(key =>
+        newState.push(products[key])
       );
+      newState.sort(function(a, b){return b.date-a.date});
       return newState;
     case 'GET_ALL_PAGES' :
       newState.push(action.data);
