@@ -77,11 +77,11 @@ export function addVariantToCart(product,id,currency) {
   }
 }
 
-export function updateQuantityInCart(itemId,operation){
+export function updateQuantityInCart(itemId,quantity){
   return {
     type:'UPDATE_QUANTITY',
     id: itemId.toString(),
-    operation: operation
+    quantity: quantity
   }
 }
 

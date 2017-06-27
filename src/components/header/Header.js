@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import store from '../../store';
 import * as actions from '../../actions/actionCreators';
 import * as helpers from '../../helpers/helpers';
-import CartIcon from './assets/cart-icon.png';
+import CartIcon from './assets/cart-icon.svg';
 import './header.css';
 
 export default class Header extends Component {

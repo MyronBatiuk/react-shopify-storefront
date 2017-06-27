@@ -12,12 +12,7 @@ function cart(state = [], action) {
       localStorage.setItem('cart', JSON.stringify(newState));
       return newState;
     case 'UPDATE_QUANTITY':
-      newState = Object.assign({}, state);
-      if ( action.operation === 'increment' ) {
-        newState.items[action.id].quantity += 1;
-      } else {
-        newState.items[action.id].quantity -= 1;
-      }
+      newState.items[action.id].quantity = action.quantity;
       localStorage.setItem('cart', JSON.stringify(newState));
       return newState;
     case 'REMOVE_ITEM':
