@@ -24,7 +24,8 @@ class CartContainer extends Component {
   render() {
     const cart = this.props.cart;
     const cartStatus = this.props.cartStatus;
-    let line_items = "Cart is empty", subtotal = 0;
+    let line_items,content;
+    let subtotal = 0;
     let line_items_number = Object.keys(cart.items).length;
     let checkoutUrl = helpers.shopifyStoreUrl + '/cart/';
     if (line_items_number !== 0) {
@@ -40,6 +41,23 @@ class CartContainer extends Component {
             />
         );
       });
+      content = <div className="Cart__content">
+        <ul className="Cart__line-items">
+            {line_items}
+        </ul>
+        <div className="Cart-subtotal">
+          <div className="Cart-subtotal__title">Sub-total:</div>
+          <div className="Cart-subtotal__amount">
+            <span className="amount">{cart.currency + subtotal}</span>
+          </div>
+        </div>
+        <button className="Cart__checkout-button" onClick={() => this.openCheckout(checkoutUrl)}>Proceed to checkout</button>
+        <p className="add-info">Shipping & taxes are calculated at checkout</p>
+      </div>;
+    } else {
+      content = <div className="Cart__content">
+        <h3 className="Empty-cart">Cart is empty</h3>
+      </div>;
     }
     return (
       <div className={`Cart ${cartStatus ? 'Cart--open' : ''}`}>
@@ -54,19 +72,7 @@ class CartContainer extends Component {
             </g>
           </svg>
         </header>
-        <div className="Cart__content">
-          <ul className="Cart__line-items">
-            {line_items}
-          </ul>
-          <div className="Cart-subtotal">
-            <div className="Cart-subtotal__title">Sub-total:</div>
-            <div className="Cart-subtotal__amount">
-              <span className="amount">{cart.currency + subtotal}</span>
-            </div>
-          </div>
-          <button className="Cart__checkout-button" onClick={() => this.openCheckout(checkoutUrl)}>Proceed to checkout</button>
-          <p className="add-info">Shipping & taxes are calculated at checkout</p>
-        </div>
+        {content}
         <footer className="Cart__footer">
           <Link className="Cart__footer-link" to="/pages/shipping-policy" onClick={this.closeCart}>Shipping policy</Link>
           <span className="Cart__footer-devider">|</span>

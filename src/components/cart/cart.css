@@ -66,6 +66,9 @@
     @media screen and (max-width: 450px) {
       .Cart .Cart__content {
         padding: 0 10px; } }
+    .Cart .Cart__content .Empty-cart {
+      text-align: center;
+      margin: 100px 0; }
     .Cart .Cart__content .Cart__line-items .Line-item {
       margin-top: 20px;
       padding-bottom: 20px;
