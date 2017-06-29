@@ -68,9 +68,9 @@ class CartContainer extends Component {
           <p className="add-info">Shipping & taxes are calculated at checkout</p>
         </div>
         <footer className="Cart__footer">
-          <Link className="Cart__footer-link" to="/pages/shipping-policy">Shipping policy</Link>
+          <Link className="Cart__footer-link" to="/pages/shipping-policy" onClick={this.closeCart}>Shipping policy</Link>
           <span className="Cart__footer-devider">|</span>
-          <Link className="Cart__footer-link" to="/pages/return-policy">Return policy</Link>
+          <Link className="Cart__footer-link" to="/pages/return-policy" onClick={this.closeCart}>Return policy</Link>
         </footer>
       </div>
     )
