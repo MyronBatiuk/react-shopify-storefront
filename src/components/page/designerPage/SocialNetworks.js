@@ -7,7 +7,8 @@ export default class SocialNetworks extends Component {
     let socialNetworks = Object.keys(networks).map(key => {
       if ( networks[key] !== '') {
         return (
-          <a key={key} href={networks[key]} target="_blank" className={`share-button ${key}`}></a>
+          <a key={key} href={networks[key]} target="_blank" rel="noopener noreferrer" className={`share-button ${key}`}>
+          </a>
         )
       } else {
         return null;

@@ -41,24 +41,23 @@
     @media screen and (max-width: 450px) {
       .Cart .Cart__header {
         padding: 26px 15px; } }
-    .Cart .Cart__header .fa-long-arrow-left {
-      cursor: pointer; }
+    .Cart .Cart__header .arrow-left {
+      cursor: pointer;
+      display: inline-block;
+      vertical-align: middle; }
     .Cart .Cart__header h5 {
       cursor: pointer;
       display: inline-block;
       margin: 0 0 0 10px;
       font-size: 16px;
-      font-weight: 400; }
+      font-weight: 400;
+      vertical-align: middle; }
     .Cart .Cart__header .Cart__icon {
       width: 28px;
       height: 26px;
-      position: absolute;
-      right: 33px;
-      top: 25px;
+      margin-top: 1px;
+      float: right;
       fill: #40BA94; }
-      @media screen and (max-width: 450px) {
-        .Cart .Cart__header .Cart__icon {
-          right: 15px; } }
   .Cart .Cart__content {
     flex: 1 0 auto;
     margin: 0;
@@ -153,16 +152,22 @@
         font-size: 14px;
         font-weight: 600;
         line-height: 1; }
-    .Cart .Cart__content .Cart__checkout-button {
-      width: 100%;
-      font-size: 23px;
-      background: #40BA94;
-      outline: none;
-      border: none;
-      border-radius: 2px;
-      color: #fff;
-      padding: 8px;
-      cursor: pointer; }
+    .Cart .Cart__content .Cart__checkout-wrapper {
+      text-align: center; }
+      .Cart .Cart__content .Cart__checkout-wrapper .Cart__checkout-button {
+        width: 282px;
+        font-size: 22px;
+        background: #40BA94;
+        outline: none;
+        border: none;
+        border-radius: 2px;
+        color: #fff;
+        padding: 8px;
+        cursor: pointer; }
+        @media screen and (max-width: 450px) {
+          .Cart .Cart__content .Cart__checkout-wrapper .Cart__checkout-button {
+            width: 242px;
+            font-size: 18px; } }
     .Cart .Cart__content .add-info {
       margin: 10px 20px;
       font-size: 12px;

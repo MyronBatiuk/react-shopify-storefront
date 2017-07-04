@@ -21,7 +21,7 @@ export default class DesignerPage extends Component {
     websitesUrl = Object.keys(websites).map(key => {
       if (websites[key] !== ''){
         return (
-          <a key={key} className="websites__item" target="_blank" href={websites[key]}>{websites[key]}</a>
+          <a key={key} className="websites__item" target="_blank" rel="noopener noreferrer" href={websites[key]}>{websites[key]}</a>
         )
       } else {
         return null;

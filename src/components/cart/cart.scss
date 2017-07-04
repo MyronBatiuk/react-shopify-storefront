@@ -44,8 +44,10 @@
     @media screen and (max-width:450px){
       padding: 26px 15px;
     }
-    .fa-long-arrow-left {
+    .arrow-left {
       cursor: pointer;
+      display: inline-block;
+      vertical-align: middle;
     }
     h5 {
       cursor: pointer;
@@ -53,17 +55,14 @@
       margin: 0 0 0 10px;
       font-size: 16px;
       font-weight: 400;
+      vertical-align: middle;
     }
     .Cart__icon {
       width: 28px;
       height: 26px;
-      position: absolute;
-      right: 33px;
-      top: 25px;
+      margin-top: 1px;
+      float: right;
       fill: #40BA94;
-      @media screen and (max-width:450px){
-        right:15px;
-      }
     }
   }
   .Cart__content {
@@ -184,16 +183,23 @@
         line-height: 1;
       }
     }
-    .Cart__checkout-button {
-      width: 100%;
-      font-size:23px;
-      background: #40BA94;
-      outline:none;
-      border:none;
-      border-radius:2px;
-      color:#fff;
-      padding: 8px;
-      cursor: pointer;
+    .Cart__checkout-wrapper {
+      text-align: center;
+      .Cart__checkout-button {
+        width: 282px;
+        font-size:22px;
+        background: #40BA94;
+        outline:none;
+        border:none;
+        border-radius:2px;
+        color:#fff;
+        padding: 8px;
+        cursor: pointer;
+        @media screen and (max-width:450px){
+          width: 242px;
+          font-size: 18px;
+        }
+      }
     }
     .add-info {
       margin:10px 20px;

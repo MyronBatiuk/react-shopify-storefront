@@ -5,6 +5,7 @@ import * as helpers from '../../helpers/helpers';
 import LineItem from './LineItem';
 import {Link} from 'react-router-dom';
 import onClickOutside from 'react-onclickoutside';
+import ArrowLeft from './assets/arrow.svg';
 
 class CartContainer extends Component {
 
@@ -51,7 +52,9 @@ class CartContainer extends Component {
             <span className="amount">{cart.currency + subtotal}</span>
           </div>
         </div>
-        <button className="Cart__checkout-button" onClick={() => this.openCheckout(checkoutUrl)}>Proceed to checkout</button>
+        <div className="Cart__checkout-wrapper">
+          <button className="Cart__checkout-button" onClick={() => this.openCheckout(checkoutUrl)}>Proceed to checkout</button>
+        </div>
         <p className="add-info">Shipping & taxes are calculated at checkout</p>
       </div>;
     } else {
@@ -62,7 +65,7 @@ class CartContainer extends Component {
     return (
       <div className={`Cart ${cartStatus ? 'Cart--open' : ''}`}>
         <header className="Cart__header">
-          <i onClick={this.closeCart} className="fa fa-long-arrow-left" aria-hidden="true"></i>
+          <img onClick={this.closeCart} className="arrow-left" src={ArrowLeft} alt=""/>
           <h5 onClick={this.closeCart}>Continue Shopping</h5>
           <svg className="Cart__icon">
             <g>
