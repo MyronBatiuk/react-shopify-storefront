@@ -29,7 +29,7 @@ export function getData(slug, template, page , getAllPages ) {
       store.dispatch(actions.getData(template, object, page, getAllPages));
       if ( template === 'all-products'){
         if ( object["pages"] > page){
-          getData('/collections/all', 'all-products', page + 1);
+          getData('/collections/types?q=Tools', 'all-products', page + 1);
         }
       }
     }
@@ -38,7 +38,7 @@ export function getData(slug, template, page , getAllPages ) {
   xhr.send(null);
 }
 //start loading all products for search
-getData('/collections/all','all-products', 1);
+getData('/collections/types?q=Tools','all-products', 1);
 
 export function showLoadingIndicator(){
   const indicator = document.getElementById('ipl-progress-indicator');
@@ -47,12 +47,11 @@ export function showLoadingIndicator(){
 
 export function hideLoadingIndicator(){
   const indicator = document.getElementById('ipl-progress-indicator');
-  window.scrollTo(0, 0);
-  if(indicator){
-    setTimeout(() => {
-      indicator.classList.add('available');
-    }, 250)
-  }
+  if ( !indicator.classList.contains('available') )
+    window.scrollTo(0, 0);
+  setTimeout(() => {
+    indicator.classList.add('available');
+  }, 250);
 }
 
 export function changeSeo(object,shop_name,shop_description,title) {
@@ -85,3 +84,30 @@ export function changeSeo(object,shop_name,shop_description,title) {
     meta.description.content = pageExcerpt;
   }
 }
+
+function getProductsAPI() {
+  console.log(this.responseText);
+  // const productsObject = JSON.parse(this.responseText);
+  // const products = productsObject['products'].sort(function (a,b) {
+  //   const dateA = new Date(a['created_at']);
+  //   const dateB = new Date(b['created_at']);
+  //   return (dateB.getTime() / 1000) - (dateA.getTime() / 1000);
+  // });
+  // store.dispatch(actions.getData('all-products', products));
+}
+
+export function getDataApi(func){
+  const XHR = ("onload" in new XMLHttpRequest()) ? XMLHttpRequest : XDomainRequest;
+  const xhr = new XHR();
+  const requestUrl = '/search?q=shoes&page=1';
+  xhr.withCredentials = true;
+  xhr.open('GET', requestUrl, true);
+  xhr.setRequestHeader("Authorization", "Basic MWViMTRmMDM5NjI3ZmY4Yzk1ZTQ5OTFhY2EwZTk3Y2U6Nzk3MmE4OGUzNTJmNTE0YzI4YWYzMjU5MDk1MDk1MTI=");
+  xhr.onload = func;
+  xhr.onerror = function() {
+    console.log('error');
+  };
+  xhr.send();
+}
+
+getDataApi(getProductsAPI);
