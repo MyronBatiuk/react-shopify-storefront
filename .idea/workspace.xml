@@ -2,22 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a40b62a-00e0-4951-99e6-aef9a5e12d7b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/cart/assets/arrow.svg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app.css" afterPath="$PROJECT_DIR$/src/app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/cart/CartContainer.js" afterPath="$PROJECT_DIR$/src/components/cart/CartContainer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/cart/cart.css" afterPath="$PROJECT_DIR$/src/components/cart/cart.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/cart/cart.scss" afterPath="$PROJECT_DIR$/src/components/cart/cart.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/collection/collection.css" afterPath="$PROJECT_DIR$/src/components/collection/collection.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/footer/footer.css" afterPath="$PROJECT_DIR$/src/components/footer/footer.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/header/header.css" afterPath="$PROJECT_DIR$/src/components/header/header.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/home/home.css" afterPath="$PROJECT_DIR$/src/components/home/home.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/page/designerPage/DesignerPage.js" afterPath="$PROJECT_DIR$/src/components/page/designerPage/DesignerPage.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/page/designerPage/SocialNetworks.js" afterPath="$PROJECT_DIR$/src/components/page/designerPage/SocialNetworks.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/page/designerPage/designerPage.css" afterPath="$PROJECT_DIR$/src/components/page/designerPage/designerPage.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/page/page.css" afterPath="$PROJECT_DIR$/src/components/page/page.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/product/ShareButtons.js" afterPath="$PROJECT_DIR$/src/components/product/ShareButtons.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/product/product.css" afterPath="$PROJECT_DIR$/src/components/product/product.css" />
     </list>
     <ignored path="shopify-storefront.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -52,7 +37,7 @@
         <entry file="file://$PROJECT_DIR$/src/components/cart/CartContainer.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="380">
-              <caret line="67" column="87" lean-forward="true" selection-start-line="67" selection-start-column="87" selection-end-line="67" selection-end-column="87" />
+              <caret line="67" column="87" lean-forward="false" selection-start-line="67" selection-start-column="87" selection-end-line="67" selection-end-column="87" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -396,12 +381,12 @@
       <workItem from="1498733450257" duration="4088000" />
       <workItem from="1498806492247" duration="32000" />
       <workItem from="1498813771330" duration="73000" />
-      <workItem from="1499153778731" duration="3152000" />
+      <workItem from="1499153778731" duration="3319000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9210000" />
+    <option name="totallyTimeSpent" value="9377000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -414,7 +399,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17410715" sideWeight="0.47890818" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -423,7 +408,7 @@
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16815476" sideWeight="0.5210918" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33878887" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33878887" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16815476" sideWeight="0.5155483" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -773,7 +758,7 @@
         <state relative-caret-position="40">
           <caret line="4" column="34" lean-forward="false" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
           <folding>
-            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#0#39#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -853,7 +838,7 @@
     <entry file="file://$PROJECT_DIR$/src/components/cart/CartContainer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
-          <caret line="67" column="87" lean-forward="true" selection-start-line="67" selection-start-column="87" selection-end-line="67" selection-end-column="87" />
+          <caret line="67" column="87" lean-forward="false" selection-start-line="67" selection-start-column="87" selection-end-line="67" selection-end-column="87" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
