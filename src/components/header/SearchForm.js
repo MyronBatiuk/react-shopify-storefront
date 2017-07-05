@@ -22,7 +22,7 @@ class SearchForm extends Component {
       });
     } else {
       if ( this.searchTo.value !== '' ) {
-        this.props.history.push('/search?q=' + this.searchTo.value);
+        this.props.history.push('/find?q=' + this.searchTo.value);
       }
     }
   };

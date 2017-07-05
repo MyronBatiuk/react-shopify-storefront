@@ -33,11 +33,11 @@
       "target" : "https://custom-storefront.myshopify.com",
       "changeOrigin" : true
     },
-    "/collections/types": {
+    "/search": {
       "target" : "https://custom-storefront.myshopify.com",
       "changeOrigin" : true
     },
-    "/search": {
+    "/collections/types": {
       "target" : "https://custom-storefront.myshopify.com",
       "changeOrigin" : true
     }

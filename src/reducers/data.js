@@ -7,9 +7,6 @@ function data(state = [], action) {
         newState.push(products[item])
       );
       return newState;
-    case 'GET_ALL_PAGES' :
-      newState.push(action.data);
-      return newState;
     default:
       return state;
   }

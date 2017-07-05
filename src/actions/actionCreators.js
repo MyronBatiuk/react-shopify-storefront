@@ -10,7 +10,7 @@ export function closeCart(index) {
   }
 }
 
-export function getData(template,object,page,getAllPages) {
+export function getData(template,object) {
   let type;
   switch (template) {
     case 'header':
@@ -29,19 +29,17 @@ export function getData(template,object,page,getAllPages) {
       type = 'GET_ALL_PRODUCTS';
       break;
     case 'page':
-      if ( getAllPages ) {
-        type = 'GET_ALL_PAGES';
-      } else {
-        type = 'GET_PAGE';
-      }
+      type = 'GET_PAGE';
+      break;
+    case 'search':
+      type = 'GET_SEARCH_RESULTS';
       break;
     default :
       type = '';
   }
   return {
     type: type,
-    data: object,
-    page: page
+    data: object
   }
 }
 
@@ -81,5 +79,11 @@ export function removeItemFromCart(itemId){
   return {
     type:'REMOVE_ITEM',
     id: itemId.toString()
+  }
+}
+
+export function cleanSearch(){
+  return {
+    type:'CLEAN_SEARCH'
   }
 }

@@ -1,23 +1,18 @@
 import * as actions from '../actions/actionCreators';
 import store from '../store';
-import Client, {Config} from 'shopify-buy';
 
 const shopifyStoreDomain = "custom-storefront.myshopify.com";
 
-const config = new Config({
-  storefrontAccessToken: '220658e0dee403d784ffef24d20241cd',
-  domain: shopifyStoreDomain
-});
-
-export const client = new Client(config);
-
 export const shopifyStoreUrl = "https://" + shopifyStoreDomain;
 
-export function getData(slug, template, page , getAllPages ) {
+export function getData(slug, template, page ) {
   const xhr = new XMLHttpRequest();
   let url = shopifyStoreUrl + slug;
   if ( page ){
     url = url + '?page=' + page;
+  }
+  if ( template === 'search' ) {
+    url = slug;
   }
   xhr.onreadystatechange = function () {
     if (xhr.readyState === 4 && xhr.status === 200) {
@@ -26,10 +21,11 @@ export function getData(slug, template, page , getAllPages ) {
       object = object.split('start-'+ template +'-object')[1];
       object = JSON.parse(object);
       object = object[0];
-      store.dispatch(actions.getData(template, object, page, getAllPages));
+
+      store.dispatch(actions.getData(template, object));
       if ( template === 'all-products'){
         if ( object["pages"] > page){
-          getData('/collections/types?q=Tools', 'all-products', page + 1);
+          getData('/collections/all', 'all-products', page + 1);
         }
       }
     }
@@ -37,8 +33,8 @@ export function getData(slug, template, page , getAllPages ) {
   xhr.open("GET", url, true);
   xhr.send(null);
 }
-//start loading all products for search
-getData('/collections/types?q=Tools','all-products', 1);
+//start loading all products
+getData('/collections/all','all-products', 1);
 
 export function showLoadingIndicator(){
   const indicator = document.getElementById('ipl-progress-indicator');
@@ -85,29 +81,27 @@ export function changeSeo(object,shop_name,shop_description,title) {
   }
 }
 
-function getProductsAPI() {
-  console.log(this.responseText);
-  // const productsObject = JSON.parse(this.responseText);
-  // const products = productsObject['products'].sort(function (a,b) {
-  //   const dateA = new Date(a['created_at']);
-  //   const dateB = new Date(b['created_at']);
-  //   return (dateB.getTime() / 1000) - (dateA.getTime() / 1000);
-  // });
-  // store.dispatch(actions.getData('all-products', products));
-}
-
-export function getDataApi(func){
-  const XHR = ("onload" in new XMLHttpRequest()) ? XMLHttpRequest : XDomainRequest;
-  const xhr = new XHR();
-  const requestUrl = '/search?q=shoes&page=1';
-  xhr.withCredentials = true;
-  xhr.open('GET', requestUrl, true);
-  xhr.setRequestHeader("Authorization", "Basic MWViMTRmMDM5NjI3ZmY4Yzk1ZTQ5OTFhY2EwZTk3Y2U6Nzk3MmE4OGUzNTJmNTE0YzI4YWYzMjU5MDk1MDk1MTI=");
-  xhr.onload = func;
-  xhr.onerror = function() {
-    console.log('error');
-  };
-  xhr.send();
-}
-
-getDataApi(getProductsAPI);
+// function getType() {
+//   console.log(this.responseText);
+//   // const products = productsObject['products'].sort(function (a,b) {
+//   //   const dateA = new Date(a['created_at']);
+//   //   const dateB = new Date(b['created_at']);
+//   //   return (dateB.getTime() / 1000) - (dateA.getTime() / 1000);
+//   // });
+//   // store.dispatch(actions.getData('all-products', products));
+// }
+//
+// export function getDataApi(requestUrl,func){
+//   const XHR = ("onload" in new XMLHttpRequest()) ? XMLHttpRequest : XDomainRequest;
+//   const xhr = new XHR();
+//   // xhr.withCredentials = true;
+//   xhr.open('GET', requestUrl, true);
+//   // xhr.setRequestHeader("Authorization", "Basic MWViMTRmMDM5NjI3ZmY4Yzk1ZTQ5OTFhY2EwZTk3Y2U6Nzk3MmE4OGUzNTJmNTE0YzI4YWYzMjU5MDk1MDk1MTI=");
+//   xhr.onload = func;
+//   xhr.onerror = function() {
+//     console.log('error');
+//   };
+//   xhr.send();
+// }
+//
+// getDataApi('/search?q=Simple', getType);

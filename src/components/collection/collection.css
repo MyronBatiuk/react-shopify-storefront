@@ -46,12 +46,3 @@
       font-size: 1.1rem;
       margin-bottom: 0.4rem;
       color: #000; }
-  .collection .collection-content .pagination {
-    padding: 0; }
-    .collection .collection-content .pagination li {
-      list-style: none;
-      display: inline-block;
-      border: 1px solid #f6f6f6; }
-      .collection .collection-content .pagination li a {
-        display: block;
-        padding: 3px 10px; }

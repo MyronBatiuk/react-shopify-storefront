@@ -442,6 +442,16 @@ a {
     .page-width {
       padding: 0 20px; } }
 
+.pagination {
+  padding: 0; }
+  .pagination li {
+    list-style: none;
+    display: inline-block;
+    border: 1px solid #f6f6f6; }
+    .pagination li a {
+      display: block;
+      padding: 3px 10px; }
+
 .ipl-progress-indicator {
   background-color: #f5f5f5;
   width: 100%;

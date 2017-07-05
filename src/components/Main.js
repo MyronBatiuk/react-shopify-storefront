@@ -32,9 +32,9 @@ export default class App extends Component {
                      cart={this.props.cart}
                      location={this.props.location}
                      header={this.props.header}/> )}/>
-          <Route path="/search" render={(props) => (
-            <SearchResults history={this.props.history}
-                           data={this.props.data}
+          <Route exact path="/find" render={(props) => (
+            <SearchResults location={this.props.location}
+                           search={this.props.search}
                            header={this.props.header}/> )}/>
           <Route path="/pages/:handle" render={(props) => (
             <Page page={this.props.page}
