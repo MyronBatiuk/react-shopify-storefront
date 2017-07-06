@@ -7,36 +7,34 @@ import './collection.css';
 
 class Collection extends Component {
   componentWillMount() {
-    helpers.showLoadingIndicator();
-    let collection = this.props.location.pathname;
+    if ( this.props.location.pathname !== "/")
+      helpers.showLoadingIndicator();
+    let location = this.props.location.pathname;
     let page = this.props.location.search;
     page = page.split('=')[1];
     if (page === '') {
       page = 1;
     }
-    if (collection === "/") {
-      collection = '/collections/home';
+    if (location === '/') {
+      location = '/collections/home';
     }
-    helpers.getData(collection, 'collection', page);
+    helpers.getData(location, 'collection', page);
   }
   componentWillReceiveProps(nextProps){
-    let newCollection = nextProps.location.pathname;
+    let newLocation = nextProps.location.pathname;
     let newPage = nextProps.location.search;
+    if ( newLocation !== this.props.location.pathname) {
+      helpers.showLoadingIndicator();
+      helpers.getData(newLocation, 'collection');
+    }
     if ( newPage !== this.props.location.search ){
       helpers.showLoadingIndicator();
     }
-    if ( newCollection !== this.props.location.pathname ) {
-      helpers.showLoadingIndicator();
-      if ( newCollection === "/" ) {
-        newCollection = '/collections/home';
-      }
-      helpers.getData(newCollection, 'collection');
-    }
   }
   componentDidUpdate(){
-    helpers.hideLoadingIndicator();
-    if ( this.props.location.pathname !== "/" && this.props.header.hasOwnProperty('shop_name') ) {
+    if ( this.props.location.pathname !== "/" && Object.keys(this.props.header).length !== 0 && Object.keys(this.props.collection).length !== 0) {
       helpers.changeSeo(this.props.collection, this.props.header.shop_name);
+      helpers.hideLoadingIndicator();
     }
   }
   render() {
@@ -44,6 +42,10 @@ class Collection extends Component {
     let collection = this.props.collection;
     let hero;
     let template = this.props.template;
+    const queryString = this.props.location.search;
+    let currentPage = queryString.split('=')[1];
+    if (typeof currentPage === 'undefined')
+      currentPage = 1;
     if (Object.keys(collection).length !== 0) {
       products = <Products
         products={collection.products}
@@ -51,6 +53,7 @@ class Collection extends Component {
       if (collection.pages > 1) {
         pagination = <Pagination
           pages={collection.pages}
+          currentPage={currentPage}
           collection={this.props.location.pathname}
           />;
       }

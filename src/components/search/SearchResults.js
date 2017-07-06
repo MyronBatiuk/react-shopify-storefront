@@ -32,8 +32,9 @@ export default class SearchResults extends Component {
     let searchString = queryString.split('q=')[1];
     if ( searchString.indexOf('&') !== -1 )
       searchString = searchString.substr(0, searchString.indexOf('&'));
-    const currentPage = queryString.split('page=')[1];
-
+    let currentPage = queryString.split('page=')[1];
+    if (typeof currentPage === 'undefined')
+      currentPage = 1;
     const search = this.props.search;
     let searchResultsItems,pagination;
     if (Object.keys(search).length !== 0) {

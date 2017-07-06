@@ -451,6 +451,8 @@ a {
     .pagination li a {
       display: block;
       padding: 3px 10px; }
+      .pagination li a.active {
+        font-weight: bold; }
 
 .ipl-progress-indicator {
   background-color: #f5f5f5;

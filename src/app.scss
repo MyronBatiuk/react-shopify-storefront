@@ -520,6 +520,9 @@ a {
     a {
       display: block;
       padding: 3px 10px;
+      &.active {
+        font-weight: bold;
+      }
     }
   }
 }

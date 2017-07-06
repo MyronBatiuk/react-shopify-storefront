@@ -10,11 +10,19 @@ export default class Pagination extends Component {
 
   render() {
     let navLinks = [];
-    let { searchString,pages } = this.props;
+    let { searchString,pages,currentPage } = this.props;
     for (let i = 1; i <= pages; i++) {
-      navLinks.push(<li key={i}>
-        <Link to={`/find?q=${searchString}&page=${i}`} onClick={() => this.loadNewPage('/search?q=' + searchString + '&page='+ i)} >{i}</Link>
-      </li>);
+      if(parseInt(currentPage,10) === i){
+        navLinks.push(<li key={i}>
+          <Link className="active" to={`/find?q=${searchString}&page=${i}`} onClick={() => this.loadNewPage('/search?q=' + searchString + '&page='+ i)} >
+            {i}
+          </Link></li>);
+      } else {
+        navLinks.push(<li key={i}>
+          <Link to={`/find?q=${searchString}&page=${i}`} onClick={() => this.loadNewPage('/search?q=' + searchString + '&page='+ i)} >
+            {i}
+          </Link></li>);
+      }
     }
     return (
         <ul className="pagination">

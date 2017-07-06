@@ -1,6 +1,5 @@
 import * as actions from '../actions/actionCreators';
 import store from '../store';
-
 const shopifyStoreDomain = "custom-storefront.myshopify.com";
 
 export const shopifyStoreUrl = "https://" + shopifyStoreDomain;
@@ -21,7 +20,6 @@ export function getData(slug, template, page ) {
       object = object.split('start-'+ template +'-object')[1];
       object = JSON.parse(object);
       object = object[0];
-
       store.dispatch(actions.getData(template, object));
       if ( template === 'all-products'){
         if ( object["pages"] > page){
@@ -29,9 +27,11 @@ export function getData(slug, template, page ) {
         }
       }
     }
+    if (xhr.status === 404)
+      window.location="/notfound";
   };
   xhr.open("GET", url, true);
-  xhr.send(null);
+  xhr.send();
 }
 //start loading all products
 getData('/collections/all','all-products', 1);
