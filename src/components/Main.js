@@ -8,6 +8,7 @@ import NotFound from './404/NotFound';
 import Cart from './cart/Cart';
 import SearchResults from './search/SearchResults';
 import HomePage from './home/HomePage';
+import Blog from './blog/Blog';
 import { Route, Switch } from 'react-router-dom';
 
 export default class App extends Component {
@@ -36,6 +37,10 @@ export default class App extends Component {
             <SearchResults location={this.props.location}
                            search={this.props.search}
                            header={this.props.header}/> )}/>
+          <Route exact path="/blog/:handle" render={(props) => (
+              <Blog location={this.props.location}
+                             blog={this.props.blog}
+                             header={this.props.header}/> )}/>
           <Route path="/pages/:handle" render={(props) => (
             <Page page={this.props.page}
                   location={this.props.location}

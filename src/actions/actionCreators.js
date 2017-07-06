@@ -34,6 +34,9 @@ export function getData(template,object) {
     case 'search':
       type = 'GET_SEARCH_RESULTS';
       break;
+    case 'blog':
+      type = 'GET_BLOG_ARTICLES';
+      break;
     default :
       type = '';
   }

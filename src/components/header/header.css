@@ -7,6 +7,8 @@
   @media screen and (max-width: 749px) {
     .header-section .site-header {
       padding: 0; } }
+  .header-section .site-header .store-name {
+    margin: 0; }
   .header-section .site-header .logo {
     max-width: 173px;
     margin: 15px 0; }

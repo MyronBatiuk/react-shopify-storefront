@@ -65,7 +65,7 @@ export default class Product extends Component {
       <div className="product-template page-width">
         <div className="grid">
           <div className="grid__item medium-up--one-half">
-            <img src={product.featured_image} alt={product.title}/>
+            <img className="featured-image" src={product.featured_image} alt={product.title}/>
             {productImages}
           </div>
           <div className="grid__item medium-up--one-half">

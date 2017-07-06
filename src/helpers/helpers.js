@@ -10,7 +10,7 @@ export function getData(slug, template, page ) {
   if ( page ){
     url = url + '?page=' + page;
   }
-  if ( template === 'search' ) {
+  if ( template === 'search' || template === 'blog') {
     url = slug;
   }
   xhr.onreadystatechange = function () {
@@ -20,6 +20,8 @@ export function getData(slug, template, page ) {
       object = object.split('start-'+ template +'-object')[1];
       object = JSON.parse(object);
       object = object[0];
+      if (template === 'blog' )
+        console.log(object);
       store.dispatch(actions.getData(template, object));
       if ( template === 'all-products'){
         if ( object["pages"] > page){
@@ -94,9 +96,9 @@ export function changeSeo(object,shop_name,shop_description,title) {
 // export function getDataApi(requestUrl,func){
 //   const XHR = ("onload" in new XMLHttpRequest()) ? XMLHttpRequest : XDomainRequest;
 //   const xhr = new XHR();
-//   // xhr.withCredentials = true;
+//   xhr.withCredentials = true;
 //   xhr.open('GET', requestUrl, true);
-//   // xhr.setRequestHeader("Authorization", "Basic MWViMTRmMDM5NjI3ZmY4Yzk1ZTQ5OTFhY2EwZTk3Y2U6Nzk3MmE4OGUzNTJmNTE0YzI4YWYzMjU5MDk1MDk1MTI=");
+//   xhr.setRequestHeader("Authorization", "Basic MWViMTRmMDM5NjI3ZmY4Yzk1ZTQ5OTFhY2EwZTk3Y2U6Nzk3MmE4OGUzNTJmNTE0YzI4YWYzMjU5MDk1MDk1MTI=");
 //   xhr.onload = func;
 //   xhr.onerror = function() {
 //     console.log('error');
@@ -104,4 +106,4 @@ export function changeSeo(object,shop_name,shop_description,title) {
 //   xhr.send();
 // }
 //
-// getDataApi('/search?q=Simple', getType);
+// getDataApi('/admin/blogs/news/articles.json', getType);

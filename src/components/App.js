@@ -13,7 +13,8 @@ function mapStateToProps(state) {
     data: state.data,
     homepage: state.homepage,
     page: state.page,
-    search: state.search
+    search: state.search,
+    blog: state.blog
   }
 }
 

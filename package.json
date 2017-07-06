@@ -37,6 +37,10 @@
       "target" : "https://custom-storefront.myshopify.com",
       "changeOrigin" : true
     },
+    "/blogs": {
+      "target" : "https://custom-storefront.myshopify.com",
+      "changeOrigin" : true
+    },
     "/collections/types": {
       "target" : "https://custom-storefront.myshopify.com",
       "changeOrigin" : true

@@ -16,7 +16,8 @@ const defaultState = {
   product: [],
   homepage: [],
   page: [],
-  search: []
+  search: [],
+  blog: []
 };
 
 const enhancers = compose(

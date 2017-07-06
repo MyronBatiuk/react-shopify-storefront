@@ -5,9 +5,10 @@ class Navigation extends Component {
   render(){
     let listOfItems = this.props.items;
     let items = Object.keys(listOfItems).map((item) => {
+      const url = listOfItems[item].url;
       return (
         <li key={item} className="nav-item">
-          <NavLink exact activeClassName="active" to={listOfItems[item].url}>
+          <NavLink exact activeClassName="active" to={url.replace('blogs','blog')}>
             {listOfItems[item].title}
           </NavLink>
         </li>

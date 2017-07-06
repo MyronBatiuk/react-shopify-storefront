@@ -14,7 +14,7 @@ class Header extends Component {
     helpers.getData('/pages/home', 'header');
   }
   componentDidUpdate() {
-    if ( this.props.location.pathname === "/" && this.props.header.hasOwnProperty('shop_name')) {
+    if ( this.props.location.pathname === "/" && Object.keys(this.props.header).length !== 0 ) {
       helpers.changeSeo(null, this.props.header.shop_name, this.props.header.shop_description);
     }
   }
@@ -40,10 +40,10 @@ class Header extends Component {
     let header = this.props.header;
     let logo, navigation, mobileNavigation;
     if (Object.keys(header).length !== 0) {
-      if (header.logo_src !== '') {
+      if (header.hasOwnProperty('logo_src')) {
         logo = <img className="logo" src={header.logo_src} alt=""/>
       } else {
-        logo = <h3>{header.shop_name}</h3>;
+        logo = <h3 className="store-name">{header.shop_name}</h3>;
       }
       if (Object.keys(header.navigation).length !== 0) {
         navigation = <Navigation items={header.navigation}/>;
