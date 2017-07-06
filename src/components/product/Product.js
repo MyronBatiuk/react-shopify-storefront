@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import VariantSelector from './VariantSelector';
+import ProductImages from './ProductImages';
 import * as helpers from '../../helpers/helpers';
 import store from '../../store';
 import * as actions from '../../actions/actionCreators';
@@ -46,13 +47,17 @@ export default class Product extends Component {
   };
 
   render() {
-    let variantSelectors, comparePrice;
+    let variantSelectors, comparePrice, productImages;
     let product = this.props.product;
     if (Object.keys(product).length !== 0) {
       if (Object.keys(product.variants).length > 1)
         variantSelectors = <VariantSelector
           variants={product.variants}
           />;
+      if (Object.keys(product.product_images).length > 1)
+        productImages = <ProductImages
+            images={product.product_images}
+        />;
       if ( product.selected_compare_price !== '' )
         comparePrice = <span className="product__compare-price">{product.currency + product.selected_compare_price}</span>
     }
@@ -61,6 +66,7 @@ export default class Product extends Component {
         <div className="grid">
           <div className="grid__item medium-up--one-half">
             <img src={product.featured_image} alt={product.title}/>
+            {productImages}
           </div>
           <div className="grid__item medium-up--one-half">
             <h1 className="product__title">{product.title}</h1>

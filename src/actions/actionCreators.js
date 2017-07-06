@@ -87,3 +87,10 @@ export function cleanSearch(){
     type:'CLEAN_SEARCH'
   }
 }
+
+export function changeFeaturedImage(image) {
+  return {
+    type: 'CHANGE_FEATURED_IMAGE',
+    image: image
+  }
+}
