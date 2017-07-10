@@ -14,7 +14,8 @@ function mapStateToProps(state) {
     homepage: state.homepage,
     page: state.page,
     search: state.search,
-    blog: state.blog
+    blog: state.blog,
+    article: state.article
   }
 }
 

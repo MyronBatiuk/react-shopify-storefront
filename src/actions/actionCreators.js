@@ -37,6 +37,9 @@ export function getData(template,object) {
     case 'blog':
       type = 'GET_BLOG_ARTICLES';
       break;
+    case 'article':
+      type = 'GET_ARTICLE';
+      break;
     default :
       type = '';
   }
@@ -82,12 +85,6 @@ export function removeItemFromCart(itemId){
   return {
     type:'REMOVE_ITEM',
     id: itemId.toString()
-  }
-}
-
-export function cleanSearch(){
-  return {
-    type:'CLEAN_SEARCH'
   }
 }
 

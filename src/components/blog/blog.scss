@@ -1,0 +1,21 @@
+.blog-template {
+  &__title {
+    text-align: center;
+    margin: 70px 0;
+  }
+  &__articles {
+    .article {
+      border-top: 1px solid #e5e5e5;
+      padding:50px 0;
+      &__info {
+        margin-bottom:20px;
+        .article__author {
+          margin-right:20px;
+        }
+      }
+      &__content {
+        margin-top:20px;
+      }
+    }
+  }
+}

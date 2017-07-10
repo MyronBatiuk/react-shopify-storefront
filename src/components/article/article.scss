@@ -1,0 +1,15 @@
+.single-article {
+  margin-top:50px;
+  &__title {
+    text-align: center;
+  }
+  &__info {
+    text-align: center;
+  }
+  &__author {
+    margin-right:20px;
+  }
+  &__content {
+    margin-top:50px;
+  }
+}

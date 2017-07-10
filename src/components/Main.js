@@ -9,6 +9,7 @@ import Cart from './cart/Cart';
 import SearchResults from './search/SearchResults';
 import HomePage from './home/HomePage';
 import Blog from './blog/Blog';
+import Article from './article/Article';
 import { Route, Switch } from 'react-router-dom';
 
 export default class App extends Component {
@@ -41,6 +42,10 @@ export default class App extends Component {
               <Blog location={this.props.location}
                              blog={this.props.blog}
                              header={this.props.header}/> )}/>
+          <Route exact path="/blog/:handle/:handle" render={(props) => (
+              <Article location={this.props.location}
+                    article={this.props.article}
+                    header={this.props.header}/> )}/>
           <Route path="/pages/:handle" render={(props) => (
             <Page page={this.props.page}
                   location={this.props.location}

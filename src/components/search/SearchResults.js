@@ -2,8 +2,6 @@ import React, { Component} from 'react';
 import SearchItem from './SearchItem';
 import Pagination from './Pagination';
 import * as helpers from '../../helpers/helpers';
-import * as actions from '../../actions/actionCreators';
-import store from '../../store';
 import './search.css';
 
 export default class SearchResults extends Component {
@@ -17,7 +15,6 @@ export default class SearchResults extends Component {
     const newQueryString = nextProps.location.search;
     if ( queryString !== newQueryString ){
       helpers.showLoadingIndicator();
-      store.dispatch(actions.cleanSearch());
       helpers.getData('/search' + newQueryString, 'search');
     }
   }

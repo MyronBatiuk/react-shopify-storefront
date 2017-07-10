@@ -43,7 +43,7 @@ class Collection extends Component {
     let hero;
     let template = this.props.template;
     const queryString = this.props.location.search;
-    let currentPage = queryString.split('=')[1];
+    let currentPage = queryString.split('page=')[1];
     if (typeof currentPage === 'undefined')
       currentPage = 1;
     if (Object.keys(collection).length !== 0) {

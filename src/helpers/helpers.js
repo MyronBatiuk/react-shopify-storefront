@@ -10,7 +10,7 @@ export function getData(slug, template, page ) {
   if ( page ){
     url = url + '?page=' + page;
   }
-  if ( template === 'search' || template === 'blog') {
+  if ( template === 'search' || template === 'blog' || template === 'article') {
     url = slug;
   }
   xhr.onreadystatechange = function () {
@@ -20,8 +20,6 @@ export function getData(slug, template, page ) {
       object = object.split('start-'+ template +'-object')[1];
       object = JSON.parse(object);
       object = object[0];
-      if (template === 'blog' )
-        console.log(object);
       store.dispatch(actions.getData(template, object));
       if ( template === 'all-products'){
         if ( object["pages"] > page){
@@ -65,7 +63,7 @@ export function changeSeo(object,shop_name,shop_description,title) {
     meta.description.content = shop_description;
     return;
   }
-  let pageTitle = object.title;
+  let objectTitle = object.title;
   let seoTitle = object.seo_title;
   let shopName = shop_name;
   let seoDescription = object.seo_description;
@@ -73,7 +71,7 @@ export function changeSeo(object,shop_name,shop_description,title) {
   if ( seoTitle !== '' && shopName !== '' ) {
     document.title = seoTitle + ' | ' + shopName;
   } else if ( shopName !== '' ) {
-    document.title = pageTitle + ' | ' + shopName;
+    document.title = objectTitle + ' | ' + shopName;
   }
   let meta = document.getElementsByTagName("meta");
   if ( seoDescription !== '' ) {
