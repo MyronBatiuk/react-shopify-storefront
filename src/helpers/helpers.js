@@ -25,6 +25,8 @@ export function getData(slug, template, page , getAllPages ) {
         }
       }
     }
+    if (xhr.status === 404)
+      window.location = '/notfound';
   };
   xhr.open("GET", url, true);
   xhr.send(null);

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import * as helpers from '../../helpers/helpers';
 import DefaultPage from './defaultPage/DefaultPage';
 import DesignerPage from './designerPage/DesignerPage';
-import './page.css';
+import AboutPage from './aboutPage/AboutPage';
 
 export default class Page extends Component {
   componentWillMount() {
@@ -34,14 +34,16 @@ export default class Page extends Component {
     if (Object.keys(page).length !== 0) {
       if (page.hasOwnProperty('designer')) {
         content = <DesignerPage page={page} data={data}/>;
+      } else if (page.hasOwnProperty('box1_image')) {
+        content = <AboutPage page={page}/>;
       } else {
         content = <DefaultPage page={page}/>;
       }
     }
     return (
-      <div className="page-template page-width">
-        {content}
-      </div>
+        <div className="page-template">
+          {content}
+        </div>
     );
   }
 };

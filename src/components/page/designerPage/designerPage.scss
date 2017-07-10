@@ -1,4 +1,8 @@
 .designer-page {
+  margin:50px auto;
+  @media screen and (max-width:767px){
+    margin: 20px auto;
+  }
   &__content{
     padding-bottom:50px;
     .designer-page__title {

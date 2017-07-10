@@ -1,0 +1,92 @@
+.about-page .hero-section__image {
+  height: 250px;
+  background-position: center center; }
+  .about-page .hero-section__image .hero-section__inner .inner__title {
+    text-transform: uppercase;
+    font-size: 2.525em; }
+  .about-page .hero-section__image .hero-section__inner .inner__subtitle {
+    max-width: 100%; }
+
+.about-page .about-page__content {
+  margin-bottom: 50px; }
+  .about-page .about-page__content .quote-section__image {
+    height: 350px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    display: table;
+    width: 100%; }
+  .about-page .about-page__content .quote-section__content {
+    position: relative;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 55px 110px;
+    z-index: 2;
+    margin: 0 auto;
+    text-align: center;
+    color: #40ba94;
+    font-size: 28px;
+    font-weight: 500; }
+    @media screen and (max-width: 1200px) {
+      .about-page .about-page__content .quote-section__content {
+        padding: 55px; } }
+    @media screen and (max-width: 767px) {
+      .about-page .about-page__content .quote-section__content {
+        font-size: 25px;
+        padding: 55px 0; } }
+    .about-page .about-page__content .quote-section__content:before, .about-page .about-page__content .quote-section__content:after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 90px;
+      height: 2px;
+      background: #40ba94;
+      left: calc(50% - 45px);
+      margin-top: -25px; }
+    .about-page .about-page__content .quote-section__content:after {
+      margin-top: 25px; }
+  .about-page .about-page__content .boxes-section .box {
+    width: 50%;
+    display: inline-block;
+    padding: 0 20px;
+    vertical-align: top;
+    margin-bottom: 70px;
+    overflow: hidden; }
+    @media screen and (max-width: 650px) {
+      .about-page .about-page__content .boxes-section .box {
+        width: 100%;
+        padding: 0;
+        margin-bottom: 30px; } }
+    .about-page .about-page__content .boxes-section .box__header {
+      height: 280px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      position: relative;
+      display: table;
+      width: 100%; }
+      @media screen and (max-width: 650px) {
+        .about-page .about-page__content .boxes-section .box__header {
+          display: block; } }
+    .about-page .about-page__content .boxes-section .box__title {
+      position: relative;
+      display: table-cell;
+      vertical-align: middle;
+      padding: 55px;
+      z-index: 2;
+      margin: 0 auto;
+      text-align: center;
+      color: #fff;
+      font-size: 28px;
+      font-weight: 500;
+      text-transform: uppercase; }
+      @media screen and (max-width: 650px) {
+        .about-page .about-page__content .boxes-section .box__title {
+          display: block;
+          padding: 123px 20px 20px; } }
+    .about-page .about-page__content .boxes-section .box__content {
+      margin-top: 25px;
+      font-size: 21px;
+      text-align: center;
+      font-weight: 500; }

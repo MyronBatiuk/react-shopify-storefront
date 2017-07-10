@@ -1,0 +1,113 @@
+.about-page {
+  .hero-section {
+    &__image {
+      height:250px;
+      background-position: center center;
+      .hero-section__inner {
+        .inner__title {
+          text-transform: uppercase;
+          font-size: 2.525em;
+        }
+        .inner__subtitle {
+          max-width:100%;
+        }
+      }
+    }
+  }
+  .about-page__content {
+    margin-bottom:50px;
+    .quote-section {
+      &__image {
+        height: 350px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        position: relative;
+        display: table;
+        width:100%;
+      }
+      &__content {
+        position: relative;
+        display: table-cell;
+        vertical-align: middle;
+        padding: 55px 110px;
+        z-index: 2;
+        margin: 0 auto;
+        text-align: center;
+        color:#40ba94;
+        font-size: 28px;
+        font-weight:500;
+        @media screen and (max-width:1200px){
+          padding:55px;
+        }
+        @media screen and (max-width:767px){
+          font-size: 25px;
+          padding:55px 0;
+        }
+        &:before,&:after {
+          content:"";
+          display:block;
+          position:absolute;
+          width:90px;
+          height:2px;
+          background: #40ba94;
+          left:calc(50% - 45px);
+          margin-top:-25px;
+        }
+        &:after {
+          margin-top:25px;
+        }
+      }
+    }
+    .boxes-section {
+      .box {
+        width:50%;
+        display:inline-block;
+        padding:0 20px;
+        vertical-align: top;
+        margin-bottom:70px;
+        overflow: hidden;
+        @media screen and (max-width:650px){
+          width:100%;
+          padding:0;
+          margin-bottom:30px;
+        }
+        &__header {
+          height: 280px;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center center;
+          position: relative;
+          display: table;
+          width:100%;
+          @media screen and (max-width:650px){
+            display: block;
+          }
+        }
+        &__title {
+          position: relative;
+          display: table-cell;
+          vertical-align: middle;
+          padding: 55px;
+          z-index: 2;
+          margin: 0 auto;
+          text-align: center;
+          color:#fff;
+          font-size: 28px;
+          font-weight:500;
+          text-transform: uppercase;
+          @media screen and (max-width:650px){
+            display: block;
+            padding: 123px 20px 20px;
+          }
+        }
+        &__content {
+          margin-top:25px;
+          font-size:21px;
+          text-align:center;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}

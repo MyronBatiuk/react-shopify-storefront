@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import * as helpers from '../../helpers/helpers';
 import Hero from './Hero';
 import ProductsGrid from '../collection/ProductsGrid';
-import './home.css';
 
 export default class Home extends Component {
 

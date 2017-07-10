@@ -224,6 +224,43 @@ ul {
     margin-bottom: 0.4rem;
     color: #535253; }
 
+.hero-section .hero-section__image {
+  height: 300px;
+  position: relative;
+  display: table;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat; }
+  .hero-section .hero-section__image .hero-section__inner {
+    position: relative;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 55px;
+    color: #fff;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center; }
+    @media screen and (max-width: 767px) {
+      .hero-section .hero-section__image .hero-section__inner {
+        padding: 20px 15px; } }
+    .hero-section .hero-section__image .hero-section__inner .inner__title {
+      font-size: 2.625em;
+      font-weight: 600;
+      margin-bottom: 8px;
+      text-shadow: 0 0 15px rgba(0, 0, 0, 0.1); }
+      @media screen and (max-width: 767px) {
+        .hero-section .hero-section__image .hero-section__inner .inner__title {
+          font-size: 2em; } }
+    .hero-section .hero-section__image .hero-section__inner .inner__subtitle {
+      margin: 0 auto;
+      max-width: 75%;
+      text-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      font-size: 1.5em; }
+      @media screen and (max-width: 767px) {
+        .hero-section .hero-section__image .hero-section__inner .inner__subtitle {
+          font-size: 1.25em; } }
+
 .grid {
   list-style: none;
   margin: 0 0 0 -30px;
