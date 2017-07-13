@@ -13,7 +13,7 @@ export function getData(slug, template, page ) {
   if ( template === 'search' || template === 'blog' || template === 'article') {
     url = slug;
   }
-  xhr.onreadystatechange = function () {
+  xhr.onload = function () {
     if (xhr.readyState === 4 && xhr.status === 200) {
       let object = xhr.responseText;
       object = object.substr(0, object.indexOf('end-'+ template +'-object'));
@@ -80,28 +80,3 @@ export function changeSeo(object,shop_name,shop_description,title) {
     meta.description.content = pageExcerpt;
   }
 }
-
-// function getType() {
-//   console.log(this.responseText);
-//   // const products = productsObject['products'].sort(function (a,b) {
-//   //   const dateA = new Date(a['created_at']);
-//   //   const dateB = new Date(b['created_at']);
-//   //   return (dateB.getTime() / 1000) - (dateA.getTime() / 1000);
-//   // });
-//   // store.dispatch(actions.getData('all-products', products));
-// }
-//
-// export function getDataApi(requestUrl,func){
-//   const XHR = ("onload" in new XMLHttpRequest()) ? XMLHttpRequest : XDomainRequest;
-//   const xhr = new XHR();
-//   xhr.withCredentials = true;
-//   xhr.open('GET', requestUrl, true);
-//   xhr.setRequestHeader("Authorization", "Basic MWViMTRmMDM5NjI3ZmY4Yzk1ZTQ5OTFhY2EwZTk3Y2U6Nzk3MmE4OGUzNTJmNTE0YzI4YWYzMjU5MDk1MDk1MTI=");
-//   xhr.onload = func;
-//   xhr.onerror = function() {
-//     console.log('error');
-//   };
-//   xhr.send();
-// }
-//
-// getDataApi('/admin/blogs/news/articles.json', getType);

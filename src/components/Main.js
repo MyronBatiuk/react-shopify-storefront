@@ -10,6 +10,8 @@ import SearchResults from './search/SearchResults';
 import HomePage from './home/HomePage';
 import Blog from './blog/Blog';
 import Article from './article/Article';
+import Login from './account/Login';
+import Register from './account/Register';
 import { Route, Switch } from 'react-router-dom';
 
 export default class App extends Component {
@@ -50,6 +52,12 @@ export default class App extends Component {
             <Page page={this.props.page}
                   location={this.props.location}
                   header={this.props.header}/> )}/>
+          <Route exact path="/account/login" render={(props) => (
+              <Login location={this.props.location}
+                    header={this.props.header}/> )}/>
+          <Route exact path="/account/register" render={(props) => (
+              <Register location={this.props.location}
+                     header={this.props.header}/> )}/>
           <Route render={(props) => (
             <NotFound  header={this.props.header}/> )}/>
         </Switch>

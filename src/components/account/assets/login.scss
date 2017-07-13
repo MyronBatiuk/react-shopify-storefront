@@ -1,0 +1,29 @@
+.login-template {
+  &__form {
+    width:350px;
+    margin:200px auto;
+    label {
+      display:block;
+    }
+    input {
+      width:100%;
+      margin-bottom:20px;
+    }
+    .login-button {
+      color: #fff;
+      background-color: #999;
+      border-color: #999;
+      padding: 6px 24px;
+      cursor:pointer;
+    }
+    .create-account {
+      margin-top:20px;
+      span {
+        margin-right:10px;
+      }
+      .customer-register-link {
+        color:#000;
+      }
+    }
+  }
+}

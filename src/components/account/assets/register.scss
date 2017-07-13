@@ -1,0 +1,41 @@
+.register-template {
+  &__form {
+    width:350px;
+    margin:150px auto;
+    &.sending-data {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+    label {
+      display:block;
+    }
+    input {
+      width:100%;
+      margin-bottom:20px;
+    }
+    .error-message {
+      color:red;
+      margin: 20px 0 0;
+    }
+    .success-message {
+      color:green;
+      margin: 20px 0 0;
+    }
+    .register-button {
+      color: #fff;
+      background-color: #999;
+      border-color: #999;
+      padding: 6px 24px;
+      cursor:pointer;
+    }
+    .login-account {
+      margin-top:15px;
+      span {
+        margin-right:10px;
+      }
+      .customer-login-link {
+        color:#000;
+      }
+    }
+  }
+}

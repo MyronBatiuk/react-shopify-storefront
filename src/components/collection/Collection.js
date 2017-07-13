@@ -23,12 +23,14 @@ class Collection extends Component {
   componentWillReceiveProps(nextProps){
     let newLocation = nextProps.location.pathname;
     let newPage = nextProps.location.search;
+    if ( newPage !== this.props.location.search ){
+      helpers.showLoadingIndicator();
+      if (newPage === '')
+        helpers.getData(newLocation, 'collection');
+    }
     if ( newLocation !== this.props.location.pathname) {
       helpers.showLoadingIndicator();
       helpers.getData(newLocation, 'collection');
-    }
-    if ( newPage !== this.props.location.search ){
-      helpers.showLoadingIndicator();
     }
   }
   componentDidUpdate(){
