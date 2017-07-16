@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import * as helpers from '../../helpers/helpers';
-import './assets/register.css';
+import './assets/login&register.css';
 
 export default class Register extends Component {
 
@@ -75,18 +75,15 @@ export default class Register extends Component {
       this.setState({
         error: 'Password should contain at least 5 characters'
       })
-    }
-    if ( !validEmail ) {
+    } else if ( !validEmail ) {
       this.setState({
         error: 'Please enter valid email'
       })
-    }
-    if( firstName === '' || lastName === '' || email === '' || password === '') {
+    } else if( firstName === '' || lastName === '' || email === '' || password === '') {
       this.setState({
         error: 'Please fill all the fields above'
       })
-    }
-    if ( firstName !== '' && lastName !== '' && email !== '' && validEmail && password !== '' && password.length >= 5 ) {
+    } else {
       this.setState({
         sendingData: true
       });
@@ -96,9 +93,8 @@ export default class Register extends Component {
           "last_name": lastName,
           "email": email,
           "verified_email": true,
-          "password": password,
-          "password_confirmation": password,
-          "send_email_welcome": false
+          "send_email_welcome": false,
+          "multipass_identifier": password
         }
       };
       this.createCustomer(customer);

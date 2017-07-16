@@ -12,6 +12,7 @@ import Blog from './blog/Blog';
 import Article from './article/Article';
 import Login from './account/Login';
 import Register from './account/Register';
+import Account from './account/Account';
 import { Route, Switch } from 'react-router-dom';
 
 export default class App extends Component {
@@ -52,6 +53,9 @@ export default class App extends Component {
             <Page page={this.props.page}
                   location={this.props.location}
                   header={this.props.header}/> )}/>
+          <Route exact path="/account" render={(props) => (
+              <Account location={this.props.location}
+                     header={this.props.header}/> )}/>
           <Route exact path="/account/login" render={(props) => (
               <Login location={this.props.location}
                     header={this.props.header}/> )}/>

@@ -1,13 +1,27 @@
-.login-template {
+.login-template,
+.register-templat {
   &__form {
     width:350px;
-    margin:200px auto;
+    margin:75px auto;
+    &.sending-data {
+      opacity: 0.5;
+      pointer-events: none;
+    }
     label {
       display:block;
     }
     input {
       width:100%;
       margin-bottom:20px;
+      padding:5px 10px;
+    }
+    .error-message {
+      color:red;
+      margin: 20px 0 0;
+    }
+    .success-message {
+      color:green;
+      margin: 20px 0 0;
     }
     .login-button {
       color: #fff;
