@@ -1,0 +1,82 @@
+.contact-page {
+  .hero-section {
+    &__image {
+      height:250px;
+      .hero-section__inner {
+        .inner__title {
+          text-transform: capitalize;
+          font-size: 2.525em;
+        }
+        .inner__subtitle {
+          text-transform: capitalize;
+          max-width:100%;
+        }
+      }
+    }
+  }
+  .info-section {
+    &__item {
+      padding: 37px 0 27px;
+      text-align:center;
+      border-bottom: 2px solid gainsboro;
+      float:none;
+      .item__title {
+        font-size:23px;
+        font-weight: 500;
+        margin-bottom: 6px;
+        &.social {
+          margin-bottom:14px;
+        }
+      }
+      .item__text {
+        font-size:23px;
+        font-weight: 500;
+        color:#40ba94;
+      }
+      &.share-buttons {
+        .share-button {
+          background: url('./assets/sharing_icons.svg');
+          background-size: 80px;
+          &.twitter {
+            background-position: 0 0;
+          }
+          &.instagram {
+            background: url('./assets/instagram.svg');
+            background-size: 20px;
+          }
+          &.dribbble {
+            background: url('./assets/dribbble.svg');
+            background-size: 20px;
+          }
+          &.facebook {
+            background-position: -20px 0;
+          }
+          &.pinterest {
+            background-position: 20px 0;
+          }
+          &.slack {
+            background: url('./assets/slack.svg');
+            background-size: 20px;
+          }
+        }
+      }
+    }
+  }
+  .form-section {
+    margin:45px 0 90px;
+    &__row {
+      margin:25px 0;
+      .row__title {
+        color:#40ba94;
+        font-size:27px;
+        font-weight: 500;
+        margin-bottom: 12px;
+      }
+      .row__text {
+        font-weight: 500;
+        font-size:19px;
+        margin-top: 12px;
+      }
+    }
+  }
+}

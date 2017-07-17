@@ -3,6 +3,7 @@ import * as helpers from '../../helpers/helpers';
 import DefaultPage from './defaultPage/DefaultPage';
 import DesignerPage from './designerPage/DesignerPage';
 import AboutPage from './aboutPage/AboutPage';
+import ContactPage from './contactPage/ContactPage';
 
 export default class Page extends Component {
   componentWillMount() {
@@ -20,8 +21,8 @@ export default class Page extends Component {
     }
   }
 
-  componentDidUpdate() {
-    if (Object.keys(this.props.page).length !== 0 && Object.keys(this.props.header).length !== 0) {
+  componentDidUpdate(nextProps) {
+    if (Object.keys(this.props.page).length !== 0 && Object.keys(this.props.header).length !== 0 && this.props.location.pathname === nextProps.location.pathname) {
       helpers.hideLoadingIndicator();
       helpers.changeSeo(this.props.page, this.props.header.shop_name);
     }
@@ -36,6 +37,8 @@ export default class Page extends Component {
         content = <DesignerPage page={page} data={data}/>;
       } else if (page.hasOwnProperty('box1_image')) {
         content = <AboutPage page={page}/>;
+      } else if (page.hasOwnProperty('email')) {
+        content = <ContactPage page={page}/>;
       } else {
         content = <DefaultPage page={page}/>;
       }
