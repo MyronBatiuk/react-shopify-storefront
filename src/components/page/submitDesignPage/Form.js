@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
 export default class Form extends Component {
 
   constructor(){
@@ -25,11 +24,12 @@ export default class Form extends Component {
 
   render() {
     const page = this.props.page;
+    console.log(page);
     return (
         <div className="form-section">
-          <form action="https://submit.jotformeu.com/submit/71981737208363/">
-            <input type="hidden" name="formID" value="71981737208363"/>
-            <input type="hidden" id="simple_spc" name="simple_spc" value="71981737208363"/>
+          <form action="https://submit.jotformeu.com/submit/72013419308348/">
+            <input type="hidden" name="formID" value="72013419308348"/>
+            <input type="hidden" id="simple_spc" name="simple_spc" value="72013419308348"/>
             <div className="form-section__row">
               <div className="grid">
                 <div className="grid__item medium-up--one-half small--full-width">
@@ -46,7 +46,7 @@ export default class Form extends Component {
                     <input type="text" id="last_3" name="q3_name[last]" className="form-textbox" size="15" placeholder="Washington"/>
                   </div>
                   <label className="capitalized">Email Address</label>
-                  <input type="email" id="input_4" name="q4_email" className="form-textbox" size="30" placeholder="thefirst@foundingfathers.com"/>
+                  <input type="email" id="input_4" name="q4_emailAddress" className="form-textbox" size="30" placeholder="thefirst@foundingfathers.com"/>
                   <input type="checkbox" className="form-checkbox" id="input_5_0"  name="q5_getEmail[]"/>
                   <label htmlFor="input_5_0" className="css-label">
                   </label>
@@ -61,27 +61,44 @@ export default class Form extends Component {
                   <p className="row__text">{page.row2_text}</p>
                 </div>
                 <div className="grid__item medium-up--one-half small--full-width">
-                  <label>Choose a subject</label>
-                  <select className={`form-dropdown ${this.state.selectStatus}`} id="input_7" name="q7_subject" onChange={this.changeSelect}>
-                    <option value="Ask a Question"> Ask a Question</option>
-                    <option value="Change shipping address"> Change shipping address</option>
-                    <option value="Change order"> Change order</option>
-                    <option value="Request a product"> Request a product</option>
-                    <option value="Other (please explain)"> Other (please explain)</option>
-                  </select>
-                  <label>Write your message</label>
-                  <textarea id="input_6" className="form-textarea" name="q6_message" cols="40" rows="6" placeholder="Four score and seven years ago..."/>
+                  <label className="capitalized">Link to work examples</label>
+                  <input type="text" id="input_6" name="q6_linkTo6" className="form-textbox" size="20" placeholder="www.declarationofindependence.com/2ndamendment"/>
+                  <input type="text" id="input_7" name="q7_linkTo" className="form-textbox" size="20" placeholder="www.dribbble.com/louisianapurchase"/>
+                </div>
+              </div>
+            </div>
+            <div className="form-section__row">
+              <div className="grid">
+                <div className="grid__item medium-up--one-half small--full-width">
+                  <h3 className="row__title">{page.row3_title}</h3>
+                  <p className="row__text">{page.row3_text}</p>
+                </div>
+                <div className="grid__item medium-up--one-half small--full-width">
+                  <label>Upload an idea (optional)</label>
+                  <div className="file-uploader">
+                    <h5 className="file-uploader__title">Drag and drop a file here or click</h5>
+                    <h5 className="file-uploader__subtitle">AI, EPS, PSD, JPG, or TIFF</h5>
+                    <input type="file" id="input_8" name="q8_clickTo[]" multiple className="form-upload-multiple" accept="ai,eps,psd,pdf,jpg,tiff,png"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="form-section__row">
+              <div className="grid">
+                <div className="grid__item medium-up--one-half small--full-width">
+                  <h3 className="row__title">{page.row4_title}</h3>
+                  <p className="row__text">{page.row4_text}</p>
+                </div>
+                <div className="grid__item medium-up--one-half small--full-width">
+                  <label>Four score and seven years...</label>
+                  <textarea id="input_9" className="form-textarea" name="q9_fourScore" cols="40" rows="6" placeholder="Four score and seven years ago..."/>
                 </div>
               </div>
             </div>
             <div className="form-section__row">
               <div className="grid grid--no-gutters grid--table">
                 <div className="grid__item medium-up--one-half small--full-width">
-                  <div className="policy-urls">
-                    <Link to={page.return_policy.url} className="return-policy">{page.return_policy.title}</Link>
-                    <span className="divider">|</span>
-                    <Link to={page.shipping_policy.url} className="shipping-policy">{page.shipping_policy.title}</Link>
-                  </div>
+                  <p className="row__small-text">{page.row5_text}</p>
                 </div>
                 <div className="grid__item medium-up--one-half small--full-width">
                   <button id="input_2" type="submit" className="form-submit-button">Send message</button>

@@ -2,30 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a40b62a-00e0-4951-99e6-aef9a5e12d7b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/page/contactPage/assets/default_hero.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/page/contactPage/Form.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/page/contactPage/Hero.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/page/contactPage/Info.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/page/contactPage/SocialNetworks.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/page/contactPage/assets/dribbble.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/page/contactPage/assets/instagram.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/page/contactPage/assets/sharing_icons.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/page/contactPage/assets/slack.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/page/contactPage/contact.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/page/contactPage/assets/checkbox1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/page/contactPage/assets/checkbox2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/page/submitDesignPage/assets/checkbox1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/page/submitDesignPage/assets/checkbox2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/page/submitDesignPage/assets/default_hero.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/page/submitDesignPage/Content.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/page/submitDesignPage/Form.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/page/submitDesignPage/Hero.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/page/submitDesignPage/Info.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/page/submitDesignPage/SubmitDesignPage.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/page/submitDesignPage/assets/compensation.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/page/submitDesignPage/assets/design.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/page/submitDesignPage/assets/how.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/page/submitDesignPage/submit.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/page/submitDesignPage/submit.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app.css" afterPath="$PROJECT_DIR$/src/app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app.scss" afterPath="$PROJECT_DIR$/src/app.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/404/notfound.css" afterPath="$PROJECT_DIR$/src/components/404/notfound.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/cart/Cart.js" afterPath="$PROJECT_DIR$/src/components/cart/Cart.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/cart/CartContainer.js" afterPath="$PROJECT_DIR$/src/components/cart/CartContainer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/cart/cart.css" afterPath="$PROJECT_DIR$/src/components/cart/cart.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/collection/collection.css" afterPath="$PROJECT_DIR$/src/components/collection/collection.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/footer/footer.css" afterPath="$PROJECT_DIR$/src/components/footer/footer.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/header/header.css" afterPath="$PROJECT_DIR$/src/components/header/header.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/page/Page.js" afterPath="$PROJECT_DIR$/src/components/page/Page.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/page/aboutPage/about.css" afterPath="$PROJECT_DIR$/src/components/page/aboutPage/about.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/page/designerPage/designerPage.css" afterPath="$PROJECT_DIR$/src/components/page/designerPage/designerPage.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/product/product.css" afterPath="$PROJECT_DIR$/src/components/product/product.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/page/contactPage/Form.js" afterPath="$PROJECT_DIR$/src/components/page/contactPage/Form.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/page/contactPage/contact.css" afterPath="$PROJECT_DIR$/src/components/page/contactPage/contact.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/page/contactPage/contact.scss" afterPath="$PROJECT_DIR$/src/components/page/contactPage/contact.scss" />
     </list>
     <ignored path="shopify-storefront.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,43 +42,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ContactPage.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/page/contactPage/ContactPage.js">
+      <file leaf-file-name="SubmitDesignPage.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/page/submitDesignPage/SubmitDesignPage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="12" column="37" lean-forward="true" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Form.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/page/contactPage/Form.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="42" column="106" lean-forward="true" selection-start-line="42" selection-start-column="106" selection-end-line="42" selection-end-column="106" />
+            <state relative-caret-position="80">
+              <caret line="4" column="32" lean-forward="false" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="contact.scss" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Form.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/page/submitDesignPage/Form.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="186">
+              <caret line="100" column="43" lean-forward="false" selection-start-line="100" selection-start-column="43" selection-end-line="100" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="contact.scss" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/page/contactPage/contact.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="314">
-              <caret line="65" column="18" lean-forward="false" selection-start-line="65" selection-start-column="18" selection-end-line="65" selection-end-column="18" />
+            <state relative-caret-position="335">
+              <caret line="187" column="24" lean-forward="false" selection-start-line="187" selection-start-column="24" selection-end-line="187" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SocialNetworks.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/page/contactPage/SocialNetworks.js">
+      <file leaf-file-name="submit.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/page/submitDesignPage/submit.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="9" column="87" lean-forward="false" selection-start-line="9" selection-start-column="87" selection-end-line="9" selection-end-column="87" />
+            <state relative-caret-position="300">
+              <caret line="15" column="20" lean-forward="false" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -101,14 +95,19 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>location</find>
-      <find>check</find>
       <find>images</find>
       <find>this.closeCart</find>
       <find>grid</find>
       <find>share</find>
+      <find>gainsboro</find>
+      <find>check</find>
+      <find>button</find>
+      <find>submit</find>
+      <find>gai</find>
     </findStrings>
     <replaceStrings>
       <replace>this.props.closeCart</replace>
+      <replace>#bfc5c5</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -117,15 +116,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/components/page/designerPage/ShareButtons.js" />
-        <option value="$PROJECT_DIR$/src/components/product/RelatedItems.js" />
-        <option value="$PROJECT_DIR$/src/components/page/designerPage/AvailableProduct.js" />
-        <option value="$PROJECT_DIR$/src/components/page/designerPage/AvailableProducts.js" />
-        <option value="$PROJECT_DIR$/src/reducers/data.js" />
-        <option value="$PROJECT_DIR$/src/components/collection/ProductsGrid.js" />
-        <option value="$PROJECT_DIR$/src/assets/dribbble.svg" />
-        <option value="$PROJECT_DIR$/src/assets/instagram.svg" />
-        <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/src/components/product/product.scss" />
         <option value="$PROJECT_DIR$/src/components/header/Header.js" />
         <option value="$PROJECT_DIR$/src/components/header/header.scss" />
@@ -152,7 +142,6 @@
         <option value="$PROJECT_DIR$/src/helpers/helpers.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/components/page/contactPage/Hero.js" />
-        <option value="$PROJECT_DIR$/src/components/page/Page.js" />
         <option value="$PROJECT_DIR$/src/components/cart/Cart.js" />
         <option value="$PROJECT_DIR$/src/components/cart/CartContainer.js" />
         <option value="$PROJECT_DIR$/src/components/page/contactPage/ContactPage.js" />
@@ -166,8 +155,18 @@
         <option value="$PROJECT_DIR$/src/components/page/contactPage/Info.js" />
         <option value="$PROJECT_DIR$/src/components/page/contactPage/SocialNetworks.js" />
         <option value="$PROJECT_DIR$/src/components/page/designerPage/SocialNetworks.js" />
-        <option value="$PROJECT_DIR$/src/components/page/contactPage/contact.scss" />
+        <option value="$PROJECT_DIR$/src/components/page/Page.js" />
+        <option value="$PROJECT_DIR$/src/components/page/submitDesignPage/Hero.js" />
         <option value="$PROJECT_DIR$/src/components/page/contactPage/Form.js" />
+        <option value="$PROJECT_DIR$/src/components/page/submitDesignPage/assets/design.svg" />
+        <option value="$PROJECT_DIR$/src/components/page/submitDesignPage/assets/how.svg" />
+        <option value="$PROJECT_DIR$/src/components/page/submitDesignPage/assets/compensation.svg" />
+        <option value="$PROJECT_DIR$/src/components/page/submitDesignPage/SubmitDesignPage.js" />
+        <option value="$PROJECT_DIR$/src/components/page/submitDesignPage/Content.js" />
+        <option value="$PROJECT_DIR$/src/components/page/submitDesignPage/Info.js" />
+        <option value="$PROJECT_DIR$/src/components/page/submitDesignPage/Form.js" />
+        <option value="$PROJECT_DIR$/src/components/page/submitDesignPage/submit.scss" />
+        <option value="$PROJECT_DIR$/src/components/page/contactPage/contact.scss" />
       </list>
     </option>
   </component>
@@ -254,8 +253,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -318,28 +317,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="product" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="shopify-storefront" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="shopify-storefront" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="page" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -366,7 +343,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="designerPage" />
+              <option name="myItemId" value="submitDesignPage" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -384,7 +361,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="page" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="contactPage" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -405,19 +390,19 @@
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\shopify-storefront\src\components\page\submitDesignPage\assets" />
+      <recent name="C:\xampp\htdocs\shopify-storefront\src\components\page" />
+      <recent name="C:\xampp\htdocs\shopify-storefront\src\components\page\contactPage\assets" />
+      <recent name="C:\xampp\htdocs\shopify-storefront\src\components\page\contactPage" />
+      <recent name="C:\xampp\htdocs\shopify-storefront\src\components\page\aboutPage\assets" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\shopify-storefront\src\components\page\contactPage" />
       <recent name="C:\xampp\htdocs\shopify-storefront\src\components\page\designerPage" />
       <recent name="C:\xampp\htdocs\shopify-storefront\src\components\page\DefaultPage" />
       <recent name="C:\xampp\htdocs\shopify-storefront\src\components\404" />
       <recent name="C:\xampp\htdocs\shopify-storefront\src\components\home\assets" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\shopify-storefront\src\components\page\contactPage\assets" />
-      <recent name="C:\xampp\htdocs\shopify-storefront\src\components\page\contactPage" />
-      <recent name="C:\xampp\htdocs\shopify-storefront\src\components\page\aboutPage\assets" />
-      <recent name="C:\xampp\htdocs\shopify-storefront\src\components\page\aboutPage" />
-      <recent name="C:\xampp\htdocs\shopify-storefront\src\components\cart\assets" />
     </key>
   </component>
   <component name="RunManager">
@@ -505,12 +490,15 @@
       <workItem from="1499341976882" duration="66000" />
       <workItem from="1499675751067" duration="13579000" />
       <workItem from="1499764522562" duration="188000" />
-      <workItem from="1500278620156" duration="17995000" />
+      <workItem from="1500278620156" duration="18932000" />
+      <workItem from="1500363897156" duration="655000" />
+      <workItem from="1500377996047" duration="3109000" />
+      <workItem from="1500621725684" duration="23763000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43272000" />
+    <option name="totallyTimeSpent" value="71736000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -597,102 +585,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/reducers/cart.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="5" column="70" lean-forward="false" selection-start-line="5" selection-start-column="70" selection-end-line="5" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/cart/LineItem.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="4" column="34" lean-forward="false" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/package-json/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1766">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/package-json/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="20" lean-forward="false" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/eslint-config-react-app/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-644">
-          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/cart/assets/arrow.svg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/actionCreators.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="68" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/product/ProductImages.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="7" column="10" lean-forward="true" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/product/Product.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1200">
-          <caret line="72" column="17" lean-forward="false" selection-start-line="72" selection-start-column="17" selection-end-line="72" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/product/product.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="18" column="23" lean-forward="false" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/header/Header.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-80">
-          <caret line="23" column="23" lean-forward="true" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/header/Navigation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="2" lean-forward="false" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/reducers/product.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
           <caret line="13" column="1" lean-forward="false" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -766,7 +662,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
           <caret line="4" column="5" lean-forward="true" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -774,7 +669,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="13" column="40" lean-forward="true" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -782,7 +676,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="12" column="24" lean-forward="false" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -790,29 +683,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
           <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#39#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-480">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#41#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/page/Page.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="23" column="33" lean-forward="true" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#41#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -820,7 +690,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="15" column="3" lean-forward="true" selection-start-line="1" selection-start-column="2" selection-end-line="15" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -828,9 +697,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="492">
           <caret line="70" column="101" lean-forward="false" selection-start-line="70" selection-start-column="101" selection-end-line="70" selection-end-column="101" />
-          <folding>
-            <element signature="e#0#39#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -838,9 +704,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="17" column="84" lean-forward="false" selection-start-line="17" selection-start-column="84" selection-end-line="17" selection-end-column="84" />
-          <folding>
-            <element signature="e#0#39#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -848,9 +711,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="20">
           <caret line="1" column="52" lean-forward="true" selection-start-line="1" selection-start-column="52" selection-end-line="1" selection-end-column="52" />
-          <folding>
-            <element signature="e#0#41#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -858,7 +718,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
           <caret line="4" column="23" lean-forward="true" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -866,7 +725,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -874,7 +732,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
           <caret line="4" column="91" lean-forward="false" selection-start-line="4" selection-start-column="91" selection-end-line="4" selection-end-column="91" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -882,7 +739,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
           <caret line="4" column="75" lean-forward="false" selection-start-line="4" selection-start-column="75" selection-end-line="4" selection-end-column="75" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -898,23 +754,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="5" column="21" lean-forward="false" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/page/contactPage/assets/slack1.svg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/page/contactPage/assets/slack1.svg" />
     <entry file="file://$PROJECT_DIR$/src/components/page/contactPage/assets/slack.svg">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="5" column="23" lean-forward="true" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -922,19 +769,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
           <caret line="11" column="48" lean-forward="true" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/page/contactPage/ContactPage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="12" column="37" lean-forward="true" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="12" column="37" lean-forward="false" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -942,7 +784,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="15" column="209" lean-forward="false" selection-start-line="15" selection-start-column="209" selection-end-line="15" selection-end-column="209" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -950,7 +791,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="9" column="86" lean-forward="false" selection-start-line="9" selection-start-column="86" selection-end-line="9" selection-end-column="86" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -962,18 +802,150 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/page/contactPage/contact.scss">
+    <entry file="file://$PROJECT_DIR$/src/components/Main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="65" column="18" lean-forward="false" selection-start-line="65" selection-start-column="18" selection-end-line="65" selection-end-column="18" />
+        <state relative-caret-position="440">
+          <caret line="32" column="23" lean-forward="false" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#43#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" column="32" lean-forward="true" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#41#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/page/submitDesignPage/assets/slack.svg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/page/Page.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-480">
+          <caret line="6" column="67" lean-forward="false" selection-start-line="6" selection-start-column="67" selection-end-line="6" selection-end-column="67" />
+          <folding>
+            <element signature="e#0#39#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/page/contactPage/Form.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="42" column="106" lean-forward="true" selection-start-line="42" selection-start-column="106" selection-end-line="42" selection-end-column="106" />
+        <state relative-caret-position="340">
+          <caret line="26" column="33" lean-forward="false" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#39#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/page/submitDesignPage/Hero.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="56" lean-forward="false" selection-start-line="24" selection-start-column="56" selection-end-line="24" selection-end-column="56" />
+          <folding>
+            <element signature="e#0#41#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/product/Product.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="118" column="104" lean-forward="true" selection-start-line="118" selection-start-column="12" selection-end-line="118" selection-end-column="104" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/page/submitDesignPage/assets/design.svg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="3" column="20" lean-forward="true" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/page/submitDesignPage/assets/compensation.svg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="3" column="16" lean-forward="false" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/page/submitDesignPage/assets/how.svg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="3" column="16" lean-forward="false" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/page/submitDesignPage/Info.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="32" column="74" lean-forward="false" selection-start-line="32" selection-start-column="74" selection-end-line="32" selection-end-column="74" />
+          <folding>
+            <element signature="e#0#39#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/page/submitDesignPage/Content.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" column="67" lean-forward="false" selection-start-line="8" selection-start-column="67" selection-end-line="8" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/page/submitDesignPage/SubmitDesignPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="32" lean-forward="false" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/page/submitDesignPage/Form.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="100" column="43" lean-forward="false" selection-start-line="100" selection-start-column="43" selection-end-line="100" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/page/submitDesignPage/submit.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="15" column="20" lean-forward="false" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/page/contactPage/contact.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="187" column="24" lean-forward="false" selection-start-line="187" selection-start-column="24" selection-end-line="187" selection-end-column="24" />
           <folding />
         </state>
       </provider>

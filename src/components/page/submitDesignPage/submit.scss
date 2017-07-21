@@ -1,0 +1,101 @@
+.submit-design-page {
+  .hero-section {
+    &__image {
+      &.align-bottom {
+        background-position: bottom;
+      }
+    }
+  }
+  .content-section {
+    padding: 80px 175px 30px;
+    position: relative;
+    @media screen and (max-width:1200px){
+      padding:50px 50px 30px;
+    }
+    @media screen and (max-width:767px){
+      padding:50px 0 30px;
+    }
+    &:after {
+      content:"";
+      display:block;
+      background: #bfc5c5;
+      width:160px;
+      height:2px;
+      position: absolute;
+      left:calc(50% - 80px);
+      bottom:0;
+    }
+    &__title {
+      font-size: 33px;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    &__text {
+      font-size: 20px;
+      font-weight: 500;
+      text-align: center;
+    }
+  }
+  .info-section {
+    &__wrapper {
+      margin-top:35px;
+      border-bottom: 2px solid #bfc5c5;
+    }
+    &__image {
+      float:left;
+      margin-right:15px;
+    }
+    &__text {
+      .item__title {
+        font-size: 24px;
+        margin-bottom:5px;
+      }
+      .item__text {
+        margin-top:0;
+        font-size: 15px;
+        font-weight: 500;
+        a {
+          color:#40ba94;
+        }
+      }
+    }
+  }
+  .form-section {
+    margin: 60px 0 90px;
+    &__row {
+      .row__small-text {
+        font-size:10px;
+        color:#bfc5c5;
+        padding-right:15px;
+      }
+      .file-uploader {
+        position: relative;
+        padding: 100px 0;
+        border:2px solid #bfc5c5;
+        cursor:pointer;
+        &__title {
+          font-weight: 500;
+          font-size:16px;
+          text-align: center;
+          margin-bottom: 10px;
+        }
+        &__subtitle {
+          font-weight:500;
+          font-size:13px;
+          text-align: center;
+          color:#bfc5c5;
+        }
+        input {
+          cursor: pointer;
+          display: block;
+          font-size: 999px;
+          height: 100%;
+          width: 100%;
+          opacity: 0;
+          position: absolute;
+          top:0;
+        }
+      }
+    }
+  }
+}

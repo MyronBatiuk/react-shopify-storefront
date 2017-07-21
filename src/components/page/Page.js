@@ -1,9 +1,10 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import * as helpers from '../../helpers/helpers';
 import DefaultPage from './defaultPage/DefaultPage';
 import DesignerPage from './designerPage/DesignerPage';
 import AboutPage from './aboutPage/AboutPage';
 import ContactPage from './contactPage/ContactPage';
+import SubmitDesignPage from './submitDesignPage/SubmitDesignPage';
 
 export default class Page extends Component {
   componentWillMount() {
@@ -39,6 +40,8 @@ export default class Page extends Component {
         content = <AboutPage page={page}/>;
       } else if (page.hasOwnProperty('email')) {
         content = <ContactPage page={page}/>;
+      } else if (page.hasOwnProperty('row3_title')) {
+        content = <SubmitDesignPage page={page}/>;
       } else {
         content = <DefaultPage page={page}/>;
       }

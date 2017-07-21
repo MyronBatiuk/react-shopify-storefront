@@ -1,56 +1,288 @@
-.contact-page .hero-section__image {
+.contact-page .hero-section__image,
+.submit-design-page .hero-section__image {
   height: 250px; }
-  .contact-page .hero-section__image .hero-section__inner .inner__title {
+  .contact-page .hero-section__image .hero-section__inner .inner__title,
+  .submit-design-page .hero-section__image .hero-section__inner .inner__title {
     text-transform: capitalize;
     font-size: 2.525em; }
-  .contact-page .hero-section__image .hero-section__inner .inner__subtitle {
+  .contact-page .hero-section__image .hero-section__inner .inner__subtitle,
+  .submit-design-page .hero-section__image .hero-section__inner .inner__subtitle {
     text-transform: capitalize;
     max-width: 100%; }
 
-.contact-page .info-section__item {
+@media screen and (max-width: 767px) {
+  .contact-page .info-section .grid__item,
+  .submit-design-page .info-section .grid__item {
+    width: 100%; } }
+
+.contact-page .info-section__item,
+.submit-design-page .info-section__item {
   padding: 37px 0 27px;
   text-align: center;
-  border-bottom: 2px solid gainsboro;
+  border-bottom: 2px solid #bfc5c5;
   float: none; }
-  .contact-page .info-section__item .item__title {
+  .contact-page .info-section__item .item__title,
+  .submit-design-page .info-section__item .item__title {
     font-size: 23px;
     font-weight: 500;
     margin-bottom: 6px; }
-    .contact-page .info-section__item .item__title.social {
+    .contact-page .info-section__item .item__title.social,
+    .submit-design-page .info-section__item .item__title.social {
       margin-bottom: 14px; }
-  .contact-page .info-section__item .item__text {
+  .contact-page .info-section__item .item__text,
+  .submit-design-page .info-section__item .item__text {
     font-size: 23px;
     font-weight: 500;
     color: #40ba94; }
-  .contact-page .info-section__item.share-buttons .share-button {
+    @media screen and (max-width: 1200px) {
+      .contact-page .info-section__item .item__text,
+      .submit-design-page .info-section__item .item__text {
+        font-size: 15px; } }
+  @media screen and (max-width: 1200px) {
+    .contact-page .info-section__item.share-buttons,
+    .submit-design-page .info-section__item.share-buttons {
+      padding: 37px 0 16px; } }
+  @media screen and (max-width: 767px) {
+    .contact-page .info-section__item.share-buttons,
+    .submit-design-page .info-section__item.share-buttons {
+      margin-top: 0; } }
+  .contact-page .info-section__item.share-buttons .share-button,
+  .submit-design-page .info-section__item.share-buttons .share-button {
     background: url("./assets/sharing_icons.svg");
     background-size: 80px; }
-    .contact-page .info-section__item.share-buttons .share-button.twitter {
+    @media screen and (max-width: 1200px) {
+      .contact-page .info-section__item.share-buttons .share-button,
+      .submit-design-page .info-section__item.share-buttons .share-button {
+        margin-right: 18px; }
+        .contact-page .info-section__item.share-buttons .share-button:last-child,
+        .submit-design-page .info-section__item.share-buttons .share-button:last-child {
+          margin-right: 0; } }
+    .contact-page .info-section__item.share-buttons .share-button.twitter,
+    .submit-design-page .info-section__item.share-buttons .share-button.twitter {
       background-position: 0 0; }
-    .contact-page .info-section__item.share-buttons .share-button.instagram {
+    .contact-page .info-section__item.share-buttons .share-button.instagram,
+    .submit-design-page .info-section__item.share-buttons .share-button.instagram {
       background: url("./assets/instagram.svg");
       background-size: 20px; }
-    .contact-page .info-section__item.share-buttons .share-button.dribbble {
+    .contact-page .info-section__item.share-buttons .share-button.dribbble,
+    .submit-design-page .info-section__item.share-buttons .share-button.dribbble {
       background: url("./assets/dribbble.svg");
       background-size: 20px; }
-    .contact-page .info-section__item.share-buttons .share-button.facebook {
+    .contact-page .info-section__item.share-buttons .share-button.facebook,
+    .submit-design-page .info-section__item.share-buttons .share-button.facebook {
       background-position: -20px 0; }
-    .contact-page .info-section__item.share-buttons .share-button.pinterest {
+    .contact-page .info-section__item.share-buttons .share-button.pinterest,
+    .submit-design-page .info-section__item.share-buttons .share-button.pinterest {
       background-position: 20px 0; }
-    .contact-page .info-section__item.share-buttons .share-button.slack {
+    .contact-page .info-section__item.share-buttons .share-button.slack,
+    .submit-design-page .info-section__item.share-buttons .share-button.slack {
       background: url("./assets/slack.svg");
       background-size: 20px; }
 
-.contact-page .form-section {
+.contact-page .form-section,
+.submit-design-page .form-section {
   margin: 45px 0 90px; }
-  .contact-page .form-section__row {
-    margin: 25px 0; }
-    .contact-page .form-section__row .row__title {
+  .contact-page .form-section__row,
+  .submit-design-page .form-section__row {
+    padding: 25px 0; }
+    @media screen and (max-width: 767px) {
+      .contact-page .form-section__row .grid__item,
+      .submit-design-page .form-section__row .grid__item {
+        width: 100%; } }
+    .contact-page .form-section__row .grid .grid__item:first-child,
+    .submit-design-page .form-section__row .grid .grid__item:first-child {
+      padding-right: 55px; }
+      @media screen and (max-width: 1200px) {
+        .contact-page .form-section__row .grid .grid__item:first-child,
+        .submit-design-page .form-section__row .grid .grid__item:first-child {
+          padding-right: 0; } }
+    .contact-page .form-section__row:last-child,
+    .submit-design-page .form-section__row:last-child {
+      padding-top: 0; }
+    .contact-page .form-section__row .form-submit-button,
+    .submit-design-page .form-section__row .form-submit-button {
+      background: #40ba94;
+      border: none;
+      color: #fff;
+      padding: 11px 44px;
+      text-transform: capitalize;
+      cursor: pointer;
+      font-size: 23px;
+      margin-left: 15px; }
+      .contact-page .form-section__row .form-submit-button:hover,
+      .submit-design-page .form-section__row .form-submit-button:hover {
+        background: #3aa785; }
+      @media screen and (max-width: 767px) {
+        .contact-page .form-section__row .form-submit-button,
+        .submit-design-page .form-section__row .form-submit-button {
+          margin: 0; } }
+      @media screen and (max-width: 450px) {
+        .contact-page .form-section__row .form-submit-button,
+        .submit-design-page .form-section__row .form-submit-button {
+          width: 100%; } }
+    @media screen and (max-width: 767px) {
+      .contact-page .form-section__row .policy-urls,
+      .submit-design-page .form-section__row .policy-urls {
+        margin-bottom: 30px; } }
+    .contact-page .form-section__row .policy-urls a,
+    .submit-design-page .form-section__row .policy-urls a {
+      color: #bfc5c5;
+      text-transform: capitalize; }
+      @media screen and (max-width: 450px) {
+        .contact-page .form-section__row .policy-urls a,
+        .submit-design-page .form-section__row .policy-urls a {
+          display: block;
+          text-align: center;
+          margin-bottom: 15px; } }
+    .contact-page .form-section__row .policy-urls .divider,
+    .submit-design-page .form-section__row .policy-urls .divider {
+      margin: 0 15px;
+      color: #bfc5c5; }
+      @media screen and (max-width: 450px) {
+        .contact-page .form-section__row .policy-urls .divider,
+        .submit-design-page .form-section__row .policy-urls .divider {
+          display: none; } }
+    .contact-page .form-section__row .row__title,
+    .submit-design-page .form-section__row .row__title {
       color: #40ba94;
       font-size: 27px;
       font-weight: 500;
       margin-bottom: 12px; }
-    .contact-page .form-section__row .row__text {
+      @media screen and (max-width: 450px) {
+        .contact-page .form-section__row .row__title,
+        .submit-design-page .form-section__row .row__title {
+          font-size: 24px; } }
+    .contact-page .form-section__row .row__text,
+    .submit-design-page .form-section__row .row__text {
       font-weight: 500;
       font-size: 19px;
       margin-top: 12px; }
+      @media screen and (max-width: 450px) {
+        .contact-page .form-section__row .row__text,
+        .submit-design-page .form-section__row .row__text {
+          font-size: 17px; } }
+    .contact-page .form-section__row .half-block,
+    .submit-design-page .form-section__row .half-block {
+      width: 50%;
+      display: inline-block;
+      padding-right: 5px; }
+      .contact-page .form-section__row .half-block.second,
+      .submit-design-page .form-section__row .half-block.second {
+        padding: 0 0 0 5px; }
+      @media screen and (max-width: 450px) {
+        .contact-page .form-section__row .half-block,
+        .submit-design-page .form-section__row .half-block {
+          width: 100%;
+          padding: 0; }
+          .contact-page .form-section__row .half-block.second,
+          .submit-design-page .form-section__row .half-block.second {
+            padding: 0; } }
+    .contact-page .form-section__row label,
+    .submit-design-page .form-section__row label {
+      display: block;
+      font-weight: 500;
+      margin: 0 13px 6px; }
+      .contact-page .form-section__row label.capitalized,
+      .submit-design-page .form-section__row label.capitalized {
+        text-transform: capitalize; }
+      @media screen and (max-width: 767px) {
+        .contact-page .form-section__row label,
+        .submit-design-page .form-section__row label {
+          margin-left: 0; } }
+    @media screen and (max-width: 1200px) {
+      .contact-page .form-section__row .checkbox-label,
+      .submit-design-page .form-section__row .checkbox-label {
+        font-size: 14px; } }
+    .contact-page .form-section__row input, .contact-page .form-section__row select, .contact-page .form-section__row textarea,
+    .submit-design-page .form-section__row input,
+    .submit-design-page .form-section__row select,
+    .submit-design-page .form-section__row textarea {
+      width: 100%;
+      margin-bottom: 15px;
+      border: 2px solid #bfc5c5;
+      padding: 7px 10px; }
+      .contact-page .form-section__row input[type="checkbox"], .contact-page .form-section__row select[type="checkbox"], .contact-page .form-section__row textarea[type="checkbox"],
+      .submit-design-page .form-section__row input[type="checkbox"],
+      .submit-design-page .form-section__row select[type="checkbox"],
+      .submit-design-page .form-section__row textarea[type="checkbox"] {
+        width: initial; }
+    .contact-page .form-section__row select,
+    .submit-design-page .form-section__row select {
+      cursor: pointer; }
+      .contact-page .form-section__row select option,
+      .submit-design-page .form-section__row select option {
+        color: #535253; }
+      .contact-page .form-section__row select.default,
+      .submit-design-page .form-section__row select.default {
+        color: #bfc5c5; }
+        .contact-page .form-section__row select.default option,
+        .submit-design-page .form-section__row select.default option {
+          color: #535253; }
+    .contact-page .form-section__row input[type=checkbox].form-checkbox,
+    .submit-design-page .form-section__row input[type=checkbox].form-checkbox {
+      position: absolute;
+      z-index: -1000;
+      left: -1000px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      width: 1px;
+      margin: -1px;
+      padding: 0;
+      border: 0; }
+    .contact-page .form-section__row input[type=checkbox].form-checkbox + label.css-label,
+    .submit-design-page .form-section__row input[type=checkbox].form-checkbox + label.css-label {
+      padding-left: 24px;
+      height: 23px;
+      display: inline-block;
+      line-height: 24px;
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      font-size: 24px;
+      vertical-align: middle;
+      cursor: pointer; }
+      @media screen and (max-width: 450px) {
+        .contact-page .form-section__row input[type=checkbox].form-checkbox + label.css-label,
+        .submit-design-page .form-section__row input[type=checkbox].form-checkbox + label.css-label {
+          margin: 0 10px 0 0; } }
+    .contact-page .form-section__row input[type=checkbox].form-checkbox:checked + label.css-label,
+    .submit-design-page .form-section__row input[type=checkbox].form-checkbox:checked + label.css-label {
+      background-image: url("./assets/checkbox2.png"); }
+    .contact-page .form-section__row label.css-label,
+    .submit-design-page .form-section__row label.css-label {
+      background-image: url("./assets/checkbox1.png");
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      margin-bottom: 2px; }
+    .contact-page .form-section__row input::-webkit-input-placeholder,
+    .submit-design-page .form-section__row input::-webkit-input-placeholder {
+      color: #bfc5c5 !important; }
+    .contact-page .form-section__row input:-moz-placeholder,
+    .submit-design-page .form-section__row input:-moz-placeholder {
+      /* Firefox 18- */
+      color: #bfc5c5 !important; }
+    .contact-page .form-section__row input::-moz-placeholder,
+    .submit-design-page .form-section__row input::-moz-placeholder {
+      /* Firefox 19+ */
+      color: #bfc5c5 !important; }
+    .contact-page .form-section__row input:-ms-input-placeholder,
+    .submit-design-page .form-section__row input:-ms-input-placeholder {
+      color: #bfc5c5 !important; }
+    .contact-page .form-section__row textarea::-webkit-input-placeholder,
+    .submit-design-page .form-section__row textarea::-webkit-input-placeholder {
+      color: #bfc5c5 !important; }
+    .contact-page .form-section__row textarea:-moz-placeholder,
+    .submit-design-page .form-section__row textarea:-moz-placeholder {
+      /* Firefox 18- */
+      color: #bfc5c5 !important; }
+    .contact-page .form-section__row textarea::-moz-placeholder,
+    .submit-design-page .form-section__row textarea::-moz-placeholder {
+      /* Firefox 19+ */
+      color: #bfc5c5 !important; }
+    .contact-page .form-section__row textarea:-ms-input-placeholder,
+    .submit-design-page .form-section__row textarea:-ms-input-placeholder {
+      color: #bfc5c5 !important; }

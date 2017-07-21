@@ -1,7 +1,8 @@
-.contact-page {
+.contact-page,
+.submit-design-page {
   .hero-section {
     &__image {
-      height:250px;
+      height: 250px;
       .hero-section__inner {
         .inner__title {
           text-transform: capitalize;
@@ -9,34 +10,54 @@
         }
         .inner__subtitle {
           text-transform: capitalize;
-          max-width:100%;
+          max-width: 100%;
         }
       }
     }
   }
   .info-section {
+    @media screen and (max-width:767px){
+      .grid__item {
+        width:100%;
+      }
+    }
     &__item {
       padding: 37px 0 27px;
-      text-align:center;
-      border-bottom: 2px solid gainsboro;
-      float:none;
+      text-align: center;
+      border-bottom: 2px solid #bfc5c5;
+      float: none;
       .item__title {
-        font-size:23px;
+        font-size: 23px;
         font-weight: 500;
         margin-bottom: 6px;
         &.social {
-          margin-bottom:14px;
+          margin-bottom: 14px;
         }
       }
       .item__text {
-        font-size:23px;
+        font-size: 23px;
         font-weight: 500;
-        color:#40ba94;
+        color: #40ba94;
+        @media screen and (max-width:1200px){
+          font-size: 15px;
+        }
       }
       &.share-buttons {
+        @media screen and (max-width:1200px){
+          padding: 37px 0 16px;
+        }
+        @media screen and (max-width:767px){
+          margin-top:0;
+        }
         .share-button {
           background: url('./assets/sharing_icons.svg');
           background-size: 80px;
+          @media screen and (max-width:1200px){
+            margin-right:18px;
+            &:last-child {
+              margin-right: 0;
+            }
+          }
           &.twitter {
             background-position: 0 0;
           }
@@ -63,19 +84,202 @@
     }
   }
   .form-section {
-    margin:45px 0 90px;
+    margin: 45px 0 90px;
     &__row {
-      margin:25px 0;
+      padding: 25px 0;
+      @media screen and (max-width:767px){
+        .grid__item {
+          width:100%;
+        }
+      }
+      .grid {
+        .grid__item {
+          &:first-child {
+            padding-right:55px;
+            @media screen and (max-width:1200px){
+              padding-right:0;
+            }
+          }
+        }
+      }
+      &:last-child {
+        padding-top:0;
+      }
+      .form-submit-button {
+        background: #40ba94;
+        border:none;
+        color:#fff;
+        padding:11px 44px;
+        text-transform: capitalize;
+        cursor: pointer;
+        font-size: 23px;
+        margin-left:15px;
+        &:hover {
+          background: #3aa785;
+        }
+        @media screen and (max-width:767px){
+          margin:0;
+        }
+        @media screen and (max-width:450px){
+          width:100%;
+        }
+      }
+      .policy-urls {
+        @media screen and (max-width:767px){
+          margin-bottom:30px;
+        }
+        a {
+          color:#bfc5c5;
+          text-transform: capitalize;
+          @media screen and (max-width:450px){
+            display: block;
+            text-align: center;
+            margin-bottom:15px;
+          }
+        }
+        .divider {
+          margin:0 15px;
+          color:#bfc5c5;
+          @media screen and (max-width:450px){
+            display:none;
+          }
+        }
+      }
       .row__title {
-        color:#40ba94;
-        font-size:27px;
+        color: #40ba94;
+        font-size: 27px;
         font-weight: 500;
         margin-bottom: 12px;
+        @media screen and (max-width:450px){
+          font-size:24px;
+        }
       }
       .row__text {
         font-weight: 500;
-        font-size:19px;
+        font-size: 19px;
         margin-top: 12px;
+        @media screen and (max-width:450px){
+          font-size:17px;
+        }
+      }
+      .half-block {
+        width: 50%;
+        display: inline-block;
+        padding-right: 5px;
+        &.second {
+          padding: 0 0 0 5px;
+        }
+        @media screen and (max-width:450px) {
+          width:100%;
+          padding:0;
+          &.second {
+            padding: 0;
+          }
+        }
+      }
+      label {
+        display: block;
+        font-weight: 500;
+        margin: 0 13px 6px;
+        &.capitalized {
+          text-transform: capitalize;
+        }
+        @media screen and (max-width:767px){
+          margin-left:0;
+        }
+      }
+      .checkbox-label {
+        @media screen and (max-width:1200px){
+          font-size: 14px;
+        }
+      }
+      input, select, textarea {
+        width: 100%;
+        margin-bottom: 15px;
+        border: 2px solid #bfc5c5;
+        padding: 7px 10px;
+        &[type="checkbox"] {
+          width: initial;
+        }
+      }
+
+      select {
+        cursor: pointer;
+        option {
+          color: #535253;
+        }
+        &.default {
+          color: #bfc5c5;
+          option {
+            color: #535253;
+          }
+        }
+      }
+      input[type=checkbox].form-checkbox {
+        position: absolute;
+        z-index: -1000;
+        left: -1000px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        width: 1px;
+        margin: -1px;
+        padding: 0;
+        border: 0;
+      }
+
+      input[type=checkbox].form-checkbox + label.css-label {
+        padding-left: 24px;
+        height: 23px;
+        display: inline-block;
+        line-height: 24px;
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        font-size: 24px;
+        vertical-align: middle;
+        cursor: pointer;
+        @media screen and (max-width:450px){
+          margin: 0 10px 0 0;
+        }
+      }
+
+      input[type=checkbox].form-checkbox:checked + label.css-label {
+        background-image: url('./assets/checkbox2.png');
+      }
+
+      label.css-label {
+        background-image: url('./assets/checkbox1.png');
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        margin-bottom: 2px;
+      }
+      input::-webkit-input-placeholder {
+        color: #bfc5c5 !important;
+      }
+      input:-moz-placeholder { /* Firefox 18- */
+        color: #bfc5c5 !important;
+      }
+      input::-moz-placeholder { /* Firefox 19+ */
+        color: #bfc5c5 !important;
+      }
+      input:-ms-input-placeholder {
+        color: #bfc5c5 !important;
+      }
+      textarea::-webkit-input-placeholder {
+        color: #bfc5c5 !important;
+      }
+      textarea:-moz-placeholder { /* Firefox 18- */
+        color: #bfc5c5 !important;
+      }
+      textarea::-moz-placeholder { /* Firefox 19+ */
+        color: #bfc5c5 !important;
+      }
+      textarea:-ms-input-placeholder {
+        color: #bfc5c5 !important;
       }
     }
   }
