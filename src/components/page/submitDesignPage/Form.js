@@ -24,10 +24,13 @@ export default class Form extends Component {
 
   render() {
     const page = this.props.page;
-    console.log(page);
     return (
         <div className="form-section">
-          <form action="https://submit.jotformeu.com/submit/72013419308348/">
+          <script src="https://cdn.jotfor.ms/js/vendor/imageinfo.js?v=3.3.1146" type="text/javascript"></script>
+          <script src="https://cdn.jotfor.ms/file-uploader/fileuploader.js?v=3.3.1146"></script>
+          <script src="https://cdn.jotfor.ms/static/prototype.forms.js" type="text/javascript"></script>
+          <script src="https://cdn.jotfor.ms/static/jotform.forms.js?3.3.1146" type="text/javascript"></script>
+          <form className="jotform-form" action="https://submit.jotformeu.com/submit/72013419308348/" method="post" encType="multipart/form-data" name="form_72013419308348" id="72013419308348">
             <input type="hidden" name="formID" value="72013419308348"/>
             <input type="hidden" id="simple_spc" name="simple_spc" value="72013419308348"/>
             <div className="form-section__row">
@@ -78,7 +81,7 @@ export default class Form extends Component {
                   <div className="file-uploader">
                     <h5 className="file-uploader__title">Drag and drop a file here or click</h5>
                     <h5 className="file-uploader__subtitle">AI, EPS, PSD, JPG, or TIFF</h5>
-                    <input type="file" id="input_8" name="q8_clickTo[]" multiple className="form-upload-multiple" accept="ai,eps,psd,pdf,jpg,tiff,png"/>
+                    <input type="file" id="input_8" name="q8_clickTo[]" multiple className="form-upload-multiple"/>
                   </div>
                 </div>
               </div>

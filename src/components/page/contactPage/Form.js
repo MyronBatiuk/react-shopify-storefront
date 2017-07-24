@@ -9,7 +9,6 @@ export default class Form extends Component {
       selectStatus: 'default'
     }
   }
-
   changeSelect = (e) => {
     const string = e.target.value;
     if (string.includes('Ask')) {
@@ -27,8 +26,10 @@ export default class Form extends Component {
     const page = this.props.page;
     return (
         <div className="form-section">
-          <form action="https://submit.jotformeu.com/submit/71981737208363/">
-            <input type="hidden" name="formID" value="71981737208363"/>
+          <script src="https://cdn.jotfor.ms/static/prototype.forms.js" type="text/javascript"></script>
+          <script src="https://cdn.jotfor.ms/static/jotform.forms.js?3.3.1146" type="text/javascript"></script>
+          <form action="https://submit.jotformeu.com/submit/71981737208363/" method="post" name="form_71981737208363" id="71981737208363">
+            <input type="hidden" name="formID" value="71981737208363" />
             <input type="hidden" id="simple_spc" name="simple_spc" value="71981737208363"/>
             <div className="form-section__row">
               <div className="grid">

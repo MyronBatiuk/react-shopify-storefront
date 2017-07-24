@@ -71,7 +71,6 @@
     .submit-design-page .form-section__row .file-uploader input {
       cursor: pointer;
       display: block;
-      font-size: 999px;
       height: 100%;
       width: 100%;
       opacity: 0;
