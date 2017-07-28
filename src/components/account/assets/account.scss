@@ -1,0 +1,55 @@
+.my-account {
+  margin:50px auto;
+  &__title {
+    text-align: center;
+  }
+  &__section {
+    border:1px solid gainsboro;
+    padding: 15px;
+    margin-bottom:30px;
+    &.sending-data {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+    .error-message {
+      color:red;
+      margin: 20px 0 0;
+    }
+    .success-message {
+      color:green;
+      margin: 20px 0 0;
+    }
+    .section__title {
+      border-bottom:1px solid gainsboro;
+      padding-bottom:15px;
+    }
+    .bold {
+      font-weight: 700;
+    }
+    .toggle-change-password-form-button {
+      color: #fff;
+      background-color: #999;
+      padding: 6px 24px;
+      cursor:pointer;
+      border: none;
+      margin: 10px 0;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+    .change-password-form {
+      display:none;
+      &.visible {
+        display:block;
+      }
+      input {
+        display: block;
+        margin:10px 0;
+        padding: 5px;
+      }
+      .change-password-button {
+        cursor:pointer;
+      }
+    }
+  }
+}

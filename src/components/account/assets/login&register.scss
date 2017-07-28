@@ -1,5 +1,5 @@
 .login-template,
-.register-templat {
+.register-template {
   &__form {
     width:350px;
     margin:75px auto;
@@ -23,14 +23,16 @@
       color:green;
       margin: 20px 0 0;
     }
-    .login-button {
+    .login-button,
+    .register-button{
       color: #fff;
       background-color: #999;
       border-color: #999;
       padding: 6px 24px;
       cursor:pointer;
     }
-    .create-account {
+    .create-account,
+    .login-account {
       margin-top:20px;
       span {
         margin-right:10px;

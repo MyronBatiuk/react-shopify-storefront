@@ -56,7 +56,7 @@ export default class Login extends Component {
               error: '',
               success: true
             });
-            localStorage.setItem('user', email);
+            localStorage.setItem('customerId', JSON.stringify(customer.id));
             setTimeout(function () {
               window.location="/account";
             },1000)

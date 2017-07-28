@@ -1,40 +1,48 @@
 .login-template__form,
-.register-templat__form {
+.register-template__form {
   width: 350px;
   margin: 75px auto; }
   .login-template__form.sending-data,
-  .register-templat__form.sending-data {
+  .register-template__form.sending-data {
     opacity: 0.5;
     pointer-events: none; }
   .login-template__form label,
-  .register-templat__form label {
+  .register-template__form label {
     display: block; }
   .login-template__form input,
-  .register-templat__form input {
+  .register-template__form input {
     width: 100%;
     margin-bottom: 20px;
     padding: 5px 10px; }
   .login-template__form .error-message,
-  .register-templat__form .error-message {
+  .register-template__form .error-message {
     color: red;
     margin: 20px 0 0; }
   .login-template__form .success-message,
-  .register-templat__form .success-message {
+  .register-template__form .success-message {
     color: green;
     margin: 20px 0 0; }
   .login-template__form .login-button,
-  .register-templat__form .login-button {
+  .login-template__form .register-button,
+  .register-template__form .login-button,
+  .register-template__form .register-button {
     color: #fff;
     background-color: #999;
     border-color: #999;
     padding: 6px 24px;
     cursor: pointer; }
   .login-template__form .create-account,
-  .register-templat__form .create-account {
+  .login-template__form .login-account,
+  .register-template__form .create-account,
+  .register-template__form .login-account {
     margin-top: 20px; }
     .login-template__form .create-account span,
-    .register-templat__form .create-account span {
+    .login-template__form .login-account span,
+    .register-template__form .create-account span,
+    .register-template__form .login-account span {
       margin-right: 10px; }
     .login-template__form .create-account .customer-register-link,
-    .register-templat__form .create-account .customer-register-link {
+    .login-template__form .login-account .customer-register-link,
+    .register-template__form .create-account .customer-register-link,
+    .register-template__form .login-account .customer-register-link {
       color: #000; }

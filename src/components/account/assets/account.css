@@ -1,0 +1,41 @@
+.my-account {
+  margin: 50px auto; }
+  .my-account__title {
+    text-align: center; }
+  .my-account__section {
+    border: 1px solid gainsboro;
+    padding: 15px;
+    margin-bottom: 30px; }
+    .my-account__section.sending-data {
+      opacity: 0.5;
+      pointer-events: none; }
+    .my-account__section .error-message {
+      color: red;
+      margin: 20px 0 0; }
+    .my-account__section .success-message {
+      color: green;
+      margin: 20px 0 0; }
+    .my-account__section .section__title {
+      border-bottom: 1px solid gainsboro;
+      padding-bottom: 15px; }
+    .my-account__section .bold {
+      font-weight: 700; }
+    .my-account__section .toggle-change-password-form-button {
+      color: #fff;
+      background-color: #999;
+      padding: 6px 24px;
+      cursor: pointer;
+      border: none;
+      margin: 10px 0; }
+      .my-account__section .toggle-change-password-form-button:hover {
+        opacity: 0.8; }
+    .my-account__section .change-password-form {
+      display: none; }
+      .my-account__section .change-password-form.visible {
+        display: block; }
+      .my-account__section .change-password-form input {
+        display: block;
+        margin: 10px 0;
+        padding: 5px; }
+      .my-account__section .change-password-form .change-password-button {
+        cursor: pointer; }
