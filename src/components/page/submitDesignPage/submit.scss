@@ -73,17 +73,27 @@
         padding: 100px 0;
         border:2px solid #bfc5c5;
         cursor:pointer;
+        text-align:center;
         &__title {
           font-weight: 500;
           font-size:16px;
           text-align: center;
-          margin-bottom: 10px;
+          display:initial;
+          img {
+            display:none;
+            vertical-align: sub;
+            margin-right: 10px;
+            &.visible {
+              display: inline-block;
+            }
+          }
         }
         &__subtitle {
           font-weight:500;
           font-size:13px;
           text-align: center;
           color:#bfc5c5;
+          margin-top: 5px;
         }
         input {
           cursor: pointer;

@@ -1,13 +1,36 @@
 import React, {Component} from 'react';
+import SuccessImage from './assets/success.png';
+
 export default class Form extends Component {
 
   constructor(){
     super();
 
     this.state = {
-      selectStatus: 'default'
+      selectStatus: 'default',
+      fileUploaderTitle: 'Drag and drop a file here or click',
+      fileUploaderSubtitle: 'AI, EPS, PSD, JPG, or TIFF',
+      fileUploadStatus: false
     }
   }
+
+  uploadFile = () => {
+    const fileUploader = document.getElementById('input_8');
+    const filesCount = fileUploader.files.length;
+    if ( filesCount > 1 ) {
+      this.setState({
+        fileUploaderTitle: filesCount + ' files successfully uploaded.',
+        fileUploaderSubtitle: 'Thanks for sharing them with us!',
+        fileUploadStatus: true
+      });
+    } else {
+      this.setState({
+        fileUploaderTitle: 'File successfully uploaded.',
+        fileUploaderSubtitle: 'Thanks for sharing it with us!',
+        fileUploadStatus: true
+      });
+    }
+  };
 
   changeSelect = (e) => {
     const string = e.target.value;
@@ -79,9 +102,12 @@ export default class Form extends Component {
                 <div className="grid__item medium-up--one-half small--full-width">
                   <label>Upload an idea (optional)</label>
                   <div className="file-uploader">
-                    <h5 className="file-uploader__title">Drag and drop a file here or click</h5>
-                    <h5 className="file-uploader__subtitle">AI, EPS, PSD, JPG, or TIFF</h5>
-                    <input type="file" id="input_8" name="q8_clickTo[]" multiple className="form-upload-multiple"/>
+                    <h5 className="file-uploader__title">
+                      <img src={SuccessImage} alt="" className={this.state.fileUploadStatus ? 'visible' : ''}/>
+                      {this.state.fileUploaderTitle}
+                      </h5>
+                    <h5 className="file-uploader__subtitle">{this.state.fileUploaderSubtitle}</h5>
+                    <input type="file" id="input_8" name="q8_clickTo[]" multiple className="form-upload-multiple" onChange={this.uploadFile}/>
                   </div>
                 </div>
               </div>
