@@ -7,6 +7,10 @@
     border:1px solid gainsboro;
     padding: 15px;
     margin-bottom:30px;
+    .address {
+      border-bottom: 1px solid gainsboro;
+      padding-bottom:20px;
+    }
     &.sending-data {
       opacity: 0.5;
       pointer-events: none;
@@ -26,18 +30,27 @@
     .bold {
       font-weight: 700;
     }
-    .toggle-change-password-form-button {
+    .submit-address-add-button,
+    .submit-address-change-button {
+      margin-right:10px;
+    }
+    .toggle-change-password-form-button,
+    .add-address-form-button,
+    .edit-address-button,
+    .delete-address-button {
       color: #fff;
       background-color: #999;
       padding: 6px 24px;
       cursor:pointer;
       border: none;
-      margin: 10px 0;
+      margin: 10px 10px 10px 0;
       &:hover {
         opacity: 0.8;
       }
     }
-    .change-password-form {
+    .change-password-form,
+    .add-address-form,
+    .edit-address-form {
       display:none;
       &.visible {
         display:block;

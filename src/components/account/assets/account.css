@@ -6,6 +6,9 @@
     border: 1px solid gainsboro;
     padding: 15px;
     margin-bottom: 30px; }
+    .my-account__section .address {
+      border-bottom: 1px solid gainsboro;
+      padding-bottom: 20px; }
     .my-account__section.sending-data {
       opacity: 0.5;
       pointer-events: none; }
@@ -20,22 +23,39 @@
       padding-bottom: 15px; }
     .my-account__section .bold {
       font-weight: 700; }
-    .my-account__section .toggle-change-password-form-button {
+    .my-account__section .submit-address-add-button,
+    .my-account__section .submit-address-change-button {
+      margin-right: 10px; }
+    .my-account__section .toggle-change-password-form-button,
+    .my-account__section .add-address-form-button,
+    .my-account__section .edit-address-button,
+    .my-account__section .delete-address-button {
       color: #fff;
       background-color: #999;
       padding: 6px 24px;
       cursor: pointer;
       border: none;
-      margin: 10px 0; }
-      .my-account__section .toggle-change-password-form-button:hover {
+      margin: 10px 10px 10px 0; }
+      .my-account__section .toggle-change-password-form-button:hover,
+      .my-account__section .add-address-form-button:hover,
+      .my-account__section .edit-address-button:hover,
+      .my-account__section .delete-address-button:hover {
         opacity: 0.8; }
-    .my-account__section .change-password-form {
+    .my-account__section .change-password-form,
+    .my-account__section .add-address-form,
+    .my-account__section .edit-address-form {
       display: none; }
-      .my-account__section .change-password-form.visible {
+      .my-account__section .change-password-form.visible,
+      .my-account__section .add-address-form.visible,
+      .my-account__section .edit-address-form.visible {
         display: block; }
-      .my-account__section .change-password-form input {
+      .my-account__section .change-password-form input,
+      .my-account__section .add-address-form input,
+      .my-account__section .edit-address-form input {
         display: block;
         margin: 10px 0;
         padding: 5px; }
-      .my-account__section .change-password-form .change-password-button {
+      .my-account__section .change-password-form .change-password-button,
+      .my-account__section .add-address-form .change-password-button,
+      .my-account__section .edit-address-form .change-password-button {
         cursor: pointer; }
