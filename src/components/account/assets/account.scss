@@ -10,6 +10,7 @@
     .address {
       border-bottom: 1px solid gainsboro;
       padding-bottom:20px;
+      margin-bottom:20px;
     }
     &.sending-data {
       opacity: 0.5;
@@ -17,11 +18,11 @@
     }
     .error-message {
       color:red;
-      margin: 20px 0 0;
+      margin: 20px 0;
     }
     .success-message {
       color:green;
-      margin: 20px 0 0;
+      margin: 20px 0;
     }
     .section__title {
       border-bottom:1px solid gainsboro;

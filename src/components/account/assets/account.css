@@ -8,16 +8,17 @@
     margin-bottom: 30px; }
     .my-account__section .address {
       border-bottom: 1px solid gainsboro;
-      padding-bottom: 20px; }
+      padding-bottom: 20px;
+      margin-bottom: 20px; }
     .my-account__section.sending-data {
       opacity: 0.5;
       pointer-events: none; }
     .my-account__section .error-message {
       color: red;
-      margin: 20px 0 0; }
+      margin: 20px 0; }
     .my-account__section .success-message {
       color: green;
-      margin: 20px 0 0; }
+      margin: 20px 0; }
     .my-account__section .section__title {
       border-bottom: 1px solid gainsboro;
       padding-bottom: 15px; }

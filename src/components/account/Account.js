@@ -53,7 +53,7 @@ export default class Account extends Component {
     const customer = this.state.customer;
     if (Object.keys(customer).length !== 0) {
       settings = <Settings customer={customer} updateCustomer={this.updateCustomer}/>;
-      addresses = <Addresses addresses={customer.addresses}/>;
+      addresses = <Addresses/>;
       orders = <Orders customer={customer}/>;
     }
     return (

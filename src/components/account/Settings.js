@@ -118,9 +118,12 @@ export default class Settings extends Component {
           </button>
 
           <div className={`change-password-form ${ this.state.changePassword ? 'visible' : ''}`}>
-            <input ref={ input => { this.oldPassword = input }} type="text" placeholder="Type old password"/>
-            <input ref={ input => { this.newPassword = input }} type="text" placeholder="Type new password"/>
-            <input ref={ input => { this.confirmNewPassword = input }} type="text" placeholder="Confirm new password"/>
+            <span>Type old password</span>
+            <input ref={ input => { this.oldPassword = input }} type="text"/>
+            <span>Type new password</span>
+            <input ref={ input => { this.newPassword = input }} type="text"/>
+            <span>Confirm new password</span>
+            <input ref={ input => { this.confirmNewPassword = input }} type="text"/>
             <button className="change-password-button" onClick={this.changePassword}>Submit</button>
           </div>
           {errorMessage}
