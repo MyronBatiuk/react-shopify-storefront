@@ -61,7 +61,7 @@ export default class Product extends Component {
     const product = this.props.product;
     const data = this.props.data;
     let collections, group, shareButtons, designer, relatedItems;
-    const sizeChart = <SizeChart/>;
+    const sizeChart = product.size_chart !== '' ? <SizeChart data={product.size_chart}/> : '';
     if (Object.keys(product).length !== 0) {
       shareButtons = <ShareButtons product={product}/>;
       if (Object.keys(product.variants).length > 1)

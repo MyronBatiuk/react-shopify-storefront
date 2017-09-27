@@ -14,8 +14,10 @@ export function getData(slug, template, page , getAllPages ) {
   xhr.onreadystatechange = function () {
     if (xhr.readyState === 4 && xhr.status === 200) {
       let object = xhr.responseText;
+      let regex = /\,(?!\s*?[\{\[\"\'\w])/g;
       object = object.substr(0, object.indexOf('end-'+ template +'-object'));
       object = object.split('start-'+ template +'-object')[1];
+      object = object.replace(regex, '');
       object = JSON.parse(object);
       object = object[0];
       store.dispatch(actions.getData(template, object, page, getAllPages));

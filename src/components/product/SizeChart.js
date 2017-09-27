@@ -30,7 +30,7 @@ export default class SizeChart extends Component {
         <span className="size-chart__title" onClick={this.showModal}>Size chart</span>
 
         <div className={`size-chart__modal ${this.state.open ? 'open' : ''}`}>
-          <ModalContainer hideModal={this.hideModal}/>
+          <ModalContainer hideModal={this.hideModal} content={this.props.data}/>
         </div>
       </div>
     )
