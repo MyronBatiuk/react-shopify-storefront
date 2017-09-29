@@ -57,7 +57,7 @@ export default class Product extends Component {
   };
 
   render() {
-    let variantSelectors, comparePrice, productImages;
+    let variantSelectors, comparePrice, productImages, divider;
     const product = this.props.product;
     const data = this.props.data;
     let collections, group, shareButtons, designer, relatedItems;
@@ -86,7 +86,8 @@ export default class Product extends Component {
             <Link key={key} to={`/collections/${productCollections[key].handle}`}>
               {productCollections[key].title}
             </Link>
-        )
+        );
+        divider = <span className="breadcrumbs__divider">/</span>;
       }
       if (Object.keys(data).length !== 0)
         relatedItems = <RelatedItems data={data} title={product.title} slug={product.slug}/>;
@@ -103,7 +104,7 @@ export default class Product extends Component {
               <li>
                 <Link to="/">All States</Link>
               </li>
-              <span className="breadcrumbs__divider">/</span>
+              {divider}
               <li className="breadcrumbs__collections">
                 {collections}
               </li>

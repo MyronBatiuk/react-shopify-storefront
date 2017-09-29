@@ -16,9 +16,7 @@ export default class Home extends Component {
     }
   }
   render(){
-    const homepage = this.props.homepage;
-    const data = this.props.data;
-    const header = this.props.header;
+    const {homepage, data, header, location} = this.props;
     let hero,productsFilters,productsGrid;
     if (Object.keys(homepage).length !== 0) {
       if ( homepage.hasOwnProperty('hero') ){
@@ -26,13 +24,13 @@ export default class Home extends Component {
       }
       productsFilters = homepage.filters;
       if (Object.keys(data).length !== 0) {
-        productsGrid = <ProductsGrid data={data} filters={productsFilters}/>
+        productsGrid = <ProductsGrid data={data} filters={productsFilters} search={location.search}/>
       }
     }
     if (Object.keys(header).length !== 0) {
       productsFilters = header.filters;
       if (Object.keys(data).length !== 0) {
-        productsGrid = <ProductsGrid data={data} filters={productsFilters} collection=""/>
+        productsGrid = <ProductsGrid data={data} filters={productsFilters} collection="" search={location.search}/>
       }
     }
     return (

@@ -9,8 +9,15 @@ export default class ProductsGrid extends Component {
 
     const typeFilters = props.filters['types'];
     const vendorFilter = props.filters['vendors'];
-    let filterType,filterValue;
-    if ( Object.keys(typeFilters).length !== 0 ){
+    const search = props.search;
+    let filterType, filterValue, collection = props.collection;
+    if ( search && props.collection === '') {
+      filterType = search.split('filter=')[1];
+      filterType = filterType.split('&value')[0];
+      filterValue = search.split('value=')[1];
+      filterValue = decodeURIComponent(filterValue.split('&')[0]);
+      collection = decodeURIComponent(search.split('state=')[1]);
+    } else if ( Object.keys(typeFilters).length !== 0 ){
       filterType = 'type';
       filterValue = typeFilters['0'];
     } else {
@@ -20,7 +27,7 @@ export default class ProductsGrid extends Component {
     this.state = {
       filterType: filterType,
       filterValue: filterValue,
-      filterCollection: props.collection
+      filterCollection: collection
     };
   }
 
@@ -35,25 +42,27 @@ export default class ProductsGrid extends Component {
     this.setState({
       filterType: type,
       filterValue: value
-    })
+    });
+    const collection = this.state.filterCollection !== '' ? `&state=${this.state.filterCollection}` : '';
+    if (this.props.collection === '')
+      history.replaceState({}, 'Filter change', `?filter=${type}&value=${value}${collection}`);
   };
 
   changeCollection = (event) => {
     this.setState({
       filterCollection: event.target.value
-    })
+    });
+    const collection = event.target.value !== '' ? `&state=${event.target.value}` : '';
+    if (this.props.collection === '')
+      history.replaceState({}, 'Filter change', `?filter=${this.state.filterType}&value=${this.state.filterValue}${collection}`);
   };
 
   render() {
-    const data = this.props.data;
-    const filterValue = this.state.filterValue;
-    const filterType = this.state.filterType;
-    const filters = this.props.filters;
-    const filterCollection = this.state.filterCollection;
+    const {data, filters, collection} = this.props;
+    const {filterValue, filterType, filterCollection} = this.state;
     const typeFilters = filters['types'];
     const vendorFilters = filters['vendors'];
     const collectionFilters = filters['collections'];
-    const collection = this.props.collection;
     let collectionFilter;
     let types = Object.keys(typeFilters).map(key => {
       if ( filterValue === typeFilters[key] ) {
@@ -79,8 +88,13 @@ export default class ProductsGrid extends Component {
       }
     });
     if (collection === '') {
-      let collections = Object.keys(collectionFilters).map(key =>
-          <option value={collectionFilters[key]}>{collectionFilters[key]}</option>
+      let collections = Object.keys(collectionFilters).map(key => {
+        if (filterCollection === collectionFilters[key]) {
+          return <option selected value={collectionFilters[key]}>{collectionFilters[key]}</option>;
+        } else {
+          return <option value={collectionFilters[key]}>{collectionFilters[key]}</option>;
+        }
+      }
       );
       collectionFilter = <select className="collections-filter" onChange={this.changeCollection}>
         <option value="">Search by state</option>
