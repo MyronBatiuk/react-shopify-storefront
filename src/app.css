@@ -13,14 +13,14 @@ textarea,
 button,
 select {
   font-size: 16px;
-  font-family: "Montserrat","HelveticaNeue","Helvetica Neue",sans-serif;
+  font-family: "Montserrat", "HelveticaNeue", "Helvetica Neue", sans-serif;
   color: #535253;
   line-height: 1.5;
   outline: none; }
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0 0 17.5px;
-  font-family: "Montserrat","HelveticaNeue","Helvetica Neue",sans-serif;
+  font-family: "Montserrat", "HelveticaNeue", "Helvetica Neue", sans-serif;
   line-height: 1.2;
   overflow-wrap: break-word;
   word-wrap: break-word; }
@@ -212,12 +212,17 @@ ul {
     padding-top: 0.375em;
     font-weight: 300;
     margin: 0; }
-  .products-grid .product .product__collection {
-    font-size: 0.9375em;
-    color: #40ba94;
-    margin: 0.725em 0;
-    font-weight: 300;
-    text-transform: capitalize; }
+  .products-grid .product .product__collections {
+    margin: 0; }
+    .products-grid .product .product__collections .product__collection {
+      font-size: 0.9375em;
+      color: #40ba94;
+      margin: 0.725em 0 0.725em 5px;
+      font-weight: 300;
+      text-transform: capitalize;
+      display: inline-block; }
+      .products-grid .product .product__collections .product__collection:first-child {
+        margin-left: 0; }
   .products-grid .product .product__price {
     display: inline-block;
     font-size: 1.625em;
@@ -351,6 +356,12 @@ ul {
       -webkit-align-self: center;
       -moz-align-self: center;
       align-self: center; }
+
+.facebook-messenger {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 134px; }
 
 @keyframes App-logo-spin {
   from {

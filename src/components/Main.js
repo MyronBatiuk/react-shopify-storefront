@@ -9,6 +9,7 @@ import Cart from './cart/Cart';
 import SearchResults from './search/SearchResults';
 import Home from './home/Home';
 import { Route, Switch } from 'react-router-dom';
+import FacebookMessenger from './Messenger';
 
 export default class App extends Component {
   render() {
@@ -48,6 +49,9 @@ export default class App extends Component {
         </Switch>
         <Footer/>
         <Cart cart={this.props.cart}/>
+        <FacebookMessenger
+            page="1011178508893471"
+            msg="Message Us" />
       </div>
     )
   }

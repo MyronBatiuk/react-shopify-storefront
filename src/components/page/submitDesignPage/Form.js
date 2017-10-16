@@ -3,31 +3,31 @@ import SuccessImage from './assets/success.png';
 
 export default class Form extends Component {
 
-  constructor(){
+  constructor() {
     super();
 
     this.state = {
       selectStatus: 'default',
       fileUploaderTitle: 'Drag and drop a file here or click',
       fileUploaderSubtitle: 'AI, EPS, PSD, JPG, or TIFF',
-      fileUploadStatus: false
-    }
+      fileUploadStatus: false,
+    };
   }
 
   uploadFile = () => {
     const fileUploader = document.getElementById('input_8');
     const filesCount = fileUploader.files.length;
-    if ( filesCount > 1 ) {
+    if (filesCount > 1) {
       this.setState({
         fileUploaderTitle: filesCount + ' files successfully uploaded.',
         fileUploaderSubtitle: 'Thanks for sharing them with us!',
-        fileUploadStatus: true
+        fileUploadStatus: true,
       });
     } else {
       this.setState({
         fileUploaderTitle: 'File successfully uploaded.',
         fileUploaderSubtitle: 'Thanks for sharing it with us!',
-        fileUploadStatus: true
+        fileUploadStatus: true,
       });
     }
   };
@@ -36,13 +36,18 @@ export default class Form extends Component {
     const string = e.target.value;
     if (string.includes('Ask')) {
       this.setState({
-        selectStatus: 'default'
+        selectStatus: 'default',
       });
     } else {
       this.setState({
-        selectStatus: ''
+        selectStatus: '',
       });
     }
+  };
+
+  formSubmit = (e) => {
+//    e.preventDefault();
+//    console.log(this.firstName.value);
   };
 
   render() {
@@ -53,7 +58,14 @@ export default class Form extends Component {
           <script src="https://cdn.jotfor.ms/file-uploader/fileuploader.js?v=3.3.1146"></script>
           <script src="https://cdn.jotfor.ms/static/prototype.forms.js" type="text/javascript"></script>
           <script src="https://cdn.jotfor.ms/static/jotform.forms.js?3.3.1146" type="text/javascript"></script>
-          <form className="jotform-form" action="https://submit.jotformeu.com/submit/72013419308348/" method="post" encType="multipart/form-data" name="form_72013419308348" id="72013419308348">
+          <form
+              onSubmit={this.formSubmit}
+              className="jotform-form"
+              action="https://submit.jotformeu.com/submit/72013419308348/"
+              method="post"
+              encType="multipart/form-data"
+              name="form_72013419308348"
+              id="72013419308348">
             <input type="hidden" name="formID" value="72013419308348"/>
             <input type="hidden" id="simple_spc" name="simple_spc" value="72013419308348"/>
             <div className="form-section__row">
@@ -65,7 +77,8 @@ export default class Form extends Component {
                 <div className="grid__item medium-up--one-half small--full-width">
                   <div className="half-block">
                     <label className="capitalized">First name</label>
-                    <input type="text" id="first_3" name="q3_name[first]" className="form-textbox" size="10" placeholder="George"/>
+                    <input type="text" id="first_3" name="q3_name[first]" ref={
+                      input => this.firstName = input} className="form-textbox" size="10" placeholder="George"/>
                   </div>
                   <div className="half-block second">
                     <label className="capitalized">Last name</label>
@@ -73,7 +86,7 @@ export default class Form extends Component {
                   </div>
                   <label className="capitalized">Email Address</label>
                   <input type="email" id="input_4" name="q4_emailAddress" className="form-textbox" size="30" placeholder="thefirst@foundingfathers.com"/>
-                  <input type="checkbox" className="form-checkbox" id="input_5_0"  name="q5_getEmail[]"/>
+                  <input type="checkbox" className="form-checkbox" id="input_5_0" name="q5_getEmail[]"/>
                   <label htmlFor="input_5_0" className="css-label">
                   </label>
                   <span className="checkbox-label">Get email updates about new products</span>
@@ -105,7 +118,7 @@ export default class Form extends Component {
                     <h5 className="file-uploader__title">
                       <img src={SuccessImage} alt="" className={this.state.fileUploadStatus ? 'visible' : ''}/>
                       {this.state.fileUploaderTitle}
-                      </h5>
+                    </h5>
                     <h5 className="file-uploader__subtitle">{this.state.fileUploaderSubtitle}</h5>
                     <input type="file" id="input_8" name="q8_clickTo[]" multiple className="form-upload-multiple" onChange={this.uploadFile}/>
                   </div>
@@ -119,7 +132,7 @@ export default class Form extends Component {
                   <p className="row__text">{page.row4_text}</p>
                 </div>
                 <div className="grid__item medium-up--one-half small--full-width">
-                  <label>Four score and seven years...</label>
+                  <label>Why would you like to join our community</label>
                   <textarea id="input_9" className="form-textarea" name="q9_fourScore" cols="40" rows="6" placeholder="Four score and seven years ago..."/>
                 </div>
               </div>

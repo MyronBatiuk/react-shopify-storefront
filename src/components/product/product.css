@@ -61,7 +61,7 @@
       text-align: justify; }
     .product-template .product-content .content__info .product__price {
       font-size: 22px;
-      color: #99A2A3; }
+      color: #000; }
     .product-template .product-content .content__info .product__compare-price {
       text-decoration: line-through;
       margin-left: 20px; }
@@ -236,5 +236,11 @@
           margin-right: 5px; }
         .product-template .product-content .content__info .breadcrumbs li.breadcrumbs__collections {
           color: #40ba94; }
+          .product-template .product-content .content__info .breadcrumbs li.breadcrumbs__collections .product__collection {
+            margin-left: 5px; }
+            .product-template .product-content .content__info .breadcrumbs li.breadcrumbs__collections .product__collection:first-child {
+              margin: 0; }
+            .product-template .product-content .content__info .breadcrumbs li.breadcrumbs__collections .product__collection a {
+              margin: 0; }
       .product-template .product-content .content__info .breadcrumbs .breadcrumbs__divider {
         margin: 0 10px 0 5px; }
