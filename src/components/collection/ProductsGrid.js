@@ -43,18 +43,16 @@ export default class ProductsGrid extends Component {
       filterType: type,
       filterValue: value
     });
-    const collection = this.state.filterCollection !== '' ? `&state=${this.state.filterCollection}` : '';
     if (this.props.collection === '')
-      history.replaceState({}, 'Filter change', `?filter=${type}&value=${value}${collection}`);
+      history.replaceState({}, 'Filter change', `?filter=${type}&value=${value}&state=${this.state.filterCollection}`);
   };
 
   changeCollection = (event) => {
     this.setState({
       filterCollection: event.target.value
     });
-    const collection = event.target.value !== '' ? `&state=${event.target.value}` : '';
     if (this.props.collection === '')
-      history.replaceState({}, 'Filter change', `?filter=${this.state.filterType}&value=${this.state.filterValue}${collection}`);
+      history.replaceState({}, 'Filter change', `?filter=${this.state.filterType}&value=${this.state.filterValue}&state=${event.target.value}`);
   };
 
   render() {
