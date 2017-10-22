@@ -3,16 +3,19 @@ import SuccessImage from './assets/success.png';
 
 export default class Form extends Component {
 
-  constructor() {
-    super();
-
-    this.state = {
-      selectStatus: 'default',
-      fileUploaderTitle: 'Drag and drop a file here or click',
-      fileUploaderSubtitle: 'AI, EPS, PSD, JPG, or TIFF',
-      fileUploadStatus: false,
-    };
-  }
+  state = {
+    selectStatus: 'default',
+    fileUploaderTitle: 'Drag and drop a file here or click',
+    fileUploaderSubtitle: 'AI, EPS, PSD, JPG, or TIFF',
+    fileUploadStatus: false,
+    error: '',
+    firstName: '',
+    lastName: '',
+    email: '',
+    example1: '',
+    example2: '',
+    story: '',
+  };
 
   uploadFile = () => {
     const fileUploader = document.getElementById('input_8');
@@ -46,8 +49,24 @@ export default class Form extends Component {
   };
 
   formSubmit = (e) => {
-//    e.preventDefault();
-//    console.log(this.firstName.value);
+    const firstName = this.firstName.value ? '' : true;
+    const lastName = this.lastName.value ? '' : true;
+    const email = this.email.value ? '' : true;
+    const example1 = this.example1.value ? '' : true;
+    const example2 = this.example2.value ? '' : true;
+    const story = this.story.value ? '' : true;
+    this.setState({
+      firstName,
+      lastName,
+      email,
+      example1,
+      example2,
+      story,
+    });
+    if ( firstName || lastName || email || example1 || example2 || story ){
+      e.preventDefault();
+      this.setState({error: true});
+    }
   };
 
   render() {
@@ -76,16 +95,21 @@ export default class Form extends Component {
                 </div>
                 <div className="grid__item medium-up--one-half small--full-width">
                   <div className="half-block">
-                    <label className="capitalized">First name</label>
+                    <label className="capitalized">First name*</label>
                     <input type="text" id="first_3" name="q3_name[first]" ref={
-                      input => this.firstName = input} className="form-textbox" size="10" placeholder="George"/>
+                      input => this.firstName = input} className={`form-textbox ${this.state.firstName &&
+                    'required'}`} size="10" placeholder="George"/>
                   </div>
                   <div className="half-block second">
                     <label className="capitalized">Last name</label>
-                    <input type="text" id="last_3" name="q3_name[last]" className="form-textbox" size="15" placeholder="Washington"/>
+                    <input type="text" id="last_3" name="q3_name[last]" ref={
+                      input => this.lastName = input} className={`form-textbox ${this.state.lastName &&
+                    'required'}`} size="15" placeholder="Washington"/>
                   </div>
-                  <label className="capitalized">Email Address</label>
-                  <input type="email" id="input_4" name="q4_emailAddress" className="form-textbox" size="30" placeholder="thefirst@foundingfathers.com"/>
+                  <label className="capitalized">Email Address*</label>
+                  <input type="email" id="input_4" name="q4_emailAddress" ref={
+                    input => this.email = input} className={`form-textbox ${this.state.email &&
+                  'required'}`} size="30" placeholder="thefirst@foundingfathers.com"/>
                   <input type="checkbox" className="form-checkbox" id="input_5_0" name="q5_getEmail[]"/>
                   <label htmlFor="input_5_0" className="css-label">
                   </label>
@@ -100,9 +124,13 @@ export default class Form extends Component {
                   <p className="row__text">{page.row2_text}</p>
                 </div>
                 <div className="grid__item medium-up--one-half small--full-width">
-                  <label className="capitalized">Link to work examples</label>
-                  <input type="text" id="input_6" name="q6_linkTo6" className="form-textbox" size="20" placeholder="www.declarationofindependence.com/2ndamendment"/>
-                  <input type="text" id="input_7" name="q7_linkTo" className="form-textbox" size="20" placeholder="www.dribbble.com/louisianapurchase"/>
+                  <label className="capitalized">Link to work examples*</label>
+                  <input type="text" id="input_6" name="q6_linkTo6" ref={
+                    input => this.example1 = input} className={`form-textbox ${this.state.example1 &&
+                  'required'}`} size="20" placeholder="www.declarationofindependence.com/2ndamendment"/>
+                  <input type="text" id="input_7" name="q7_linkTo" ref={
+                    input => this.example2 = input} className={`form-textbox ${this.state.example2 &&
+                  'required'}`} size="20" placeholder="www.dribbble.com/louisianapurchase"/>
                 </div>
               </div>
             </div>
@@ -132,18 +160,21 @@ export default class Form extends Component {
                   <p className="row__text">{page.row4_text}</p>
                 </div>
                 <div className="grid__item medium-up--one-half small--full-width">
-                  <label>Why would you like to join our community</label>
-                  <textarea id="input_9" className="form-textarea" name="q9_fourScore" cols="40" rows="6" placeholder="Four score and seven years ago..."/>
+                  <label>Why would you like to join our community*</label>
+                  <textarea id="input_9" className={`form-textbox ${this.state.story &&
+                  'required'}`} name="q9_fourScore" ref={
+                    input => this.story = input} cols="40" rows="6" placeholder="Four score and seven years ago..."/>
                 </div>
               </div>
             </div>
             <div className="form-section__row">
               <div className="grid grid--no-gutters grid--table">
-                <div className="grid__item medium-up--one-half small--full-width">
+                <div className="grid__item medium-up--one-half small--full-width info-item">
                   <p className="row__small-text">{page.row5_text}</p>
                 </div>
                 <div className="grid__item medium-up--one-half small--full-width">
                   <button id="input_2" type="submit" className="form-submit-button">Send message</button>
+                  <p className={`error-message ${this.state.error && 'visible'}`}>*Please fill all the required fields before submit</p>
                 </div>
               </div>
             </div>

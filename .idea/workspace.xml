@@ -3,7 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="1a40b62a-00e0-4951-99e6-aef9a5e12d7b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/collection/ProductsGrid.js" afterPath="$PROJECT_DIR$/src/components/collection/ProductsGrid.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Messenger.js" afterPath="$PROJECT_DIR$/src/components/Messenger.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/collection/Product.js" afterPath="$PROJECT_DIR$/src/components/collection/Product.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/page/contactPage/Form.js" afterPath="$PROJECT_DIR$/src/components/page/contactPage/Form.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/page/contactPage/contact.css" afterPath="$PROJECT_DIR$/src/components/page/contactPage/contact.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/page/contactPage/contact.scss" afterPath="$PROJECT_DIR$/src/components/page/contactPage/contact.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/page/submitDesignPage/Form.js" afterPath="$PROJECT_DIR$/src/components/page/submitDesignPage/Form.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/page/submitDesignPage/submit.css" afterPath="$PROJECT_DIR$/src/components/page/submitDesignPage/submit.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/page/submitDesignPage/submit.scss" afterPath="$PROJECT_DIR$/src/components/page/submitDesignPage/submit.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/product/Product.js" afterPath="$PROJECT_DIR$/src/components/product/Product.js" />
     </list>
     <ignored path="shopify-storefront.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -23,42 +31,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SubmitDesignPage.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/page/submitDesignPage/SubmitDesignPage.js">
+      <file leaf-file-name="Product.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/product/Product.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="11" column="37" lean-forward="false" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Form.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/page/submitDesignPage/Form.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="50" column="4" lean-forward="true" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="4" />
+            <state relative-caret-position="118">
+              <caret line="86" column="35" lean-forward="true" selection-start-line="86" selection-start-column="35" selection-end-line="86" selection-end-column="35" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProductsGrid.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/collection/ProductsGrid.js">
+      <file leaf-file-name="Product.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/collection/Product.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-              <folding>
-                <marker date="1508599223000" expanded="true" signature="3414:3502" ph="..." />
-                <marker date="1508599223000" expanded="true" signature="3576:4000" ph="..." />
-                <marker date="1508599223000" expanded="true" signature="4774:4839" ph="..." />
-                <marker date="1508599223000" expanded="true" signature="5025:5319" ph="..." />
-                <marker date="1508599223000" expanded="true" signature="5068:5222" ph="..." />
-                <marker date="1508599223000" expanded="true" signature="5120:5178" ph="..." />
-                <marker date="1508599223000" expanded="true" signature="5270:5306" ph="..." />
-              </folding>
+            <state relative-caret-position="116">
+              <caret line="14" column="60" lean-forward="false" selection-start-line="14" selection-start-column="60" selection-end-line="14" selection-end-column="60" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -88,6 +76,8 @@
       <find>upload</find>
       <find>bread</find>
       <find>price</find>
+      <find>form</find>
+      <find>small</find>
     </findStrings>
     <replaceStrings>
       <replace>this.props.closeCart</replace>
@@ -125,9 +115,6 @@
         <option value="$PROJECT_DIR$/src/components/page/submitDesignPage/SubmitDesignPage.js" />
         <option value="$PROJECT_DIR$/src/components/page/submitDesignPage/Content.js" />
         <option value="$PROJECT_DIR$/src/components/page/submitDesignPage/Info.js" />
-        <option value="$PROJECT_DIR$/src/components/page/contactPage/contact.scss" />
-        <option value="$PROJECT_DIR$/src/components/page/contactPage/Form.js" />
-        <option value="$PROJECT_DIR$/src/components/page/submitDesignPage/submit.scss" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/components/page/defaultPage/DefaultPage.js" />
         <option value="$PROJECT_DIR$/src/components/page/defaultPage/defaultPage.scss" />
@@ -137,20 +124,23 @@
         <option value="$PROJECT_DIR$/src/components/product/ModalContainer.js" />
         <option value="$PROJECT_DIR$/src/components/home/Home.js" />
         <option value="$PROJECT_DIR$/src/helpers/helpers.js" />
-        <option value="$PROJECT_DIR$/src/components/collection/Product.js" />
         <option value="$PROJECT_DIR$/build/index.html" />
-        <option value="$PROJECT_DIR$/src/components/product/Product.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/node_modules/react-facebook-message-us/lib/react-facebook-message-us.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/components/messenger.js" />
         <option value="$PROJECT_DIR$/src/components/Main.js" />
-        <option value="$PROJECT_DIR$/src/components/Messenger.js" />
         <option value="$PROJECT_DIR$/src/app.scss" />
         <option value="$PROJECT_DIR$/src/components/product/product.scss" />
-        <option value="$PROJECT_DIR$/src/components/page/submitDesignPage/Form.js" />
-        <option value="$PROJECT_DIR$/build/200.html" />
         <option value="$PROJECT_DIR$/src/components/collection/ProductsGrid.js" />
+        <option value="$PROJECT_DIR$/build/200.html" />
+        <option value="$PROJECT_DIR$/src/components/page/contactPage/Form.js" />
+        <option value="$PROJECT_DIR$/src/components/page/contactPage/contact.scss" />
+        <option value="$PROJECT_DIR$/src/components/page/submitDesignPage/Form.js" />
+        <option value="$PROJECT_DIR$/src/components/page/submitDesignPage/submit.scss" />
+        <option value="$PROJECT_DIR$/src/components/Messenger.js" />
+        <option value="$PROJECT_DIR$/src/components/product/Product.js" />
+        <option value="$PROJECT_DIR$/src/components/collection/Product.js" />
       </list>
     </option>
   </component>
@@ -236,7 +226,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -266,13 +256,14 @@
               <item name="react-shopify-storefront" type="b2602c69:ProjectViewProjectNode" />
               <item name="react-shopify-storefront" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="helpers" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="page" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -421,12 +412,13 @@
       <workItem from="1507194705060" duration="5000" />
       <workItem from="1507621900654" duration="28000" />
       <workItem from="1508163406020" duration="3579000" />
-      <workItem from="1508596864744" duration="1601000" />
+      <workItem from="1508596864744" duration="2307000" />
+      <workItem from="1508676193968" duration="5830000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="110193000" />
+    <option name="totallyTimeSpent" value="116729000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -448,7 +440,7 @@
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16815476" sideWeight="0.5210918" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36632392" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36632392" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16815476" sideWeight="0.5155483" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -620,20 +612,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/page/contactPage/contact.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1666">
-          <caret line="180" column="23" lean-forward="false" selection-start-line="180" selection-start-column="23" selection-end-line="180" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/page/contactPage/Form.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="30" column="137" lean-forward="false" selection-start-line="30" selection-start-column="137" selection-end-line="30" selection-end-column="137" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/header/Navigation.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
@@ -652,13 +630,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
           <caret line="4" column="1" lean-forward="false" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/page/submitDesignPage/submit.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1720">
-          <caret line="86" column="36" lean-forward="false" selection-start-line="86" selection-start-column="36" selection-end-line="86" selection-end-column="36" />
         </state>
       </provider>
     </entry>
@@ -739,30 +710,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/collection/Product.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-274">
-          <caret line="9" column="34" lean-forward="true" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/page/submitDesignPage/SubmitDesignPage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="11" column="37" lean-forward="false" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/product/Product.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="65" column="34" lean-forward="false" selection-start-line="65" selection-start-column="34" selection-end-line="65" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/App.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -806,24 +753,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Messenger.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="48" lean-forward="true" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/product/product.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="169">
           <caret line="75" column="20" lean-forward="true" selection-start-line="75" selection-start-column="20" selection-end-line="75" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="439" column="0" lean-forward="true" selection-start-line="439" selection-start-column="0" selection-end-line="439" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -844,21 +777,13 @@
     <entry file="file://$PROJECT_DIR$/build/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="40" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="1287" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/page/submitDesignPage/Form.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="50" column="4" lean-forward="true" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="4" />
-          <folding />
+          <caret line="0" column="18" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="1287" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/collection/ProductsGrid.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
+        <state relative-caret-position="645">
           <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
           <folding>
             <marker date="1508599223000" expanded="true" signature="3414:3502" ph="..." />
@@ -869,6 +794,82 @@
             <marker date="1508599223000" expanded="true" signature="5120:5178" ph="..." />
             <marker date="1508599223000" expanded="true" signature="5270:5306" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="449" column="13" lean-forward="false" selection-start-line="449" selection-start-column="9" selection-end-line="449" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/page/submitDesignPage/SubmitDesignPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="37" lean-forward="false" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#39#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/page/submitDesignPage/Form.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4">
+          <caret line="141" column="22" lean-forward="true" selection-start-line="141" selection-start-column="22" selection-end-line="141" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/page/contactPage/Form.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="411">
+          <caret line="107" column="90" lean-forward="true" selection-start-line="107" selection-start-column="81" selection-end-line="107" selection-end-column="90" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/page/contactPage/contact.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1557">
+          <caret line="296" column="26" lean-forward="false" selection-start-line="296" selection-start-column="26" selection-end-line="296" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/page/submitDesignPage/submit.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="73" column="25" lean-forward="true" selection-start-line="73" selection-start-column="25" selection-end-line="73" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Messenger.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/collection/Product.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="14" column="60" lean-forward="false" selection-start-line="14" selection-start-column="60" selection-end-line="14" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/product/Product.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="86" column="35" lean-forward="true" selection-start-line="86" selection-start-column="35" selection-end-line="86" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>

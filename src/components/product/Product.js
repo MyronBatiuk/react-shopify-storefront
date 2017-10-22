@@ -87,7 +87,7 @@ export default class Product extends Component {
       if (collectionNumber !== 0) {
         collections = Object.keys(productCollections).map(key => {
               const title = collectionNumber > 1 ? states[productCollections[key].title] : productCollections[key].title;
-              const coma = ( collectionNumber === parseInt(key) + 1 ) ? '' : ', ';
+              const coma = ( collectionNumber === parseInt(key, 10) + 1 ) ? '' : ', ';
               return (
                   <span className="product__collection">
                     <Link key={key} to={`/collections/${productCollections[key].handle}`}>

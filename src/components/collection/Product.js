@@ -10,18 +10,18 @@ class Product extends Component {
     const states = helpers.states;
     let productCollection;
     if (collectionNumber !== 0) {
-        productCollection = Object.keys(productCollections).map(key => {
-          const title = collectionNumber > 1 ? states[productCollections[key].title] : productCollections[key].title;
-          const coma = ( collectionNumber === parseInt(key) + 1 ) ? '' : ', ';
-          return (
-              <li className="product__collection">
-                <Link key={key} to={`/collections/${productCollections[key].handle}`}>
-                  {title}
-                </Link>
-                {coma}
-              </li>
-          );
-        });
+      productCollection = Object.keys(productCollections).map(key => {
+        const title = collectionNumber > 1 ? states[productCollections[key].title] : productCollections[key].title;
+        const coma = ( collectionNumber === parseInt(key, 10) + 1 ) ? '' : ', ';
+        return (
+            <li className="product__collection">
+              <Link key={key} to={`/collections/${productCollections[key].handle}`}>
+                {title}
+              </Link>
+              {coma}
+            </li>
+        );
+      });
     }
     let designer;
     if (product.hasOwnProperty('designer_title'))

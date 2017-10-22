@@ -52,7 +52,8 @@
   .submit-design-page .form-section__row .row__small-text {
     font-size: 10px;
     color: #bfc5c5;
-    padding-right: 15px; }
+    padding-right: 15px;
+    margin: 0; }
   .submit-design-page .form-section__row .file-uploader {
     position: relative;
     padding: 100px 0;

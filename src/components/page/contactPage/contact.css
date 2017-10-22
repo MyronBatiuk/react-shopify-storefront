@@ -99,6 +99,14 @@
     .contact-page .form-section__row:last-child,
     .submit-design-page .form-section__row:last-child {
       padding-top: 0; }
+    .contact-page .form-section__row .error-message,
+    .submit-design-page .form-section__row .error-message {
+      color: #d81313;
+      margin-left: 15px;
+      display: none; }
+      .contact-page .form-section__row .error-message.visible,
+      .submit-design-page .form-section__row .error-message.visible {
+        display: block; }
     .contact-page .form-section__row .form-submit-button,
     .submit-design-page .form-section__row .form-submit-button {
       background: #40ba94;
@@ -206,6 +214,11 @@
       .submit-design-page .form-section__row select[type="checkbox"],
       .submit-design-page .form-section__row textarea[type="checkbox"] {
         width: initial; }
+      .contact-page .form-section__row input.required, .contact-page .form-section__row select.required, .contact-page .form-section__row textarea.required,
+      .submit-design-page .form-section__row input.required,
+      .submit-design-page .form-section__row select.required,
+      .submit-design-page .form-section__row textarea.required {
+        border: 2px solid #d81313; }
     .contact-page .form-section__row select,
     .submit-design-page .form-section__row select {
       cursor: pointer; }
@@ -286,3 +299,7 @@
     .contact-page .form-section__row textarea:-ms-input-placeholder,
     .submit-design-page .form-section__row textarea:-ms-input-placeholder {
       color: #bfc5c5 !important; }
+    .contact-page .form-section__row .info-item,
+    .submit-design-page .form-section__row .info-item {
+      vertical-align: unset;
+      padding-top: 16px; }

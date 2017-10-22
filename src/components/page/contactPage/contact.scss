@@ -105,6 +105,14 @@
       &:last-child {
         padding-top:0;
       }
+      .error-message {
+        color: #d81313;
+        margin-left: 15px;
+        display: none;
+        &.visible {
+          display: block;
+        }
+      }
       .form-submit-button {
         background: #40ba94;
         border:none;
@@ -201,6 +209,9 @@
         &[type="checkbox"] {
           width: initial;
         }
+        &.required {
+          border: 2px solid #d81313;
+        }
       }
 
       select {
@@ -280,6 +291,10 @@
       }
       textarea:-ms-input-placeholder {
         color: #bfc5c5 !important;
+      }
+      .info-item {
+        vertical-align: unset;
+        padding-top: 16px;
       }
     }
   }
