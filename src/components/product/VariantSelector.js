@@ -5,25 +5,40 @@ import * as actions from '../../actions/actionCreators';
 class VariantSelector extends Component {
 
   logChange = (e) => {
-    let variantId = e.target.value;
-    let variantPrice = this.props.variants[variantId].price;
-    let variantComparePrice = this.props.variants[variantId].compare_at_price;
-    store.dispatch(actions.changeSelectedVariant(variantId, variantPrice, variantComparePrice));
+    const variantId = e.target.value;
+    const variant = this.props.variants[variantId];
+    store.dispatch(actions.changeFeaturedImage(variant.image_url));
+    store.dispatch(actions.changeSelectedVariant(variantId, variant.price, variant.compare_at_price));
   };
 
   render() {
-    let variants = this.props.variants;
-    let options = Object.keys(variants).map(id =>
-        <option
-          value={variants[id].id}
-          key={variants[id].id}>
-          {variants[id].title}
-        </option>
+    const {variants, selected} = this.props;
+    const options = Object.keys(variants).map(id => {
+          if (selected === parseInt(variants[id].id, 10)) {
+            return (
+                <option
+                    selected
+                    value={variants[id].id}
+                    key={variants[id].id}>
+                  {variants[id].title}
+                </option>
+            );
+          } else {
+            return (
+                <option
+                    value={variants[id].id}
+                    key={variants[id].id}>
+                  {variants[id].title}
+                </option>
+            );
+          }
+
+        },
     );
     return (
-      <select className="product__variants" onChange={this.logChange}>
-        {options}
-      </select>
+        <select className="product__variants" onChange={this.logChange}>
+          {options}
+        </select>
     );
   }
 }

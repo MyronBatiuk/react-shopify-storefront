@@ -6,6 +6,7 @@ export default class ProductImages extends Component {
 
   changeFeaturedImage = (image) => {
     store.dispatch(actions.changeFeaturedImage(image));
+    store.dispatch(actions.changeSelectedVariantByImage(image));
   };
 
   render(){

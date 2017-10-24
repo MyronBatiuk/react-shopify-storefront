@@ -69,6 +69,7 @@ export default class Product extends Component {
       if (Object.keys(product.variants).length > 1)
         variantSelectors = <VariantSelector
             variants={product.variants}
+            selected={product.selected_variant}
         />;
       if (product.hasOwnProperty('designer'))
         designer = <Designer designer={product.designer}/>;
