@@ -12,10 +12,13 @@ function product(state = [], action) {
     case 'CHANGE_SELECTED_QUANTITY' :
       return {...state, selected_quantity: action.quantity};
     case 'CHANGE_FEATURED_IMAGE' :
-      return { ...state, featured_image: action.image};
+      return {...state, featured_image: action.image};
     case 'CHANGE_SELECTED_VARIANT_BY_IMAGE' :
       const variants = state.variants;
-      let i = 0, selectedVariant, selectedPrice, selectedComparePrice;
+      let i = 0;
+      let selectedVariant = state.selected_variant;
+      let selectedPrice = state.selected_price;
+      let selectedComparePrice = state.selected_compare_price;
       Object.keys(variants).map(key => {
         if (variants[key].image_url === action.image && i === 0) {
           selectedVariant = parseInt(variants[key].id, 10);
